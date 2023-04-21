@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		8D36171D29F2CA7F00231628 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D36171C29F2CA7F00231628 /* AppDelegate.swift */; };
 		8D36171F29F2CA7F00231628 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D36171E29F2CA7F00231628 /* SceneDelegate.swift */; };
-		8D36172129F2CA7F00231628 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D36172029F2CA7F00231628 /* ViewController.swift */; };
-		8D36172429F2CA7F00231628 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D36172229F2CA7F00231628 /* Main.storyboard */; };
+		8D36172129F2CA7F00231628 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D36172029F2CA7F00231628 /* MainViewController.swift */; };
 		8D36172629F2CA8000231628 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D36172529F2CA8000231628 /* Assets.xcassets */; };
 		8D36172929F2CA8000231628 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D36172729F2CA8000231628 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,8 +18,7 @@
 		8D36171929F2CA7F00231628 /* LabsProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LabsProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D36171C29F2CA7F00231628 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D36171E29F2CA7F00231628 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8D36172029F2CA7F00231628 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8D36172329F2CA7F00231628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8D36172029F2CA7F00231628 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8D36172529F2CA8000231628 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D36172829F2CA8000231628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D36172A29F2CA8000231628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,8 +56,7 @@
 			children = (
 				8D36171C29F2CA7F00231628 /* AppDelegate.swift */,
 				8D36171E29F2CA7F00231628 /* SceneDelegate.swift */,
-				8D36172029F2CA7F00231628 /* ViewController.swift */,
-				8D36172229F2CA7F00231628 /* Main.storyboard */,
+				8D36172029F2CA7F00231628 /* MainViewController.swift */,
 				8D36172529F2CA8000231628 /* Assets.xcassets */,
 				8D36172729F2CA8000231628 /* LaunchScreen.storyboard */,
 				8D36172A29F2CA8000231628 /* Info.plist */,
@@ -127,7 +124,6 @@
 			files = (
 				8D36172929F2CA8000231628 /* LaunchScreen.storyboard in Resources */,
 				8D36172629F2CA8000231628 /* Assets.xcassets in Resources */,
-				8D36172429F2CA7F00231628 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D36172129F2CA7F00231628 /* ViewController.swift in Sources */,
+				8D36172129F2CA7F00231628 /* MainViewController.swift in Sources */,
 				8D36171D29F2CA7F00231628 /* AppDelegate.swift in Sources */,
 				8D36171F29F2CA7F00231628 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +143,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8D36172229F2CA7F00231628 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8D36172329F2CA7F00231628 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8D36172729F2CA8000231628 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,14 +280,14 @@
 				INFOPLIST_FILE = LabsProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lonalia.LabsProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -320,14 +308,14 @@
 				INFOPLIST_FILE = LabsProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lonalia.LabsProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
