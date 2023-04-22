@@ -7,26 +7,53 @@
 
 import UIKit
 
-class MainVC: UIViewController {
+import SnapKit
+import Then
 
-    private let tableView: UITableView = {
-        let view = UITableView(frame: .zero)
-        view.backgroundColor = .clear
-        
-        return view
-    }()
+final class MainVC: UIViewController {
+
+    private let tableView = UITableView().then {
+        $0.backgroundColor = .clear
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
+        setupUI()
+        setupConstraints()
     }
 
     private func setupUI() {
+        view.backgroundColor = .white
+        navigationController?.isNavigationBarHidden = true
         
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(MainTableViewCell.self, forCellReuseIdentifier: "mainCell")
+        view.addSubview(tableView)
     }
     
     private func setupConstraints() {
-        
+        tableView.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview()
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+        }
     }
 }
 
+extension MainVC: UITableViewDelegate {
+    
+}
+
+extension MainVC: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath) as? MainTableViewCell else { return UITableViewCell() }
+        cell.updateUI(titleText: "Practise Then library")
+        return cell
+    }
+}
