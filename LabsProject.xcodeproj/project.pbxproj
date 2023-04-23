@@ -12,6 +12,8 @@
 		8D36172129F2CA7F00231628 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D36172029F2CA7F00231628 /* MainVC.swift */; };
 		8D36172629F2CA8000231628 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D36172529F2CA8000231628 /* Assets.xcassets */; };
 		8D36172929F2CA8000231628 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D36172729F2CA8000231628 /* LaunchScreen.storyboard */; };
+		8D38229E29F5107D00B71F26 /* PractiseThenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D38229D29F5107D00B71F26 /* PractiseThenVM.swift */; };
+		8D3822A129F512CF00B71F26 /* PractiseThenTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3822A029F512CF00B71F26 /* PractiseThenTableViewHeader.swift */; };
 		8DAC242E29F412480012A85F /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAC242D29F412480012A85F /* MainTableViewCell.swift */; };
 		8DAC243129F417BB0012A85F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8DAC243029F417BB0012A85F /* SnapKit */; };
 		8DAC243429F41A7C0012A85F /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 8DAC243329F41A7C0012A85F /* Then */; };
@@ -26,6 +28,8 @@
 		8D36172529F2CA8000231628 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D36172829F2CA8000231628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D36172A29F2CA8000231628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D38229D29F5107D00B71F26 /* PractiseThenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PractiseThenVM.swift; sourceTree = "<group>"; };
+		8D3822A029F512CF00B71F26 /* PractiseThenTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PractiseThenTableViewHeader.swift; sourceTree = "<group>"; };
 		8DAC242D29F412480012A85F /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		8DAC243529F433F50012A85F /* PractiseThenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PractiseThenVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,11 +76,27 @@
 			path = LabsProject;
 			sourceTree = "<group>";
 		};
+		8D38229C29F50FC500B71F26 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8DAC242D29F412480012A85F /* MainTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8D38229F29F512B300B71F26 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				8D3822A029F512CF00B71F26 /* PractiseThenTableViewHeader.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		8DAC242B29F3EB890012A85F /* Scene */ = {
 			isa = PBXGroup;
 			children = (
 				8D36172029F2CA7F00231628 /* MainVC.swift */,
-				8DAC242D29F412480012A85F /* MainTableViewCell.swift */,
+				8D38229C29F50FC500B71F26 /* Cell */,
 				8DAC242C29F3EBB50012A85F /* Then */,
 			);
 			path = Scene;
@@ -86,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				8DAC243529F433F50012A85F /* PractiseThenVC.swift */,
+				8D38229D29F5107D00B71F26 /* PractiseThenVM.swift */,
+				8D38229F29F512B300B71F26 /* Header */,
 			);
 			path = Then;
 			sourceTree = "<group>";
@@ -172,7 +194,9 @@
 				8DAC243629F433F50012A85F /* PractiseThenVC.swift in Sources */,
 				8D36171D29F2CA7F00231628 /* AppDelegate.swift in Sources */,
 				8DAC242E29F412480012A85F /* MainTableViewCell.swift in Sources */,
+				8D38229E29F5107D00B71F26 /* PractiseThenVM.swift in Sources */,
 				8D36171F29F2CA7F00231628 /* SceneDelegate.swift in Sources */,
+				8D3822A129F512CF00B71F26 /* PractiseThenTableViewHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

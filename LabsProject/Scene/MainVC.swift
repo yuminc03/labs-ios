@@ -14,6 +14,7 @@ final class MainVC: UIViewController {
 
     private let tableView = UITableView().then {
         $0.backgroundColor = .clear
+        $0.register(MainTableViewCell.self, forCellReuseIdentifier: "mainCell")
     }
 
     override func viewDidLoad() {
@@ -28,7 +29,6 @@ final class MainVC: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(MainTableViewCell.self, forCellReuseIdentifier: "mainCell")
         view.addSubview(tableView)
     }
     
@@ -43,6 +43,10 @@ final class MainVC: UIViewController {
 
 extension MainVC: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = PractiseThenVC()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension MainVC: UITableViewDataSource {

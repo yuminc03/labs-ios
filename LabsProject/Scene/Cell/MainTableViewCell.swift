@@ -30,15 +30,17 @@ final class MainTableViewCell: UITableViewCell {
     
     private func setupUI() {
         selectionStyle = .none
+        backgroundColor = .white
         
         contentView.addSubview(titleLabel)
     }
     
     private func setupConstraints() {
         titleLabel.snp.makeConstraints {
-            $0.leading.equalToSuperview().offset(20)
             $0.top.equalToSuperview().offset(10)
             $0.bottom.equalToSuperview().offset(-10)
+            $0.leading.equalToSuperview().offset(20)
+            $0.trailing.lessThanOrEqualToSuperview().offset(-20)
         }
     }
     
