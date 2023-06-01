@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class MainVC: UIViewController {
+final class MainVC: LabsVC {
 
     private let tableView = UITableView().then {
         $0.backgroundColor = .clear

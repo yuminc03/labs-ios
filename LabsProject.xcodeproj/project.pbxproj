@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D1860F62A28DD2D00F89D18 /* MainNaviVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1860F52A28DD2D00F89D18 /* MainNaviVC.swift */; };
+		8D1860F82A28DDC500F89D18 /* LabsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1860F72A28DDC500F89D18 /* LabsVC.swift */; };
 		8D36171D29F2CA7F00231628 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D36171C29F2CA7F00231628 /* AppDelegate.swift */; };
 		8D36171F29F2CA7F00231628 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D36171E29F2CA7F00231628 /* SceneDelegate.swift */; };
 		8D36172129F2CA7F00231628 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D36172029F2CA7F00231628 /* MainVC.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D1860F52A28DD2D00F89D18 /* MainNaviVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNaviVC.swift; sourceTree = "<group>"; };
+		8D1860F72A28DDC500F89D18 /* LabsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabsVC.swift; sourceTree = "<group>"; };
 		8D36171929F2CA7F00231628 /* LabsProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LabsProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D36171C29F2CA7F00231628 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D36171E29F2CA7F00231628 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 		8DAC242B29F3EB890012A85F /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				8D1860F52A28DD2D00F89D18 /* MainNaviVC.swift */,
+				8D1860F72A28DDC500F89D18 /* LabsVC.swift */,
 				8D36172029F2CA7F00231628 /* MainVC.swift */,
 				8D38229C29F50FC500B71F26 /* Cell */,
 				8DAC242C29F3EBB50012A85F /* Then */,
@@ -193,10 +199,12 @@
 				8D36172129F2CA7F00231628 /* MainVC.swift in Sources */,
 				8DAC243629F433F50012A85F /* PractiseThenVC.swift in Sources */,
 				8D36171D29F2CA7F00231628 /* AppDelegate.swift in Sources */,
+				8D1860F82A28DDC500F89D18 /* LabsVC.swift in Sources */,
 				8DAC242E29F412480012A85F /* MainTableViewCell.swift in Sources */,
 				8D38229E29F5107D00B71F26 /* PractiseThenVM.swift in Sources */,
 				8D36171F29F2CA7F00231628 /* SceneDelegate.swift in Sources */,
 				8D3822A129F512CF00B71F26 /* PractiseThenTableViewHeader.swift in Sources */,
+				8D1860F62A28DD2D00F89D18 /* MainNaviVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
