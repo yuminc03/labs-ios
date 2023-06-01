@@ -12,6 +12,11 @@ import Then
 
 final class MainVC: LabsVC {
 
+    private let datas = [
+        "Practise Then library",
+        "WebView Test"
+    ]
+    
     private let tableView = UITableView().then {
         $0.backgroundColor = .clear
         $0.register(MainTableViewCell.self, forCellReuseIdentifier: "mainCell")
@@ -44,20 +49,28 @@ final class MainVC: LabsVC {
 extension MainVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = PractiseThenVC()
-        navigationController?.pushViewController(vc, animated: true)
+        switch indexPath.row {
+        case 0:
+            let vc = PractiseThenVC()
+            navigationController?.pushViewController(vc, animated: true)
+        case 1:
+            let vc = WebVC()
+            navigationController?.pushViewController(vc, animated: true)
+        default:
+            break
+        }
     }
 }
 
 extension MainVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return datas.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath) as? MainTableViewCell else { return UITableViewCell() }
-        cell.updateUI(titleText: "Practise Then library")
+        cell.updateUI(titleText: datas[indexPath.row])
         return cell
     }
 }
