@@ -14,7 +14,8 @@ final class MainVC: LabsVC {
 
     private let datas = [
         "Practise Then library",
-        "WebView Test"
+        "WebView Test",
+        "WebView Cookie Test"
     ]
     
     private let tableView = UITableView().then {
@@ -55,6 +56,9 @@ extension MainVC: UITableViewDelegate {
             navigationController?.pushViewController(vc, animated: true)
         case 1:
             let vc = WebVC()
+            navigationController?.pushViewController(vc, animated: true)
+        case 2:
+            let vc = CookieWebVC()
             navigationController?.pushViewController(vc, animated: true)
         default:
             break
