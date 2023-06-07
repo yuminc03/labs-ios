@@ -13,42 +13,40 @@ import SnapKit
 final class WebVC: LabsVC {
     
     private var webView = WKWebView(frame: .zero)
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setupConstraints()
         loadHTML(url: "Test.html")
-        evaluateJS()
+//        evaluateJS()
     }
     
     private func loadHTML(url: String) {
-        guard let url = URL(string: url) else { return }
-        let urlRequest = URLRequest(url: url)
+        guard let filePath = Bundle.main.path(forResource: "Test", ofType: "html") else { return }
+        let siteUrl = URL(fileURLWithPath: filePath)
+        let urlRequest = URLRequest(url: siteUrl)
         webView.load(urlRequest)
     }
     
-    private func evaluateJS() {
-        webView.evaluateJavaScript("colorHeader()")
-    }
+//    private func evaluateJS() {
+//        webView.evaluateJavaScript("callNative()")
+//    }
     
     private func setupUI() {
         view.backgroundColor = .white
-        view.addSubview(webView)
-        
-        webView.uiDelegate = self
-        webView.navigationDelegate = self
         
         let config = WKWebViewConfiguration()
         let contentController = WKUserContentController()
         contentController.add(self, name: "callbackHandler")
+        let userScript = WKUserScript(source: "colorHeader()", injectionTime: .atDocumentEnd, forMainFrameOnly: true)
+        contentController.addUserScript(userScript)
         config.userContentController = contentController
         webView = WKWebView(frame: .zero, configuration: config)
+        webView.uiDelegate = self
+        webView.navigationDelegate = self
         
-        let userScript = WKUserScript(source: "redHeader()", injectionTime: .atDocumentEnd, forMainFrameOnly: true)
-        let userContent = WKUserContentController()
-        userContent.addUserScript(userScript)
-        
+        view.addSubview(webView)
     }
     
     private func setupConstraints() {
@@ -62,7 +60,13 @@ final class WebVC: LabsVC {
 
 extension WebVC: WKUIDelegate {
     
-    
+    func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Swift.Void){
+        let alert = UIAlertController(title: "Title", message: message, preferredStyle: .alert)
+        let buttonAction = UIAlertAction(title: "Close", style: .default, handler: { action in completionHandler()
+        })
+        alert.addAction(buttonAction)
+        present(alert, animated: true, completion: nil)
+    }
 }
 
 extension WebVC: WKNavigationDelegate {
@@ -74,7 +78,9 @@ extension WebVC: WKScriptMessageHandler {
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         if message.name == "callbackHandler" {
+            print("==================")
             print(message.body)
+            print("==================")
         }
     }
 }

@@ -59,7 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				8D1860FA2A29070B00F89D18 /* WebVC.swift */,
-				8D1860FC2A290BBB00F89D18 /* Test.html */,
 			);
 			path = Web;
 			sourceTree = "<group>";
@@ -85,10 +84,11 @@
 			children = (
 				8D36171C29F2CA7F00231628 /* AppDelegate.swift */,
 				8D36171E29F2CA7F00231628 /* SceneDelegate.swift */,
+				8DAC242B29F3EB890012A85F /* Scene */,
 				8D36172529F2CA8000231628 /* Assets.xcassets */,
+				8D1860FC2A290BBB00F89D18 /* Test.html */,
 				8D36172729F2CA8000231628 /* LaunchScreen.storyboard */,
 				8D36172A29F2CA8000231628 /* Info.plist */,
-				8DAC242B29F3EB890012A85F /* Scene */,
 			);
 			path = LabsProject;
 			sourceTree = "<group>";
@@ -359,7 +359,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GMHUACJXLZ;
+				DEVELOPMENT_TEAM = 54V3G99LL8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LabsProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -387,7 +387,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GMHUACJXLZ;
+				DEVELOPMENT_TEAM = 54V3G99LL8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LabsProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
