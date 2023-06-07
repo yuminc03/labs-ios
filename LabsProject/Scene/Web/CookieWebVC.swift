@@ -13,17 +13,44 @@ import SnapKit
 final class CookieWebVC: LabsVC {
     
     private var webView = WKWebView(frame: .zero)
+    private var httpCookies: [HTTPCookie] = []
+    private let domain = "https://yuminc03.github.io"
+    private let path = "/first_bootstrap_portpolio"
+    private let injectScriptInit: String = """
+                                       var isSet = false;
+                                       
+                                       function getCookie(name) {
+                                            var cookieValue = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+                                            return cookieValue? cookieValue[2] : null;
+                                       }
+                                       
+                                       function deleteAllCookies() {
+                                           var cookies = document.cookie.split(";");
+                                       
+                                           for (var i = 0; i < cookies.length; i++) {
+                                               var cookie = cookies[i];
+                                               var eqPos = cookie.indexOf("=");
+                                               var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+                                               document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+                                           }
+                                       }
+                                       
+                                       """
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setupConstraints()
-        loadHTML(url: "https://yuminc03.github.io/first_bootstrap_portpolio")
+        loadHTML(url: domain + path)
     }
     
     private func loadHTML(url: String) {
         if let url = URL(string: url) {
-            let urlRequest = URLRequest(url: url)
+            var urlRequest = URLRequest(url: url)
+            let headers = HTTPCookie.requestHeaderFields(with: httpCookies)
+            for (name, value) in headers {
+                urlRequest.setValue(value, forHTTPHeaderField: name)
+            }
             webView.load(urlRequest)
         }
     }
@@ -31,6 +58,30 @@ final class CookieWebVC: LabsVC {
 //    private func evaluateJS() {
 //        webView.evaluateJavaScript("callNative()")
 //    }
+    
+    private func setCookies() {
+        guard let token = setupCookie(name: "token", value: "aaaaaaaaaaa", path: path, domain: domain) else {
+            return
+        }
+        
+        guard let userName = setupCookie(name: "userName", value: "yumin", path: path, domain: domain) else {
+            return
+        }
+        
+        httpCookies = [token, userName]
+        print("🍪🍪 token: \(token.value), userName: \(userName.value)")
+    }
+    
+    ///cookie 만들고 cookie를 return
+    private func setupCookie(name: String, value: String, path: String, domain: String) -> HTTPCookie? {
+        var cookieProperties = [HTTPCookiePropertyKey : Any]()
+        cookieProperties[.name] = name
+        cookieProperties[.value] = value
+        cookieProperties[.path] = path
+        cookieProperties[.domain] = domain
+        let newCookie = HTTPCookie(properties: cookieProperties)
+        return newCookie
+    }
     
     private func setupUI() {
         view.backgroundColor = .white
