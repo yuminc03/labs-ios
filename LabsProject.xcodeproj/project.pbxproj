@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D1860F62A28DD2D00F89D18 /* MainNaviVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1860F52A28DD2D00F89D18 /* MainNaviVC.swift */; };
+		8D1860F82A28DDC500F89D18 /* LabsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1860F72A28DDC500F89D18 /* LabsVC.swift */; };
+		8D1860FB2A29070B00F89D18 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1860FA2A29070B00F89D18 /* WebVC.swift */; };
+		8D1860FD2A290BBB00F89D18 /* Test.html in Resources */ = {isa = PBXBuildFile; fileRef = 8D1860FC2A290BBB00F89D18 /* Test.html */; };
 		8D36171D29F2CA7F00231628 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D36171C29F2CA7F00231628 /* AppDelegate.swift */; };
 		8D36171F29F2CA7F00231628 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D36171E29F2CA7F00231628 /* SceneDelegate.swift */; };
 		8D36172129F2CA7F00231628 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D36172029F2CA7F00231628 /* MainVC.swift */; };
@@ -14,6 +18,7 @@
 		8D36172929F2CA8000231628 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D36172729F2CA8000231628 /* LaunchScreen.storyboard */; };
 		8D38229E29F5107D00B71F26 /* PractiseThenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D38229D29F5107D00B71F26 /* PractiseThenVM.swift */; };
 		8D3822A129F512CF00B71F26 /* PractiseThenTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3822A029F512CF00B71F26 /* PractiseThenTableViewHeader.swift */; };
+		8D63FF462A30D8EC002177AA /* CookieWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D63FF452A30D8EC002177AA /* CookieWebVC.swift */; };
 		8DAC242E29F412480012A85F /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAC242D29F412480012A85F /* MainTableViewCell.swift */; };
 		8DAC243129F417BB0012A85F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8DAC243029F417BB0012A85F /* SnapKit */; };
 		8DAC243429F41A7C0012A85F /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 8DAC243329F41A7C0012A85F /* Then */; };
@@ -21,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D1860F52A28DD2D00F89D18 /* MainNaviVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNaviVC.swift; sourceTree = "<group>"; };
+		8D1860F72A28DDC500F89D18 /* LabsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabsVC.swift; sourceTree = "<group>"; };
+		8D1860FA2A29070B00F89D18 /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
+		8D1860FC2A290BBB00F89D18 /* Test.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Test.html; sourceTree = "<group>"; };
 		8D36171929F2CA7F00231628 /* LabsProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LabsProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D36171C29F2CA7F00231628 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D36171E29F2CA7F00231628 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +39,7 @@
 		8D36172A29F2CA8000231628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D38229D29F5107D00B71F26 /* PractiseThenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PractiseThenVM.swift; sourceTree = "<group>"; };
 		8D3822A029F512CF00B71F26 /* PractiseThenTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PractiseThenTableViewHeader.swift; sourceTree = "<group>"; };
+		8D63FF452A30D8EC002177AA /* CookieWebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookieWebVC.swift; sourceTree = "<group>"; };
 		8DAC242D29F412480012A85F /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		8DAC243529F433F50012A85F /* PractiseThenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PractiseThenVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D1860F92A28FD7000F89D18 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				8D1860FA2A29070B00F89D18 /* WebVC.swift */,
+				8D63FF452A30D8EC002177AA /* CookieWebVC.swift */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
 		8D36171029F2CA7F00231628 = {
 			isa = PBXGroup;
 			children = (
@@ -68,10 +87,11 @@
 			children = (
 				8D36171C29F2CA7F00231628 /* AppDelegate.swift */,
 				8D36171E29F2CA7F00231628 /* SceneDelegate.swift */,
+				8DAC242B29F3EB890012A85F /* Scene */,
 				8D36172529F2CA8000231628 /* Assets.xcassets */,
+				8D1860FC2A290BBB00F89D18 /* Test.html */,
 				8D36172729F2CA8000231628 /* LaunchScreen.storyboard */,
 				8D36172A29F2CA8000231628 /* Info.plist */,
-				8DAC242B29F3EB890012A85F /* Scene */,
 			);
 			path = LabsProject;
 			sourceTree = "<group>";
@@ -95,7 +115,10 @@
 		8DAC242B29F3EB890012A85F /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				8D1860F52A28DD2D00F89D18 /* MainNaviVC.swift */,
+				8D1860F72A28DDC500F89D18 /* LabsVC.swift */,
 				8D36172029F2CA7F00231628 /* MainVC.swift */,
+				8D1860F92A28FD7000F89D18 /* Web */,
 				8D38229C29F50FC500B71F26 /* Cell */,
 				8DAC242C29F3EBB50012A85F /* Then */,
 			);
@@ -178,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D1860FD2A290BBB00F89D18 /* Test.html in Resources */,
 				8D36172929F2CA8000231628 /* LaunchScreen.storyboard in Resources */,
 				8D36172629F2CA8000231628 /* Assets.xcassets in Resources */,
 			);
@@ -193,10 +217,14 @@
 				8D36172129F2CA7F00231628 /* MainVC.swift in Sources */,
 				8DAC243629F433F50012A85F /* PractiseThenVC.swift in Sources */,
 				8D36171D29F2CA7F00231628 /* AppDelegate.swift in Sources */,
+				8D1860F82A28DDC500F89D18 /* LabsVC.swift in Sources */,
 				8DAC242E29F412480012A85F /* MainTableViewCell.swift in Sources */,
 				8D38229E29F5107D00B71F26 /* PractiseThenVM.swift in Sources */,
 				8D36171F29F2CA7F00231628 /* SceneDelegate.swift in Sources */,
+				8D63FF462A30D8EC002177AA /* CookieWebVC.swift in Sources */,
+				8D1860FB2A29070B00F89D18 /* WebVC.swift in Sources */,
 				8D3822A129F512CF00B71F26 /* PractiseThenTableViewHeader.swift in Sources */,
+				8D1860F62A28DD2D00F89D18 /* MainNaviVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,7 +363,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GMHUACJXLZ;
+				DEVELOPMENT_TEAM = 54V3G99LL8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LabsProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -363,7 +391,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GMHUACJXLZ;
+				DEVELOPMENT_TEAM = 54V3G99LL8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LabsProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

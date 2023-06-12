@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="/public/js/jquery-3.1.1.js"></script>
+        <script type="text/javascript" charset="UTF-8">
+            
+            function callNative() {
+                try {
+                    webkit.messageHandlers.callbackHandler.postMessage("JavaScript callNative()에서 보낸 Message!");
+                } catch(error) {
+                    alert(error);
+                }
+            }
+            
+            function colorHeader() {
+                alert('JavaScript 함수 colorHeader() 호출됨!');
+                document.querySelector('h2').style.color = "blue";
+            }
+        </script>
+        
+    </head>
+    <body>
+        <h2>iOS WKWebView Test 페이지</h2>
+        <br><input type="button" onclick="callNative()" value="네이티브 함수 호출!"/>
+    </body>
+    
+</html>
