@@ -23,6 +23,7 @@
 		8D98EBB22A4486B8009DF067 /* TypiCodeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98EBAF2A4486B8009DF067 /* TypiCodeAPI.swift */; };
 		8D98EBB32A4486B8009DF067 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98EBB02A4486B8009DF067 /* NetworkManager.swift */; };
 		8D98EBB42A4486B8009DF067 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98EBB12A4486B8009DF067 /* API.swift */; };
+		8D98EBB72A448AE8009DF067 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8D98EBB62A448AE8009DF067 /* Alamofire */; };
 		8DAC242E29F412480012A85F /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAC242D29F412480012A85F /* MainTableViewCell.swift */; };
 		8DAC243129F417BB0012A85F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8DAC243029F417BB0012A85F /* SnapKit */; };
 		8DAC243429F41A7C0012A85F /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 8DAC243329F41A7C0012A85F /* Then */; };
@@ -57,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D98EBB72A448AE8009DF067 /* Alamofire in Frameworks */,
 				8DAC243129F417BB0012A85F /* SnapKit in Frameworks */,
 				8DAC243429F41A7C0012A85F /* Then in Frameworks */,
 			);
@@ -182,6 +184,7 @@
 			packageProductDependencies = (
 				8DAC243029F417BB0012A85F /* SnapKit */,
 				8DAC243329F41A7C0012A85F /* Then */,
+				8D98EBB62A448AE8009DF067 /* Alamofire */,
 			);
 			productName = LabsProject;
 			productReference = 8D36171929F2CA7F00231628 /* LabsProject.app */;
@@ -214,6 +217,7 @@
 			packageReferences = (
 				8DAC242F29F417BB0012A85F /* XCRemoteSwiftPackageReference "SnapKit" */,
 				8DAC243229F41A7C0012A85F /* XCRemoteSwiftPackageReference "Then" */,
+				8D98EBB52A448AE8009DF067 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 8D36171A29F2CA7F00231628 /* Products */;
 			projectDirPath = "";
@@ -324,7 +328,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -378,7 +382,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -468,6 +472,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8D98EBB52A448AE8009DF067 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire#features";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		8DAC242F29F417BB0012A85F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -487,6 +499,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8D98EBB62A448AE8009DF067 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D98EBB52A448AE8009DF067 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		8DAC243029F417BB0012A85F /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8DAC242F29F417BB0012A85F /* XCRemoteSwiftPackageReference "SnapKit" */;
