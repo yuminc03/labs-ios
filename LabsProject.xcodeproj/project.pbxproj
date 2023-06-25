@@ -23,11 +23,12 @@
 		8D98EBB22A4486B8009DF067 /* TypiCodeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98EBAF2A4486B8009DF067 /* TypiCodeAPI.swift */; };
 		8D98EBB32A4486B8009DF067 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98EBB02A4486B8009DF067 /* NetworkManager.swift */; };
 		8D98EBB42A4486B8009DF067 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98EBB12A4486B8009DF067 /* API.swift */; };
-		8D98EBB72A448AE8009DF067 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8D98EBB62A448AE8009DF067 /* Alamofire */; };
 		8DAC242E29F412480012A85F /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAC242D29F412480012A85F /* MainTableViewCell.swift */; };
 		8DAC243129F417BB0012A85F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8DAC243029F417BB0012A85F /* SnapKit */; };
 		8DAC243429F41A7C0012A85F /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 8DAC243329F41A7C0012A85F /* Then */; };
 		8DAC243629F433F50012A85F /* PractiseThenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAC243529F433F50012A85F /* PractiseThenVC.swift */; };
+		8DD7138B2A4846D800209EEF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8DD7138A2A4846D800209EEF /* Alamofire */; };
+		8DD7138E2A4848D600209EEF /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 8DD7138D2A4848D600209EEF /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,8 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D98EBB72A448AE8009DF067 /* Alamofire in Frameworks */,
+				8DD7138B2A4846D800209EEF /* Alamofire in Frameworks */,
 				8DAC243129F417BB0012A85F /* SnapKit in Frameworks */,
+				8DD7138E2A4848D600209EEF /* ComposableArchitecture in Frameworks */,
 				8DAC243429F41A7C0012A85F /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,16 +143,24 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		8DA817A32A482B05000DCEBB /* TCA */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TCA;
+			sourceTree = "<group>";
+		};
 		8DAC242B29F3EB890012A85F /* Scene */ = {
 			isa = PBXGroup;
 			children = (
 				8D1860F52A28DD2D00F89D18 /* MainNaviVC.swift */,
 				8D1860F72A28DDC500F89D18 /* LabsVC.swift */,
 				8D36172029F2CA7F00231628 /* MainVC.swift */,
+				8D38229C29F50FC500B71F26 /* Cell */,
 				8D1860F92A28FD7000F89D18 /* Web */,
 				8D4D3D3D2A3E0861009A64F6 /* Segmented */,
-				8D38229C29F50FC500B71F26 /* Cell */,
 				8DAC242C29F3EBB50012A85F /* Then */,
+				8DA817A32A482B05000DCEBB /* TCA */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -184,7 +194,8 @@
 			packageProductDependencies = (
 				8DAC243029F417BB0012A85F /* SnapKit */,
 				8DAC243329F41A7C0012A85F /* Then */,
-				8D98EBB62A448AE8009DF067 /* Alamofire */,
+				8DD7138A2A4846D800209EEF /* Alamofire */,
+				8DD7138D2A4848D600209EEF /* ComposableArchitecture */,
 			);
 			productName = LabsProject;
 			productReference = 8D36171929F2CA7F00231628 /* LabsProject.app */;
@@ -217,7 +228,8 @@
 			packageReferences = (
 				8DAC242F29F417BB0012A85F /* XCRemoteSwiftPackageReference "SnapKit" */,
 				8DAC243229F41A7C0012A85F /* XCRemoteSwiftPackageReference "Then" */,
-				8D98EBB52A448AE8009DF067 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8DD713892A4846D800209EEF /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8DD7138C2A4848D600209EEF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = 8D36171A29F2CA7F00231628 /* Products */;
 			projectDirPath = "";
@@ -472,14 +484,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8D98EBB52A448AE8009DF067 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire#features";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
 		8DAC242F29F417BB0012A85F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -496,14 +500,25 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		8DD713892A4846D800209EEF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire#features";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.7.0;
+			};
+		};
+		8DD7138C2A4848D600209EEF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.54.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8D98EBB62A448AE8009DF067 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8D98EBB52A448AE8009DF067 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
 		8DAC243029F417BB0012A85F /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8DAC242F29F417BB0012A85F /* XCRemoteSwiftPackageReference "SnapKit" */;
@@ -513,6 +528,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8DAC243229F41A7C0012A85F /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		8DD7138A2A4846D800209EEF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DD713892A4846D800209EEF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		8DD7138D2A4848D600209EEF /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DD7138C2A4848D600209EEF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
