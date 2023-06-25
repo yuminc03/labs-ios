@@ -23,11 +23,18 @@
 		8D98EBB22A4486B8009DF067 /* TypiCodeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98EBAF2A4486B8009DF067 /* TypiCodeAPI.swift */; };
 		8D98EBB32A4486B8009DF067 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98EBB02A4486B8009DF067 /* NetworkManager.swift */; };
 		8D98EBB42A4486B8009DF067 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98EBB12A4486B8009DF067 /* API.swift */; };
-		8D98EBB72A448AE8009DF067 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8D98EBB62A448AE8009DF067 /* Alamofire */; };
 		8DAC242E29F412480012A85F /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAC242D29F412480012A85F /* MainTableViewCell.swift */; };
 		8DAC243129F417BB0012A85F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8DAC243029F417BB0012A85F /* SnapKit */; };
 		8DAC243429F41A7C0012A85F /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 8DAC243329F41A7C0012A85F /* Then */; };
 		8DAC243629F433F50012A85F /* PractiseThenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAC243529F433F50012A85F /* PractiseThenVC.swift */; };
+		8DD7138B2A4846D800209EEF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8DD7138A2A4846D800209EEF /* Alamofire */; };
+		8DD7138E2A4848D600209EEF /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 8DD7138D2A4848D600209EEF /* ComposableArchitecture */; };
+		8DD713902A484B7100209EEF /* NotificationSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7138F2A484B7100209EEF /* NotificationSettingVC.swift */; };
+		8DD713932A48512D00209EEF /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD713922A48512D00209EEF /* NavigationBarView.swift */; };
+		8DD713952A4852D500209EEF /* NotificationSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD713942A4852D500209EEF /* NotificationSettingTableViewCell.swift */; };
+		8DD713972A4853DD00209EEF /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD713962A4853DD00209EEF /* UIColor+.swift */; };
+		8DD7139C2A485A9000209EEF /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8DD7139B2A485A9000209EEF /* CombineCocoa */; };
+		8DD7139E2A485CC000209EEF /* TableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7139D2A485CC000209EEF /* TableView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +58,11 @@
 		8D98EBB12A4486B8009DF067 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		8DAC242D29F412480012A85F /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		8DAC243529F433F50012A85F /* PractiseThenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PractiseThenVC.swift; sourceTree = "<group>"; };
+		8DD7138F2A484B7100209EEF /* NotificationSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingVC.swift; sourceTree = "<group>"; };
+		8DD713922A48512D00209EEF /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
+		8DD713942A4852D500209EEF /* NotificationSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingTableViewCell.swift; sourceTree = "<group>"; };
+		8DD713962A4853DD00209EEF /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		8DD7139D2A485CC000209EEF /* TableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +70,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D98EBB72A448AE8009DF067 /* Alamofire in Frameworks */,
+				8DD7138B2A4846D800209EEF /* Alamofire in Frameworks */,
 				8DAC243129F417BB0012A85F /* SnapKit in Frameworks */,
+				8DD7138E2A4848D600209EEF /* ComposableArchitecture in Frameworks */,
+				8DD7139C2A485A9000209EEF /* CombineCocoa in Frameworks */,
 				8DAC243429F41A7C0012A85F /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +111,7 @@
 			children = (
 				8D36171C29F2CA7F00231628 /* AppDelegate.swift */,
 				8D36171E29F2CA7F00231628 /* SceneDelegate.swift */,
+				8DD713912A48511A00209EEF /* Common */,
 				8D98EBAE2A4486B8009DF067 /* Network */,
 				8DAC242B29F3EB890012A85F /* Scene */,
 				8D36172529F2CA8000231628 /* Assets.xcassets */,
@@ -141,6 +156,15 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		8DA817A32A482B05000DCEBB /* TCA */ = {
+			isa = PBXGroup;
+			children = (
+				8DD7138F2A484B7100209EEF /* NotificationSettingVC.swift */,
+				8DD713942A4852D500209EEF /* NotificationSettingTableViewCell.swift */,
+			);
+			path = TCA;
+			sourceTree = "<group>";
+		};
 		8DAC242B29F3EB890012A85F /* Scene */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,7 +174,10 @@
 				8D1860F92A28FD7000F89D18 /* Web */,
 				8D4D3D3D2A3E0861009A64F6 /* Segmented */,
 				8D38229C29F50FC500B71F26 /* Cell */,
+				8D1860F92A28FD7000F89D18 /* Web */,
+				8D4D3D3D2A3E0861009A64F6 /* Segmented */,
 				8DAC242C29F3EBB50012A85F /* Then */,
+				8DA817A32A482B05000DCEBB /* TCA */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -163,6 +190,16 @@
 				8D38229F29F512B300B71F26 /* Header */,
 			);
 			path = Then;
+			sourceTree = "<group>";
+		};
+		8DD713912A48511A00209EEF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8DD713922A48512D00209EEF /* NavigationBarView.swift */,
+				8DD713962A4853DD00209EEF /* UIColor+.swift */,
+				8DD7139D2A485CC000209EEF /* TableView+.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,7 +221,9 @@
 			packageProductDependencies = (
 				8DAC243029F417BB0012A85F /* SnapKit */,
 				8DAC243329F41A7C0012A85F /* Then */,
-				8D98EBB62A448AE8009DF067 /* Alamofire */,
+				8DD7138A2A4846D800209EEF /* Alamofire */,
+				8DD7138D2A4848D600209EEF /* ComposableArchitecture */,
+				8DD7139B2A485A9000209EEF /* CombineCocoa */,
 			);
 			productName = LabsProject;
 			productReference = 8D36171929F2CA7F00231628 /* LabsProject.app */;
@@ -217,7 +256,9 @@
 			packageReferences = (
 				8DAC242F29F417BB0012A85F /* XCRemoteSwiftPackageReference "SnapKit" */,
 				8DAC243229F41A7C0012A85F /* XCRemoteSwiftPackageReference "Then" */,
-				8D98EBB52A448AE8009DF067 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8DD713892A4846D800209EEF /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8DD7138C2A4848D600209EEF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				8DD7139A2A485A9000209EEF /* XCRemoteSwiftPackageReference "CombineCocoa" */,
 			);
 			productRefGroup = 8D36171A29F2CA7F00231628 /* Products */;
 			projectDirPath = "";
@@ -250,13 +291,18 @@
 				8D98EBAD2A44858B009DF067 /* SegmentedVC.swift in Sources */,
 				8DAC243629F433F50012A85F /* PractiseThenVC.swift in Sources */,
 				8D36171D29F2CA7F00231628 /* AppDelegate.swift in Sources */,
+				8DD713902A484B7100209EEF /* NotificationSettingVC.swift in Sources */,
+				8DD7139E2A485CC000209EEF /* TableView+.swift in Sources */,
 				8D98EBB42A4486B8009DF067 /* API.swift in Sources */,
 				8D98EBB22A4486B8009DF067 /* TypiCodeAPI.swift in Sources */,
 				8D1860F82A28DDC500F89D18 /* LabsVC.swift in Sources */,
 				8DAC242E29F412480012A85F /* MainTableViewCell.swift in Sources */,
 				8D38229E29F5107D00B71F26 /* PractiseThenVM.swift in Sources */,
 				8D36171F29F2CA7F00231628 /* SceneDelegate.swift in Sources */,
+				8DD713932A48512D00209EEF /* NavigationBarView.swift in Sources */,
 				8D63FF462A30D8EC002177AA /* CookieWebVC.swift in Sources */,
+				8DD713952A4852D500209EEF /* NotificationSettingTableViewCell.swift in Sources */,
+				8DD713972A4853DD00209EEF /* UIColor+.swift in Sources */,
 				8D98EBB32A4486B8009DF067 /* NetworkManager.swift in Sources */,
 				8D1860FB2A29070B00F89D18 /* WebVC.swift in Sources */,
 				8D3822A129F512CF00B71F26 /* PractiseThenTableViewHeader.swift in Sources */,
@@ -496,6 +542,30 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		8DD713892A4846D800209EEF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire#features";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.7.0;
+			};
+		};
+		8DD7138C2A4848D600209EEF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.54.1;
+			};
+		};
+		8DD7139A2A485A9000209EEF /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -513,6 +583,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8DAC243229F41A7C0012A85F /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		8DD7138A2A4846D800209EEF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DD713892A4846D800209EEF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		8DD7138D2A4848D600209EEF /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DD7138C2A4848D600209EEF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		8DD7139B2A485A9000209EEF /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DD7139A2A485A9000209EEF /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

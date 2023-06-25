@@ -7,7 +7,11 @@
 
 import UIKit
 
+import Combine
+
 class LabsVC: UIViewController {
+    
+    var cancelBag = Set<AnyCancellable>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
