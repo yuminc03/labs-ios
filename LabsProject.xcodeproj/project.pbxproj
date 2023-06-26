@@ -19,6 +19,11 @@
 		8D38229E29F5107D00B71F26 /* PractiseThenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D38229D29F5107D00B71F26 /* PractiseThenVM.swift */; };
 		8D3822A129F512CF00B71F26 /* PractiseThenTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3822A029F512CF00B71F26 /* PractiseThenTableViewHeader.swift */; };
 		8D63FF462A30D8EC002177AA /* CookieWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D63FF452A30D8EC002177AA /* CookieWebVC.swift */; };
+		8D685B912A49B71900629A37 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D685B902A49B71900629A37 /* BaseVC.swift */; };
+		8D685B932A49B93D00629A37 /* CounterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D685B922A49B93D00629A37 /* CounterVC.swift */; };
+		8D685B952A49C30B00629A37 /* TwoCountersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D685B942A49C30B00629A37 /* TwoCountersVC.swift */; };
+		8D685B982A49D53100629A37 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D685B972A49D53100629A37 /* CounterView.swift */; };
+		8D685B9A2A49D8C500629A37 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D685B992A49D8C500629A37 /* BaseView.swift */; };
 		8D98EBAD2A44858B009DF067 /* SegmentedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98EBAC2A44858B009DF067 /* SegmentedVC.swift */; };
 		8D98EBB22A4486B8009DF067 /* TypiCodeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98EBAF2A4486B8009DF067 /* TypiCodeAPI.swift */; };
 		8D98EBB32A4486B8009DF067 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98EBB02A4486B8009DF067 /* NetworkManager.swift */; };
@@ -52,6 +57,11 @@
 		8D38229D29F5107D00B71F26 /* PractiseThenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PractiseThenVM.swift; sourceTree = "<group>"; };
 		8D3822A029F512CF00B71F26 /* PractiseThenTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PractiseThenTableViewHeader.swift; sourceTree = "<group>"; };
 		8D63FF452A30D8EC002177AA /* CookieWebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookieWebVC.swift; sourceTree = "<group>"; };
+		8D685B902A49B71900629A37 /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		8D685B922A49B93D00629A37 /* CounterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterVC.swift; sourceTree = "<group>"; };
+		8D685B942A49C30B00629A37 /* TwoCountersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoCountersVC.swift; sourceTree = "<group>"; };
+		8D685B972A49D53100629A37 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		8D685B992A49D8C500629A37 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		8D98EBAC2A44858B009DF067 /* SegmentedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedVC.swift; sourceTree = "<group>"; };
 		8D98EBAF2A4486B8009DF067 /* TypiCodeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypiCodeAPI.swift; sourceTree = "<group>"; };
 		8D98EBB02A4486B8009DF067 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -146,6 +156,14 @@
 			path = Segmented;
 			sourceTree = "<group>";
 		};
+		8D685B962A49D52100629A37 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8D685B972A49D53100629A37 /* CounterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		8D98EBAE2A4486B8009DF067 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +179,9 @@
 			children = (
 				8DD7138F2A484B7100209EEF /* NotificationSettingVC.swift */,
 				8DD713942A4852D500209EEF /* NotificationSettingTableViewCell.swift */,
+				8D685B922A49B93D00629A37 /* CounterVC.swift */,
+				8D685B942A49C30B00629A37 /* TwoCountersVC.swift */,
+				8D685B962A49D52100629A37 /* Views */,
 			);
 			path = TCA;
 			sourceTree = "<group>";
@@ -195,6 +216,8 @@
 		8DD713912A48511A00209EEF /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8D685B902A49B71900629A37 /* BaseVC.swift */,
+				8D685B992A49D8C500629A37 /* BaseView.swift */,
 				8DD713922A48512D00209EEF /* NavigationBarView.swift */,
 				8DD713962A4853DD00209EEF /* UIColor+.swift */,
 				8DD7139D2A485CC000209EEF /* TableView+.swift */,
@@ -289,6 +312,7 @@
 			files = (
 				8D36172129F2CA7F00231628 /* MainVC.swift in Sources */,
 				8D98EBAD2A44858B009DF067 /* SegmentedVC.swift in Sources */,
+				8D685B952A49C30B00629A37 /* TwoCountersVC.swift in Sources */,
 				8DAC243629F433F50012A85F /* PractiseThenVC.swift in Sources */,
 				8D36171D29F2CA7F00231628 /* AppDelegate.swift in Sources */,
 				8DD713902A484B7100209EEF /* NotificationSettingVC.swift in Sources */,
@@ -298,15 +322,19 @@
 				8D1860F82A28DDC500F89D18 /* LabsVC.swift in Sources */,
 				8DAC242E29F412480012A85F /* MainTableViewCell.swift in Sources */,
 				8D38229E29F5107D00B71F26 /* PractiseThenVM.swift in Sources */,
+				8D685B9A2A49D8C500629A37 /* BaseView.swift in Sources */,
 				8D36171F29F2CA7F00231628 /* SceneDelegate.swift in Sources */,
 				8DD713932A48512D00209EEF /* NavigationBarView.swift in Sources */,
 				8D63FF462A30D8EC002177AA /* CookieWebVC.swift in Sources */,
 				8DD713952A4852D500209EEF /* NotificationSettingTableViewCell.swift in Sources */,
+				8D685B932A49B93D00629A37 /* CounterVC.swift in Sources */,
 				8DD713972A4853DD00209EEF /* UIColor+.swift in Sources */,
 				8D98EBB32A4486B8009DF067 /* NetworkManager.swift in Sources */,
 				8D1860FB2A29070B00F89D18 /* WebVC.swift in Sources */,
 				8D3822A129F512CF00B71F26 /* PractiseThenTableViewHeader.swift in Sources */,
+				8D685B912A49B71900629A37 /* BaseVC.swift in Sources */,
 				8D1860F62A28DD2D00F89D18 /* MainNaviVC.swift in Sources */,
+				8D685B982A49D53100629A37 /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

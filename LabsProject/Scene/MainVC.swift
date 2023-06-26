@@ -6,7 +6,9 @@
 //
 
 import UIKit
+import Combine
 
+import ComposableArchitecture
 import SnapKit
 import Then
 
@@ -17,10 +19,11 @@ final class MainVC: LabsVC {
         "WebView Test",
         "WebView Cookie Test",
         "Todos",
-        "TCA"
+        "TCA - Counter",
+        "TCA - Two Counters"
     ]
     
-    private let tableView = UITableView().then {
+    private let tableView = UITableView(frame: .zero, style: .insetGrouped).then {
         $0.backgroundColor = .clear
         $0.register(MainTableViewCell.self, forCellReuseIdentifier: "mainCell")
     }
@@ -32,7 +35,7 @@ final class MainVC: LabsVC {
     }
 
     private func setupUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = .systemGray6
         navigationController?.isNavigationBarHidden = true
         
         tableView.delegate = self
@@ -66,7 +69,12 @@ extension MainVC: UITableViewDelegate {
             let vc = SegmentedVC()
             navigationController?.pushViewController(vc, animated: true)
         case 4:
-            let vc = NotificationSettingVC()
+            let counterVC = CounterVC(
+                store: Store(initialState: Counter.State(), reducer: Counter())
+            )
+            navigationController?.pushViewController(counterVC, animated: true)
+        case 5:
+            let vc = TwoCountersVC()
             navigationController?.pushViewController(vc, animated: true)
         default:
             break
