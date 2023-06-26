@@ -1,5 +1,5 @@
 //
-//  BaseVC.swift
+//  BaseView.swift
 //  LabsProject
 //
 //  Created by Yumin Chu on 2023/06/26.
@@ -8,10 +8,9 @@
 import UIKit
 import Combine
 
-import CombineCocoa
 import ComposableArchitecture
 
-class BaseVC<R: ReducerProtocol>: UIViewController where R.State: Equatable {
+class BaseView<R: ReducerProtocol>: UIView where R.State: Equatable {
     
     var cancelBag = Set<AnyCancellable>()
     var store: StoreOf<R>
@@ -20,20 +19,16 @@ class BaseVC<R: ReducerProtocol>: UIViewController where R.State: Equatable {
     init(store: StoreOf<R>) {
         self.store = store
         self.viewStore = ViewStore(store)
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        setup()
+        super.init(frame: .zero)
+        setupUI()
         bind()
     }
     
-    func setup() { }
+    required init?(coder: NSCoder) {
+        fatalError("Do not use Storyboard.")
+    }
+    
+    func setupUI() { }
+    
     func bind() { }
 }
