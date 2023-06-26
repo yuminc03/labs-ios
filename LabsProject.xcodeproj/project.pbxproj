@@ -19,6 +19,8 @@
 		8D38229E29F5107D00B71F26 /* PractiseThenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D38229D29F5107D00B71F26 /* PractiseThenVM.swift */; };
 		8D3822A129F512CF00B71F26 /* PractiseThenTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3822A029F512CF00B71F26 /* PractiseThenTableViewHeader.swift */; };
 		8D63FF462A30D8EC002177AA /* CookieWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D63FF452A30D8EC002177AA /* CookieWebVC.swift */; };
+		8D685B912A49B71900629A37 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D685B902A49B71900629A37 /* BaseVC.swift */; };
+		8D685B932A49B93D00629A37 /* CounterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D685B922A49B93D00629A37 /* CounterVC.swift */; };
 		8D98EBAD2A44858B009DF067 /* SegmentedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98EBAC2A44858B009DF067 /* SegmentedVC.swift */; };
 		8D98EBB22A4486B8009DF067 /* TypiCodeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98EBAF2A4486B8009DF067 /* TypiCodeAPI.swift */; };
 		8D98EBB32A4486B8009DF067 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98EBB02A4486B8009DF067 /* NetworkManager.swift */; };
@@ -52,6 +54,8 @@
 		8D38229D29F5107D00B71F26 /* PractiseThenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PractiseThenVM.swift; sourceTree = "<group>"; };
 		8D3822A029F512CF00B71F26 /* PractiseThenTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PractiseThenTableViewHeader.swift; sourceTree = "<group>"; };
 		8D63FF452A30D8EC002177AA /* CookieWebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookieWebVC.swift; sourceTree = "<group>"; };
+		8D685B902A49B71900629A37 /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		8D685B922A49B93D00629A37 /* CounterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterVC.swift; sourceTree = "<group>"; };
 		8D98EBAC2A44858B009DF067 /* SegmentedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedVC.swift; sourceTree = "<group>"; };
 		8D98EBAF2A4486B8009DF067 /* TypiCodeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypiCodeAPI.swift; sourceTree = "<group>"; };
 		8D98EBB02A4486B8009DF067 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 			children = (
 				8DD7138F2A484B7100209EEF /* NotificationSettingVC.swift */,
 				8DD713942A4852D500209EEF /* NotificationSettingTableViewCell.swift */,
+				8D685B922A49B93D00629A37 /* CounterVC.swift */,
 			);
 			path = TCA;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 		8DD713912A48511A00209EEF /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8D685B902A49B71900629A37 /* BaseVC.swift */,
 				8DD713922A48512D00209EEF /* NavigationBarView.swift */,
 				8DD713962A4853DD00209EEF /* UIColor+.swift */,
 				8DD7139D2A485CC000209EEF /* TableView+.swift */,
@@ -300,10 +306,12 @@
 				8DD713932A48512D00209EEF /* NavigationBarView.swift in Sources */,
 				8D63FF462A30D8EC002177AA /* CookieWebVC.swift in Sources */,
 				8DD713952A4852D500209EEF /* NotificationSettingTableViewCell.swift in Sources */,
+				8D685B932A49B93D00629A37 /* CounterVC.swift in Sources */,
 				8DD713972A4853DD00209EEF /* UIColor+.swift in Sources */,
 				8D98EBB32A4486B8009DF067 /* NetworkManager.swift in Sources */,
 				8D1860FB2A29070B00F89D18 /* WebVC.swift in Sources */,
 				8D3822A129F512CF00B71F26 /* PractiseThenTableViewHeader.swift in Sources */,
+				8D685B912A49B71900629A37 /* BaseVC.swift in Sources */,
 				8D1860F62A28DD2D00F89D18 /* MainNaviVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
