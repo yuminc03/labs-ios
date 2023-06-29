@@ -74,7 +74,9 @@ extension MainVC: UITableViewDelegate {
             )
             navigationController?.pushViewController(counterVC, animated: true)
         case 5:
-            let vc = TwoCountersVC()
+            let vc = TwoCountersVC(
+                store: Store(initialState: TwoCounters.State(), reducer: TwoCounters())
+            )
             navigationController?.pushViewController(vc, animated: true)
         default:
             break
