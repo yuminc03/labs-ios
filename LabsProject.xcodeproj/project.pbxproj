@@ -24,6 +24,10 @@
 		8D5F6FD82A5166560051A402 /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F6FD72A5166560051A402 /* StepperView.swift */; };
 		8D5F6FDA2A5166F80051A402 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F6FD92A5166F80051A402 /* SliderView.swift */; };
 		8D5F6FDC2A51BD1C0051A402 /* BindingFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F6FDB2A51BD1C0051A402 /* BindingFormVC.swift */; };
+		8D5F6FE12A51C96B0051A402 /* TextiFieldFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F6FE02A51C96B0051A402 /* TextiFieldFormView.swift */; };
+		8D5F6FE32A51C98E0051A402 /* SwitchFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F6FE22A51C98E0051A402 /* SwitchFormView.swift */; };
+		8D5F6FE52A51C9AC0051A402 /* StepperFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F6FE42A51C9AC0051A402 /* StepperFormView.swift */; };
+		8D5F6FE72A51C9CB0051A402 /* SliderFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F6FE62A51C9CB0051A402 /* SliderFormView.swift */; };
 		8D63FF462A30D8EC002177AA /* CookieWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D63FF452A30D8EC002177AA /* CookieWebVC.swift */; };
 		8D685B912A49B71900629A37 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D685B902A49B71900629A37 /* BaseVC.swift */; };
 		8D685B932A49B93D00629A37 /* CounterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D685B922A49B93D00629A37 /* CounterVC.swift */; };
@@ -68,6 +72,10 @@
 		8D5F6FD72A5166560051A402 /* StepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperView.swift; sourceTree = "<group>"; };
 		8D5F6FD92A5166F80051A402 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		8D5F6FDB2A51BD1C0051A402 /* BindingFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingFormVC.swift; sourceTree = "<group>"; };
+		8D5F6FE02A51C96B0051A402 /* TextiFieldFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextiFieldFormView.swift; sourceTree = "<group>"; };
+		8D5F6FE22A51C98E0051A402 /* SwitchFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchFormView.swift; sourceTree = "<group>"; };
+		8D5F6FE42A51C9AC0051A402 /* StepperFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperFormView.swift; sourceTree = "<group>"; };
+		8D5F6FE62A51C9CB0051A402 /* SliderFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderFormView.swift; sourceTree = "<group>"; };
 		8D63FF452A30D8EC002177AA /* CookieWebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookieWebVC.swift; sourceTree = "<group>"; };
 		8D685B902A49B71900629A37 /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		8D685B922A49B93D00629A37 /* CounterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterVC.swift; sourceTree = "<group>"; };
@@ -187,11 +195,23 @@
 			path = BindingBasics;
 			sourceTree = "<group>";
 		};
+		8D5F6FDF2A51C81C0051A402 /* BindingForm */ = {
+			isa = PBXGroup;
+			children = (
+				8D5F6FE02A51C96B0051A402 /* TextiFieldFormView.swift */,
+				8D5F6FE22A51C98E0051A402 /* SwitchFormView.swift */,
+				8D5F6FE42A51C9AC0051A402 /* StepperFormView.swift */,
+				8D5F6FE62A51C9CB0051A402 /* SliderFormView.swift */,
+			);
+			path = BindingForm;
+			sourceTree = "<group>";
+		};
 		8D685B962A49D52100629A37 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				8D5F6FDD2A51BDE60051A402 /* Counter */,
 				8D5F6FDE2A51BDF10051A402 /* BindingBasics */,
+				8D5F6FDF2A51C81C0051A402 /* BindingForm */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -353,6 +373,7 @@
 				8D98EBB42A4486B8009DF067 /* API.swift in Sources */,
 				8D5F6FDA2A5166F80051A402 /* SliderView.swift in Sources */,
 				8D5F6FD42A5162BB0051A402 /* TextFieldView.swift in Sources */,
+				8D5F6FE52A51C9AC0051A402 /* StepperFormView.swift in Sources */,
 				8D98EBB22A4486B8009DF067 /* TypiCodeAPI.swift in Sources */,
 				8D1860F82A28DDC500F89D18 /* LabsVC.swift in Sources */,
 				8DAC242E29F412480012A85F /* MainTableViewCell.swift in Sources */,
@@ -362,8 +383,10 @@
 				8DD713932A48512D00209EEF /* NavigationBarView.swift in Sources */,
 				8D63FF462A30D8EC002177AA /* CookieWebVC.swift in Sources */,
 				8DD713952A4852D500209EEF /* NotificationSettingTableViewCell.swift in Sources */,
+				8D5F6FE12A51C96B0051A402 /* TextiFieldFormView.swift in Sources */,
 				8D685B932A49B93D00629A37 /* CounterVC.swift in Sources */,
 				8DD713972A4853DD00209EEF /* UIColor+.swift in Sources */,
+				8D5F6FE72A51C9CB0051A402 /* SliderFormView.swift in Sources */,
 				8D98EBB32A4486B8009DF067 /* NetworkManager.swift in Sources */,
 				8D1860FB2A29070B00F89D18 /* WebVC.swift in Sources */,
 				8D5F6FDC2A51BD1C0051A402 /* BindingFormVC.swift in Sources */,
@@ -372,6 +395,7 @@
 				8D5F6FD62A5165720051A402 /* SwitchView.swift in Sources */,
 				8D1860F62A28DD2D00F89D18 /* MainNaviVC.swift in Sources */,
 				8D5F6FD22A5151740051A402 /* BindingBasicsVC.swift in Sources */,
+				8D5F6FE32A51C98E0051A402 /* SwitchFormView.swift in Sources */,
 				8D685B982A49D53100629A37 /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

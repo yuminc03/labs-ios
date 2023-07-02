@@ -25,6 +25,7 @@ struct BindingForm: ReducerProtocol {
         case didChangeStepCount(Int)
         case didChangeText(String)
         case didChangeToggle(isOn: Bool)
+        case didTapResetButton
     }
     
     func reduce(into state: inout State, action: Action) -> ComposableArchitecture.EffectTask<Action> {
@@ -45,11 +46,15 @@ struct BindingForm: ReducerProtocol {
         case .didChangeToggle(let isOn):
             state.isToggleOn = isOn
             return .none
+            
+        case .didTapResetButton:
+            state = State()
+            return .none
         }
     }
 }
 
-final class BindingFormVC: BaseVC<BindingForm> {
+final class BindingFormVC: BaseVC<BindingBasics> {
     
     private let containerView: UIView = {
         let view = UIView()
@@ -69,8 +74,15 @@ final class BindingFormVC: BaseVC<BindingForm> {
     private let switchView: SwitchView
     private let stepperView: StepperView
     private let sliderView: SliderView
+    
+    private let resetButton: UIButton = {
+        let view = UIButton()
+        view.setTitle("Reset", for: .normal)
+        view.setTitleColor(.systemRed, for: .normal)
+        return view
+    }()
 
-    override init(store: StoreOf<BindingFormVC>) {
+    override init(store: StoreOf<BindingBasics>) {
         self.textFieldView = TextFieldView(store: store)
         self.switchView = SwitchView(store: store)
         self.stepperView = StepperView(store: store)
@@ -80,6 +92,15 @@ final class BindingFormVC: BaseVC<BindingForm> {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func bind() {
+        super.bind()
+        resetButton.tapPublisher
+            .sink { [weak self] _ in
+                viewStore.send(.)
+            }
+            .store(in: &cancelBag)
     }
     
     override func setup() {
@@ -98,7 +119,7 @@ final class BindingFormVC: BaseVC<BindingForm> {
             $0.edges.equalToSuperview().inset(20)
         }
         
-        [textFieldView, switchView, stepperView, sliderView].forEach {
+        [textFieldView, switchView, stepperView, sliderView, resetButton].forEach {
             stackView.addArrangedSubview($0)
         }
     }
