@@ -18,6 +18,11 @@
 		8D36172929F2CA8000231628 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D36172729F2CA8000231628 /* LaunchScreen.storyboard */; };
 		8D38229E29F5107D00B71F26 /* PractiseThenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D38229D29F5107D00B71F26 /* PractiseThenVM.swift */; };
 		8D3822A129F512CF00B71F26 /* PractiseThenTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3822A029F512CF00B71F26 /* PractiseThenTableViewHeader.swift */; };
+		8D5F6FD22A5151740051A402 /* BindingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F6FD12A5151740051A402 /* BindingVC.swift */; };
+		8D5F6FD42A5162BB0051A402 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F6FD32A5162BB0051A402 /* TextFieldView.swift */; };
+		8D5F6FD62A5165720051A402 /* SwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F6FD52A5165720051A402 /* SwitchView.swift */; };
+		8D5F6FD82A5166560051A402 /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F6FD72A5166560051A402 /* StepperView.swift */; };
+		8D5F6FDA2A5166F80051A402 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F6FD92A5166F80051A402 /* SliderView.swift */; };
 		8D63FF462A30D8EC002177AA /* CookieWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D63FF452A30D8EC002177AA /* CookieWebVC.swift */; };
 		8D685B912A49B71900629A37 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D685B902A49B71900629A37 /* BaseVC.swift */; };
 		8D685B932A49B93D00629A37 /* CounterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D685B922A49B93D00629A37 /* CounterVC.swift */; };
@@ -56,6 +61,11 @@
 		8D36172A29F2CA8000231628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D38229D29F5107D00B71F26 /* PractiseThenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PractiseThenVM.swift; sourceTree = "<group>"; };
 		8D3822A029F512CF00B71F26 /* PractiseThenTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PractiseThenTableViewHeader.swift; sourceTree = "<group>"; };
+		8D5F6FD12A5151740051A402 /* BindingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingVC.swift; sourceTree = "<group>"; };
+		8D5F6FD32A5162BB0051A402 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		8D5F6FD52A5165720051A402 /* SwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchView.swift; sourceTree = "<group>"; };
+		8D5F6FD72A5166560051A402 /* StepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperView.swift; sourceTree = "<group>"; };
+		8D5F6FD92A5166F80051A402 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		8D63FF452A30D8EC002177AA /* CookieWebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookieWebVC.swift; sourceTree = "<group>"; };
 		8D685B902A49B71900629A37 /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		8D685B922A49B93D00629A37 /* CounterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterVC.swift; sourceTree = "<group>"; };
@@ -160,6 +170,10 @@
 			isa = PBXGroup;
 			children = (
 				8D685B972A49D53100629A37 /* CounterView.swift */,
+				8D5F6FD32A5162BB0051A402 /* TextFieldView.swift */,
+				8D5F6FD52A5165720051A402 /* SwitchView.swift */,
+				8D5F6FD72A5166560051A402 /* StepperView.swift */,
+				8D5F6FD92A5166F80051A402 /* SliderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +195,7 @@
 				8DD713942A4852D500209EEF /* NotificationSettingTableViewCell.swift */,
 				8D685B922A49B93D00629A37 /* CounterVC.swift */,
 				8D685B942A49C30B00629A37 /* TwoCountersVC.swift */,
+				8D5F6FD12A5151740051A402 /* BindingVC.swift */,
 				8D685B962A49D52100629A37 /* Views */,
 			);
 			path = TCA;
@@ -313,11 +328,14 @@
 				8D36172129F2CA7F00231628 /* MainVC.swift in Sources */,
 				8D98EBAD2A44858B009DF067 /* SegmentedVC.swift in Sources */,
 				8D685B952A49C30B00629A37 /* TwoCountersVC.swift in Sources */,
+				8D5F6FD82A5166560051A402 /* StepperView.swift in Sources */,
 				8DAC243629F433F50012A85F /* PractiseThenVC.swift in Sources */,
 				8D36171D29F2CA7F00231628 /* AppDelegate.swift in Sources */,
 				8DD713902A484B7100209EEF /* NotificationSettingVC.swift in Sources */,
 				8DD7139E2A485CC000209EEF /* TableView+.swift in Sources */,
 				8D98EBB42A4486B8009DF067 /* API.swift in Sources */,
+				8D5F6FDA2A5166F80051A402 /* SliderView.swift in Sources */,
+				8D5F6FD42A5162BB0051A402 /* TextFieldView.swift in Sources */,
 				8D98EBB22A4486B8009DF067 /* TypiCodeAPI.swift in Sources */,
 				8D1860F82A28DDC500F89D18 /* LabsVC.swift in Sources */,
 				8DAC242E29F412480012A85F /* MainTableViewCell.swift in Sources */,
@@ -333,6 +351,9 @@
 				8D1860FB2A29070B00F89D18 /* WebVC.swift in Sources */,
 				8D3822A129F512CF00B71F26 /* PractiseThenTableViewHeader.swift in Sources */,
 				8D685B912A49B71900629A37 /* BaseVC.swift in Sources */,
+				8D5F6FD62A5165720051A402 /* SwitchView.swift in Sources */,
+				8D1860F62A28DD2D00F89D18 /* MainNaviVC.swift in Sources */,
+				8D5F6FD22A5151740051A402 /* BindingVC.swift in Sources */,
 				8D1860F62A28DD2D00F89D18 /* MainNaviVC.swift in Sources */,
 				8D685B982A49D53100629A37 /* CounterView.swift in Sources */,
 			);

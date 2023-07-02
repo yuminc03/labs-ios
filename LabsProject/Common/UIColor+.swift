@@ -8,7 +8,7 @@
 import UIKit
 
 enum LabsColor: String {
-    
+    case gray_2F2F2F
     case gray_EAEAEA
 }
 

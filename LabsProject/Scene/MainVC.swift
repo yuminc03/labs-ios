@@ -20,7 +20,8 @@ final class MainVC: LabsVC {
         "WebView Cookie Test",
         "Todos",
         "TCA - Counter",
-        "TCA - Two Counters"
+        "TCA - Two Counters",
+        "TCA - BindingBasicsView"
     ]
     
     private let tableView = UITableView(frame: .zero, style: .insetGrouped).then {
@@ -74,7 +75,20 @@ extension MainVC: UITableViewDelegate {
             )
             navigationController?.pushViewController(counterVC, animated: true)
         case 5:
-            let vc = TwoCountersVC()
+            let vc = TwoCountersVC(
+                store: Store(
+                    initialState: TwoCounters.State(),
+                    reducer: TwoCounters()
+                )
+            )
+            navigationController?.pushViewController(vc, animated: true)
+        case 6:
+            let vc = BindingVC(
+                store: Store(
+                    initialState: BindingBasics.State(),
+                    reducer: BindingBasics()
+                )
+            )
             navigationController?.pushViewController(vc, animated: true)
         default:
             break

@@ -12,7 +12,7 @@ import SnapKit
 /// NavigationBar
 final class NavigationBarView: UIView {
     
-    private let titleLabel: UILabel = {
+    let titleLabel: UILabel = {
         let view = UILabel()
         view.textColor = .black
         view.font = .systemFont(ofSize: 18, weight: .medium)
