@@ -31,9 +31,6 @@ class BaseVC<R: ReducerProtocol>: UIViewController where R.State: Equatable {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setup()
-        bind()
-        
         view.backgroundColor = .white
         view.addSubview(navigationBar)
         
@@ -47,6 +44,9 @@ class BaseVC<R: ReducerProtocol>: UIViewController where R.State: Equatable {
                 self?.navigationController?.popViewController(animated: true)
             }
             .store(in: &cancelBag)
+        
+        setup()
+        bind()
     }
     
     func setNavigationTitle(title: String) {
