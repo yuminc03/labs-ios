@@ -16,7 +16,8 @@ class BaseVC<R: ReducerProtocol>: UIViewController where R.State: Equatable {
     var cancelBag = Set<AnyCancellable>()
     var store: StoreOf<R>
     var viewStore: ViewStoreOf<R>
-    
+    private let navigationBar = NavigationBarView(title: "Counter")
+
     init(store: StoreOf<R>) {
         self.store = store
         self.viewStore = ViewStore(store)
@@ -32,6 +33,24 @@ class BaseVC<R: ReducerProtocol>: UIViewController where R.State: Equatable {
 
         setup()
         bind()
+        
+        view.backgroundColor = .white
+        view.addSubview(navigationBar)
+        
+        navigationBar.snp.makeConstraints {
+            $0.leading.trailing.top.equalToSuperview()
+            $0.height.equalTo(109)
+        }
+        
+        navigationBar.backButton.tapPublisher
+            .sink { [weak self] _ in
+                self?.navigationController?.popViewController(animated: true)
+            }
+            .store(in: &cancelBag)
+    }
+    
+    func setNavigationTitle(title: String) {
+        navigationBar.titleLabel.text = title
     }
     
     func setup() { }
