@@ -6,33 +6,56 @@
 //
 
 import UIKit
+import Combine
 
 import SnapKit
 
-final class TextFieldView: BaseView<BindingForm> {
+final class TextFieldView: BaseView<BindingBasics> {
     
     private let stackView: UIStackView = {
         let view = UIStackView()
         view.axis = .horizontal
-        view.spacing = 20
+        view.spacing = 10
         return view
     }()
 
     private let textField: UITextField = {
         let view = UITextField()
         view.placeholder = "Type here"
-        view.textColor = labsColor(.gray_EAEAEA)
-        view.font = .systemFont(ofSize: 20)
+        view.textColor = labsColor(.gray_2F2F2F)
         return view
     }()
     
-    private let textLabel: UILabel = {
+    let textLabel: UILabel = {
         let view = UILabel()
         view.textColor = labsColor(.gray_2F2F2F)
-        view.font = .systemFont(ofSize: 16)
         return view
     }()
-
+    
+    override func bind() {
+        super.bind()
+        
+        textField.textPublisher
+            .compactMap { $0 }
+            .sink { [weak self] text in
+                self?.viewStore.send(.didChangeText(text))
+            }
+            .store(in: &cancelBag)
+        
+        viewStore.publisher.text
+            .sink { [weak self] text in
+                self?.textField.text = text.description
+                self?.textLabel.text = text.description
+            }
+            .store(in: &cancelBag)
+        
+        viewStore.publisher.isToggleOn
+            .sink { [weak self] isToggleOn in
+                self?.textField.isEnabled = isToggleOn == false
+            }
+            .store(in: &cancelBag)
+    }
+    
     override func setupUI() {
         super.setupUI()
         backgroundColor = .white

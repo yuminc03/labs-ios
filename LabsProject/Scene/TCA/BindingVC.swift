@@ -11,13 +11,13 @@ import Combine
 import ComposableArchitecture
 import SnapKit
 
-struct BindingForm: ReducerProtocol {
+struct BindingBasics: ReducerProtocol {
     
     struct State: Equatable {
         var sliderValue = 5.0
         var stepCount = 10
         var text = ""
-        var isOn = false
+        var isToggleOn = false
     }
     
     enum Action: Equatable {
@@ -43,15 +43,38 @@ struct BindingForm: ReducerProtocol {
             return .none
             
         case .didChangeToggle(let isOn):
-            state.isOn = isOn
+            state.isToggleOn = isOn
             return .none
         }
     }
 }
 
-final class BindingVC: BaseVC<BindingForm> {
+final class BindingVC: BaseVC<BindingBasics> {
     
-    override init(store: StoreOf<BindingForm>) {
+    private let containerView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 10
+        return view
+    }()
+
+    private let stackView: UIStackView = {
+        let view = UIStackView()
+        view.axis = .vertical
+        view.spacing = 10
+        return view
+    }()
+    
+    private let textFieldView: TextFieldView
+    private let switchView: SwitchView
+    private let stepperView: StepperView
+    private let sliderView: SliderView
+
+    override init(store: StoreOf<BindingBasics>) {
+        self.textFieldView = TextFieldView(store: store)
+        self.switchView = SwitchView(store: store)
+        self.stepperView = StepperView(store: store)
+        self.sliderView = SliderView(store: store)
         super.init(store: store)
     }
     
@@ -61,6 +84,22 @@ final class BindingVC: BaseVC<BindingForm> {
     
     override func setup() {
         super.setup()
+        view.backgroundColor = labsColor(.gray_EAEAEA)
+        view.addSubview(containerView)
+        setNavigationTitle(title: "TCA - BindingBasicsView")
+        containerView.addSubview(stackView)
         
+        containerView.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(20)
+        }
+        
+        stackView.snp.makeConstraints {
+            $0.edges.equalToSuperview().inset(20)
+        }
+        
+        [textFieldView, switchView, stepperView, sliderView].forEach {
+            stackView.addArrangedSubview($0)
+        }
     }
 }
