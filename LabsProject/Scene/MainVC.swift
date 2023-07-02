@@ -83,7 +83,7 @@ extension MainVC: UITableViewDelegate {
             )
             navigationController?.pushViewController(vc, animated: true)
         case 6:
-            let vc = BindingVC(
+            let vc = BindingBasicsVC(
                 store: Store(
                     initialState: BindingBasics.State(),
                     reducer: BindingBasics()

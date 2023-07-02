@@ -49,7 +49,7 @@ struct BindingBasics: ReducerProtocol {
     }
 }
 
-final class BindingVC: BaseVC<BindingBasics> {
+final class BindingBasicsVC: BaseVC<BindingBasics> {
     
     private let containerView: UIView = {
         let view = UIView()
