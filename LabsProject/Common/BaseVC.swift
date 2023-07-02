@@ -49,6 +49,10 @@ class BaseVC<R: ReducerProtocol>: UIViewController where R.State: Equatable {
             .store(in: &cancelBag)
     }
     
+    func setNavigationTitle(title: String) {
+        navigationBar.titleLabel.text = title
+    }
+    
     func setup() { }
     func bind() { }
 }
