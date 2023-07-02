@@ -22,17 +22,17 @@ struct TwoCounters: ReducerProtocol {
     }
     
     func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
-        switch action {
-        case .counter1(let action):
-            Scope(state: state.counter1, action: action) {
-                Counter()
-            }
-            
-        case .counter2(let action):
-            Scope(state: state.counter2, action: action) {
-                Counter()
-            }
-        }
+//        switch action {
+//        case .counter1(let action):
+//            Scope(state: state.counter1, action: action) {
+//                Counter()
+//            }
+//            
+//        case .counter2(let action):
+//            Scope(state: state.counter2, action: action) {
+//                Counter()
+//            }
+//        }
         return .none
     }
 }
