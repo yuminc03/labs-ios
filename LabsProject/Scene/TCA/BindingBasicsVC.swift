@@ -54,7 +54,7 @@ final class BindingBasicsVC: BaseVC<BindingBasics> {
     private let containerView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
-        view.layer.cornerRadius = 10
+        view.layer.cornerRadius = 20
         return view
     }()
 

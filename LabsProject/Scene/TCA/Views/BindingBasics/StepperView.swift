@@ -28,7 +28,6 @@ final class StepperView: BaseView<BindingBasics> {
     private let stepperView: UIStepper = {
         let view = UIStepper()
         view.stepValue = 1
-        view.value = 10
         return view
     }()
 
@@ -58,6 +57,8 @@ final class StepperView: BaseView<BindingBasics> {
         backgroundColor = .white
         addSubview(stackView)
         
+        stepperView.value = Double(viewStore.stepCount)
+
         [textLabel, stepperView].forEach { subview in
             stackView.addArrangedSubview(subview)
         }

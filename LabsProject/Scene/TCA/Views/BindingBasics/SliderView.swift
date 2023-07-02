@@ -28,7 +28,6 @@ final class SliderView: BaseView<BindingBasics> {
     private let sliderView: UISlider = {
         let view = UISlider()
         view.maximumValue = 10
-        view.value = 5
         return view
     }()
 
@@ -60,6 +59,8 @@ final class SliderView: BaseView<BindingBasics> {
         backgroundColor = .white
         addSubview(stackView)
         
+        sliderView.value = Float(viewStore.sliderValue)
+
         [textLabel, sliderView].forEach { subview in
             stackView.addArrangedSubview(subview)
         }
