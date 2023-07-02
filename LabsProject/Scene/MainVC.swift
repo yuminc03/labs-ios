@@ -21,7 +21,8 @@ final class MainVC: LabsVC {
         "Todos",
         "TCA - Counter",
         "TCA - Two Counters",
-        "TCA - BindingBasicsView"
+        "TCA - BindingBasicsView",
+        "TCA - BindingFormView"
     ]
     
     private let tableView = UITableView(frame: .zero, style: .insetGrouped).then {
@@ -90,6 +91,16 @@ extension MainVC: UITableViewDelegate {
                 )
             )
             navigationController?.pushViewController(vc, animated: true)
+            
+        case 7:
+            let vc = BindingFormVC(
+                store: Store(
+                    initialState: BindingForm.State(),
+                    reducer: BindingForm()
+                )
+            )
+            navigationController?.pushViewController(vc, animated: true)
+            
         default:
             break
         }

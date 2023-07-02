@@ -54,7 +54,7 @@ struct BindingForm: ReducerProtocol {
     }
 }
 
-final class BindingFormVC: BaseVC<BindingBasics> {
+final class BindingFormVC: BaseVC<BindingForm> {
     
     private let containerView: UIView = {
         let view = UIView()
@@ -70,10 +70,10 @@ final class BindingFormVC: BaseVC<BindingBasics> {
         return view
     }()
     
-    private let textFieldView: TextFieldView
-    private let switchView: SwitchView
-    private let stepperView: StepperView
-    private let sliderView: SliderView
+    private let textFieldView: TextFieldFormView
+    private let switchView: SwitchFormView
+    private let stepperView: StepperFormView
+    private let sliderView: SliderFormView
     
     private let resetButton: UIButton = {
         let view = UIButton()
@@ -82,11 +82,11 @@ final class BindingFormVC: BaseVC<BindingBasics> {
         return view
     }()
 
-    override init(store: StoreOf<BindingBasics>) {
-        self.textFieldView = TextFieldView(store: store)
-        self.switchView = SwitchView(store: store)
-        self.stepperView = StepperView(store: store)
-        self.sliderView = SliderView(store: store)
+    override init(store: StoreOf<BindingForm>) {
+        self.textFieldView = TextFieldFormView(store: store)
+        self.switchView = SwitchFormView(store: store)
+        self.stepperView = StepperFormView(store: store)
+        self.sliderView = SliderFormView(store: store)
         super.init(store: store)
     }
     
@@ -98,7 +98,7 @@ final class BindingFormVC: BaseVC<BindingBasics> {
         super.bind()
         resetButton.tapPublisher
             .sink { [weak self] _ in
-                viewStore.send(.)
+                self?.viewStore.send(.didTapResetButton)
             }
             .store(in: &cancelBag)
     }

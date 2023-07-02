@@ -50,6 +50,7 @@ final class SliderFormView: BaseView<BindingForm> {
         viewStore.publisher.sliderValue
             .sink { [weak self] sliderValue in
                 self?.sliderView.value = Float(sliderValue)
+                self?.textLabel.text = "Slider value: \(Int(sliderValue))"
             }
             .store(in: &cancelBag)
     }
