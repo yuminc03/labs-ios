@@ -1,8 +1,8 @@
 //
-//  StepperView.swift
+//  SliderFormView.swift
 //  LabsProject
 //
-//  Created by Yumin Chu on 2023/07/02.
+//  Created by Yumin Chu on 2023/07/03.
 //
 
 import UIKit
@@ -10,7 +10,7 @@ import Combine
 
 import SnapKit
 
-final class StepperView: BaseView<BindingBasics> {
+final class SliderFormView: BaseView<BindingForm> {
     
     private let stackView: UIStackView = {
         let view = UIStackView()
@@ -25,30 +25,32 @@ final class StepperView: BaseView<BindingBasics> {
         return view
     }()
     
-    private let stepperView: UIStepper = {
-        let view = UIStepper()
-        view.stepValue = 1
-        view.value = 10
+    private let sliderView: UISlider = {
+        let view = UISlider()
+        view.maximumValue = 10
         return view
     }()
 
     override func bind() {
         super.bind()
-        stepperView.valuePublisher
+        
+        sliderView.valuePublisher
             .sink { [weak self] value in
-                self?.viewStore.send(.didChangeStepCount(Int(value)))
+                self?.viewStore.send(.didChangeSliderValue(Double(value)))
+                self?.textLabel.text = "Slider value: \(Int(value))"
             }
             .store(in: &cancelBag)
         
         viewStore.publisher.isToggleOn
             .sink { [weak self] isToggleOn in
-                self?.stepperView.isEnabled = isToggleOn == false
+                self?.sliderView.isEnabled = isToggleOn == false
             }
             .store(in: &cancelBag)
         
-        viewStore.publisher.stepCount
-            .sink { [weak self] stepCount in
-                self?.textLabel.text = "Max slider value: \(stepCount)"
+        viewStore.publisher.sliderValue
+            .sink { [weak self] sliderValue in
+                self?.sliderView.value = Float(sliderValue)
+                self?.textLabel.text = "Slider value: \(Int(sliderValue))"
             }
             .store(in: &cancelBag)
     }
@@ -58,12 +60,18 @@ final class StepperView: BaseView<BindingBasics> {
         backgroundColor = .white
         addSubview(stackView)
         
-        [textLabel, stepperView].forEach { subview in
+        sliderView.value = Float(viewStore.sliderValue)
+
+        [textLabel, sliderView].forEach { subview in
             stackView.addArrangedSubview(subview)
         }
         
         stackView.snp.makeConstraints {
             $0.edges.equalToSuperview()
+        }
+        
+        sliderView.snp.makeConstraints {
+            $0.width.equalTo(150)
         }
     }
 }
