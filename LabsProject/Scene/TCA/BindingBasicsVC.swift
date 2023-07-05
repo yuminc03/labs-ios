@@ -78,10 +78,6 @@ final class BindingBasicsVC: BaseVC<BindingBasics> {
         super.init(store: store)
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     override func setup() {
         super.setup()
         view.backgroundColor = labsColor(.gray_EAEAEA)

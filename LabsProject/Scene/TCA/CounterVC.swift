@@ -43,10 +43,6 @@ final class CounterVC: BaseVC<Counter> {
         super.init(store: store)
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     override func bind() {
         
     }

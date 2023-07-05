@@ -65,10 +65,6 @@ final class TwoCountersVC: BaseVC<TwoCounters> {
         super.init(store: store)
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     override func setup() {
         view.backgroundColor = .systemGray6
         view.addSubview(stackView)

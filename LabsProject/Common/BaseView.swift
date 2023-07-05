@@ -24,7 +24,7 @@ class BaseView<R: ReducerProtocol>: UIView where R.State: Equatable {
         bind()
     }
     
-    required init?(coder: NSCoder) {
+    @available(*, unavailable) required init?(coder: NSCoder) {
         fatalError("Do not use Storyboard.")
     }
     
