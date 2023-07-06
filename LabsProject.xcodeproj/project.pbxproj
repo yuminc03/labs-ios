@@ -44,9 +44,7 @@
 		8DAC243629F433F50012A85F /* PractiseThenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAC243529F433F50012A85F /* PractiseThenVC.swift */; };
 		8DD7138B2A4846D800209EEF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8DD7138A2A4846D800209EEF /* Alamofire */; };
 		8DD7138E2A4848D600209EEF /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 8DD7138D2A4848D600209EEF /* ComposableArchitecture */; };
-		8DD713902A484B7100209EEF /* NotificationSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7138F2A484B7100209EEF /* NotificationSettingVC.swift */; };
 		8DD713932A48512D00209EEF /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD713922A48512D00209EEF /* NavigationBarView.swift */; };
-		8DD713952A4852D500209EEF /* NotificationSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD713942A4852D500209EEF /* NotificationSettingTableViewCell.swift */; };
 		8DD713972A4853DD00209EEF /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD713962A4853DD00209EEF /* UIColor+.swift */; };
 		8DD7139C2A485A9000209EEF /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8DD7139B2A485A9000209EEF /* CombineCocoa */; };
 		8DD7139E2A485CC000209EEF /* TableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7139D2A485CC000209EEF /* TableView+.swift */; };
@@ -88,9 +86,7 @@
 		8D98EBB12A4486B8009DF067 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		8DAC242D29F412480012A85F /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		8DAC243529F433F50012A85F /* PractiseThenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PractiseThenVC.swift; sourceTree = "<group>"; };
-		8DD7138F2A484B7100209EEF /* NotificationSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingVC.swift; sourceTree = "<group>"; };
 		8DD713922A48512D00209EEF /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
-		8DD713942A4852D500209EEF /* NotificationSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingTableViewCell.swift; sourceTree = "<group>"; };
 		8DD713962A4853DD00209EEF /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		8DD7139D2A485CC000209EEF /* TableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -229,8 +225,6 @@
 		8DA817A32A482B05000DCEBB /* TCA */ = {
 			isa = PBXGroup;
 			children = (
-				8DD7138F2A484B7100209EEF /* NotificationSettingVC.swift */,
-				8DD713942A4852D500209EEF /* NotificationSettingTableViewCell.swift */,
 				8D685B922A49B93D00629A37 /* CounterVC.swift */,
 				8D685B942A49C30B00629A37 /* TwoCountersVC.swift */,
 				8D5F6FD12A5151740051A402 /* BindingBasicsVC.swift */,
@@ -368,7 +362,6 @@
 				8D5F6FD82A5166560051A402 /* StepperView.swift in Sources */,
 				8DAC243629F433F50012A85F /* PractiseThenVC.swift in Sources */,
 				8D36171D29F2CA7F00231628 /* AppDelegate.swift in Sources */,
-				8DD713902A484B7100209EEF /* NotificationSettingVC.swift in Sources */,
 				8DD7139E2A485CC000209EEF /* TableView+.swift in Sources */,
 				8D98EBB42A4486B8009DF067 /* API.swift in Sources */,
 				8D5F6FDA2A5166F80051A402 /* SliderView.swift in Sources */,
@@ -382,7 +375,6 @@
 				8D36171F29F2CA7F00231628 /* SceneDelegate.swift in Sources */,
 				8DD713932A48512D00209EEF /* NavigationBarView.swift in Sources */,
 				8D63FF462A30D8EC002177AA /* CookieWebVC.swift in Sources */,
-				8DD713952A4852D500209EEF /* NotificationSettingTableViewCell.swift in Sources */,
 				8D5F6FE12A51C96B0051A402 /* TextFieldFormView.swift in Sources */,
 				8D685B932A49B93D00629A37 /* CounterVC.swift in Sources */,
 				8DD713972A4853DD00209EEF /* UIColor+.swift in Sources */,
