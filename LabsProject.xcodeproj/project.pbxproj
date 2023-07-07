@@ -37,6 +37,7 @@
 		8D8BA2432A5853E900A2A525 /* TodoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8BA2422A5853E900A2A525 /* TodoListCell.swift */; };
 		8D8BA2452A58568000A2A525 /* CollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8BA2442A58568000A2A525 /* CollectionView+.swift */; };
 		8D8BA2472A58579100A2A525 /* SegmentedVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8BA2462A58579100A2A525 /* SegmentedVM.swift */; };
+		8D8BA24A2A58593700A2A525 /* TodosDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8BA2492A58593600A2A525 /* TodosDTO.swift */; };
 		8D98EBAD2A44858B009DF067 /* SegmentedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98EBAC2A44858B009DF067 /* SegmentedVC.swift */; };
 		8D98EBB22A4486B8009DF067 /* TypiCodeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98EBAF2A4486B8009DF067 /* TypiCodeAPI.swift */; };
 		8D98EBB32A4486B8009DF067 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98EBB02A4486B8009DF067 /* NetworkManager.swift */; };
@@ -86,6 +87,7 @@
 		8D8BA2422A5853E900A2A525 /* TodoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListCell.swift; sourceTree = "<group>"; };
 		8D8BA2442A58568000A2A525 /* CollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView+.swift"; sourceTree = "<group>"; };
 		8D8BA2462A58579100A2A525 /* SegmentedVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedVM.swift; sourceTree = "<group>"; };
+		8D8BA2492A58593600A2A525 /* TodosDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosDTO.swift; sourceTree = "<group>"; };
 		8D98EBAC2A44858B009DF067 /* SegmentedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedVC.swift; sourceTree = "<group>"; };
 		8D98EBAF2A4486B8009DF067 /* TypiCodeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypiCodeAPI.swift; sourceTree = "<group>"; };
 		8D98EBB02A4486B8009DF067 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				8D36171E29F2CA7F00231628 /* SceneDelegate.swift */,
 				8DD713912A48511A00209EEF /* Common */,
 				8D98EBAE2A4486B8009DF067 /* Network */,
+				8D8BA2482A58592000A2A525 /* Model */,
 				8DAC242B29F3EB890012A85F /* Scene */,
 				8D36172529F2CA8000231628 /* Assets.xcassets */,
 				8D1860FC2A290BBB00F89D18 /* Test.html */,
@@ -226,6 +229,14 @@
 				8D8BA2422A5853E900A2A525 /* TodoListCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8D8BA2482A58592000A2A525 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8D8BA2492A58593600A2A525 /* TodosDTO.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8D98EBAE2A4486B8009DF067 /* Network */ = {
@@ -389,6 +400,7 @@
 				8D98EBB22A4486B8009DF067 /* TypiCodeAPI.swift in Sources */,
 				8D1860F82A28DDC500F89D18 /* LabsVC.swift in Sources */,
 				8DAC242E29F412480012A85F /* MainTableViewCell.swift in Sources */,
+				8D8BA24A2A58593700A2A525 /* TodosDTO.swift in Sources */,
 				8D38229E29F5107D00B71F26 /* PractiseThenVM.swift in Sources */,
 				8D685B9A2A49D8C500629A37 /* BaseView.swift in Sources */,
 				8D36171F29F2CA7F00231628 /* SceneDelegate.swift in Sources */,

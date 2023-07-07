@@ -11,6 +11,8 @@ import SnapKit
 
 final class SegmentedVC: LabsVC {
     
+    private let vm = SegmentedVM()
+    
     private let segmentedView: UISegmentedControl = {
         let view = UISegmentedControl(items: ["todos", "photos"])
         view.selectedSegmentIndex = 0
@@ -21,7 +23,7 @@ final class SegmentedVC: LabsVC {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(
             width: (UIScreen.main.bounds.width - 100) / 2,
-            height: 500
+            height: 200
         )
 //        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         layout.scrollDirection = .vertical
@@ -46,7 +48,25 @@ final class SegmentedVC: LabsVC {
         super.viewDidLoad()
         setupUI()
         setupConstarints()
+        bind()
         
+        vm.requestTodos()
+    }
+    
+    private func bind() {
+        vm.$todosResult
+            .compactMap { $0 }
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] result in
+                switch result {
+                case .success:
+                    self?.todosCollectionView.reloadData()
+                    
+                case .failure:
+                    break
+                }
+            }
+            .store(in: &cancelBag)
     }
     
     private func setupUI() {
@@ -74,17 +94,27 @@ final class SegmentedVC: LabsVC {
 extension SegmentedVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        print(indexPath.row)
     }
 }
 
 extension SegmentedVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        guard case .success(let model) = vm.todosResult else {
+            return 0
+        }
         
+        return model.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard case .success(let model) = vm.todosResult else {
+            return UICollectionViewCell()
+        }
         
+        let cell = collectionView.dequeueItem(type: TodoListCell.self, indexPath: indexPath)
+        cell.updateUI(data: model[indexPath.item])
+        return cell
     }
 }
