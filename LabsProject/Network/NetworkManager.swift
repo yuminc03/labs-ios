@@ -30,7 +30,7 @@ final class NetworkManager {
     ///   - request: 요청할 정보가 담긴 API
     ///   - model: 데이터를 decode할 Model
     /// - Returns: T : decode된 형태의 model
-    func request<T: Decodable>(request: API, model: T.Type) async throws -> T {
+    static func request<T: Decodable>(request: API, model: T.Type) async throws -> T {
         guard NetworkReachabilityManager()?.isReachable == true else {
             throw NetworkError.networkError
         }
