@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CombineCocoa
 
 import SnapKit
 
@@ -25,7 +26,6 @@ final class SegmentedVC: LabsVC {
             width: (UIScreen.main.bounds.width - 100) / 2,
             height: 200
         )
-//        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         layout.scrollDirection = .vertical
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.backgroundColor = .clear
@@ -67,6 +67,12 @@ final class SegmentedVC: LabsVC {
                 }
             }
             .store(in: &cancelBag)
+        
+        segmentedView.selectedSegmentIndexPublisher
+            .sink { [weak self] index in
+                self?.didSelecte(index: index)
+            }
+            .store(in: &cancelBag)
     }
     
     private func setupUI() {
@@ -89,12 +95,16 @@ final class SegmentedVC: LabsVC {
             $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-60)
         }
     }
+    
+    private func didSelecte(index: Int) {
+        photoesCollectionView.isHidden = index == 1 ? true : false
+    }
 }
 
 extension SegmentedVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.row)
+        
     }
 }
 
