@@ -6,51 +6,34 @@
 //
 
 import UIKit
-import Combine
 
 import ComposableArchitecture
 import SnapKit
 
-struct Counter: ReducerProtocol {
-    struct State: Equatable {
-        var value = 0
-    }
-    
-    enum Action {
-        case didTapDecrementButton
-        case didTapIncrementButton
-    }
-    
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
-        switch action {
-        case .didTapDecrementButton:
-            state.value -= 1
-            return .none
-            
-        case .didTapIncrementButton:
-            state.value += 1
-            return .none
-        }
-    }
-}
-
 final class CounterVC: TCABaseVC<Counter> {
     
     private let counterView: CounterView
+    
+    private let stackView: UIStackView = {
+        let view = UIStackView()
+        view.axis = .vertical
+        view.spacing = 10
+        return view
+    }()
     
     override init(store: StoreOf<Counter>) {
         self.counterView = CounterView(store: store)
         super.init(store: store)
     }
     
-    override func bind() {
-        
-    }
-    
     override func setup() {
-        view.addSubview(counterView)
-        counterView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+        view.backgroundColor = .systemGray6
+        view.addSubview(stackView)
+        stackView.addArrangedSubview(counterView)
+        
+        stackView.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.centerY.equalToSuperview()
         }
     }
 }

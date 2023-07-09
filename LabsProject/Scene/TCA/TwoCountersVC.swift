@@ -10,33 +10,6 @@ import UIKit
 import ComposableArchitecture
 import SnapKit
 
-struct TwoCounters: ReducerProtocol {
-    struct State: Equatable {
-        var counter1 = Counter.State()
-        var counter2 = Counter.State()
-    }
-    
-    enum Action: Equatable {
-        case counter1(Counter.Action)
-        case counter2(Counter.Action)
-    }
-    
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
-//        switch action {
-//        case .counter1(let action):
-//            Scope(state: state.counter1, action: action) {
-//                Counter()
-//            }
-//            
-//        case .counter2(let action):
-//            Scope(state: state.counter2, action: action) {
-//                Counter()
-//            }
-//        }
-        return .none
-    }
-}
-
 final class TwoCountersVC: TCABaseVC<TwoCounters> {
         
     private let stackView: UIStackView = {
@@ -68,13 +41,14 @@ final class TwoCountersVC: TCABaseVC<TwoCounters> {
     override func setup() {
         view.backgroundColor = .systemGray6
         view.addSubview(stackView)
+        setNavigationTitle(title: "Counter2")
         
         [counter1, counter2].forEach {
             stackView.addArrangedSubview($0)
         }
         
         stackView.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(20)
             $0.centerY.equalToSuperview()
         }
     }
