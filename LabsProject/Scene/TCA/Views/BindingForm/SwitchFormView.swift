@@ -10,7 +10,7 @@ import Combine
 
 import SnapKit
 
-final class SwitchFormView: BaseView<BindingForm> {
+final class SwitchFormView: TCABaseView<BindingForm> {
     
     private let stackView: UIStackView = {
         let view = UIStackView()

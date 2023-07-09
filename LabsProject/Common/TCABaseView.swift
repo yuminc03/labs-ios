@@ -10,7 +10,7 @@ import Combine
 
 import ComposableArchitecture
 
-class BaseView<R: ReducerProtocol>: UIView where R.State: Equatable {
+class TCABaseView<R: ReducerProtocol>: UIView where R.State: Equatable {
     
     var cancelBag = Set<AnyCancellable>()
     var store: StoreOf<R>

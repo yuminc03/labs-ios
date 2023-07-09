@@ -10,7 +10,7 @@ import Combine
 
 import SnapKit
 
-final class TextFieldView: BaseView<BindingBasics> {
+final class TextFieldView: TCABaseView<BindingBasics> {
     
     private let stackView: UIStackView = {
         let view = UIStackView()

@@ -37,7 +37,7 @@ struct TwoCounters: ReducerProtocol {
     }
 }
 
-final class TwoCountersVC: BaseVC<TwoCounters> {
+final class TwoCountersVC: TCABaseVC<TwoCounters> {
         
     private let stackView: UIStackView = {
         let view = UIStackView()

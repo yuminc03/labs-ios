@@ -34,7 +34,7 @@ struct Counter: ReducerProtocol {
     }
 }
 
-final class CounterVC: BaseVC<Counter> {
+final class CounterVC: TCABaseVC<Counter> {
     
     private let counterView: CounterView
     

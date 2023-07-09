@@ -11,9 +11,8 @@ import Combine
 import CombineCocoa
 import ComposableArchitecture
 
-class BaseVC<R: ReducerProtocol>: UIViewController where R.State: Equatable {
+class TCABaseVC<R: ReducerProtocol>: LabsVC where R.State: Equatable {
     
-    var cancelBag = Set<AnyCancellable>()
     var store: StoreOf<R>
     var viewStore: ViewStoreOf<R>
     private let navigationBar = NavigationBarView(title: "Counter")
