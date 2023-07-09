@@ -10,7 +10,7 @@ import Combine
 
 import SnapKit
 
-final class StepperView: BaseView<BindingBasics> {
+final class StepperView: TCABaseView<BindingBasics> {
     
     private let stackView: UIStackView = {
         let view = UIStackView()

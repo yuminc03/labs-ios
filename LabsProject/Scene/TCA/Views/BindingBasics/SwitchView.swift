@@ -10,7 +10,7 @@ import Combine
 
 import SnapKit
 
-final class SwitchView: BaseView<BindingBasics> {
+final class SwitchView: TCABaseView<BindingBasics> {
     
     private let stackView: UIStackView = {
         let view = UIStackView()

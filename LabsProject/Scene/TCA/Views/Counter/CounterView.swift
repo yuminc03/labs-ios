@@ -9,7 +9,7 @@ import UIKit
 
 import SnapKit
 
-final class CounterView: BaseView<Counter> {
+final class CounterView: TCABaseView<Counter> {
     
     private let stackView: UIStackView = {
         let view = UIStackView()

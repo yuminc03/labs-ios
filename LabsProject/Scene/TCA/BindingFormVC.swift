@@ -54,7 +54,7 @@ struct BindingForm: ReducerProtocol {
     }
 }
 
-final class BindingFormVC: BaseVC<BindingForm> {
+final class BindingFormVC: TCABaseVC<BindingForm> {
     
     private let containerView: UIView = {
         let view = UIView()
