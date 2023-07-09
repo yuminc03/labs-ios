@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D01AEDA2A5AE2F80008902E /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01AED92A5AE2F80008902E /* Counter.swift */; };
+		8D01AEDC2A5AE3420008902E /* TwoCounters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01AEDB2A5AE3420008902E /* TwoCounters.swift */; };
 		8D1860F62A28DD2D00F89D18 /* MainNaviVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1860F52A28DD2D00F89D18 /* MainNaviVC.swift */; };
 		8D1860F82A28DDC500F89D18 /* LabsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1860F72A28DDC500F89D18 /* LabsVC.swift */; };
 		8D1860FB2A29070B00F89D18 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1860FA2A29070B00F89D18 /* WebVC.swift */; };
@@ -55,6 +57,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D01AED92A5AE2F80008902E /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		8D01AEDB2A5AE3420008902E /* TwoCounters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoCounters.swift; sourceTree = "<group>"; };
 		8D1860F52A28DD2D00F89D18 /* MainNaviVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNaviVC.swift; sourceTree = "<group>"; };
 		8D1860F72A28DDC500F89D18 /* LabsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabsVC.swift; sourceTree = "<group>"; };
 		8D1860FA2A29070B00F89D18 /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
@@ -115,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D01AEDD2A5AE34E0008902E /* Reducer */ = {
+			isa = PBXGroup;
+			children = (
+				8D01AED92A5AE2F80008902E /* Counter.swift */,
+				8D01AEDB2A5AE3420008902E /* TwoCounters.swift */,
+			);
+			path = Reducer;
+			sourceTree = "<group>";
+		};
 		8D1860F92A28FD7000F89D18 /* Web */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +265,7 @@
 		8DA817A32A482B05000DCEBB /* TCA */ = {
 			isa = PBXGroup;
 			children = (
+				8D01AEDD2A5AE34E0008902E /* Reducer */,
 				8D685B922A49B93D00629A37 /* CounterVC.swift */,
 				8D685B942A49C30B00629A37 /* TwoCountersVC.swift */,
 				8D5F6FD12A5151740051A402 /* BindingBasicsVC.swift */,
@@ -395,9 +409,11 @@
 				8D8BA2432A5853E900A2A525 /* TodoListCell.swift in Sources */,
 				8D36171D29F2CA7F00231628 /* AppDelegate.swift in Sources */,
 				8DD7139E2A485CC000209EEF /* TableView+.swift in Sources */,
+				8D01AEDC2A5AE3420008902E /* TwoCounters.swift in Sources */,
 				8D98EBB42A4486B8009DF067 /* API.swift in Sources */,
 				8D5F6FDA2A5166F80051A402 /* SliderView.swift in Sources */,
 				8D5F6FD42A5162BB0051A402 /* TextFieldView.swift in Sources */,
+				8D01AEDA2A5AE2F80008902E /* Counter.swift in Sources */,
 				8D5F6FE52A51C9AC0051A402 /* StepperFormView.swift in Sources */,
 				8D98EBB22A4486B8009DF067 /* TypiCodeAPI.swift in Sources */,
 				8D1860F82A28DDC500F89D18 /* LabsVC.swift in Sources */,
