@@ -54,6 +54,7 @@
 		8DD713972A4853DD00209EEF /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD713962A4853DD00209EEF /* UIColor+.swift */; };
 		8DD7139C2A485A9000209EEF /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8DD7139B2A485A9000209EEF /* CombineCocoa */; };
 		8DD7139E2A485CC000209EEF /* TableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7139D2A485CC000209EEF /* TableView+.swift */; };
+		8DFA9A132A5C2C840070AB35 /* ListOfStateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFA9A122A5C2C840070AB35 /* ListOfStateVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +102,7 @@
 		8DD713922A48512D00209EEF /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		8DD713962A4853DD00209EEF /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		8DD7139D2A485CC000209EEF /* TableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+.swift"; sourceTree = "<group>"; };
+		8DFA9A122A5C2C840070AB35 /* ListOfStateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfStateVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +272,7 @@
 				8D685B942A49C30B00629A37 /* TwoCountersVC.swift */,
 				8D5F6FD12A5151740051A402 /* BindingBasicsVC.swift */,
 				8D5F6FDB2A51BD1C0051A402 /* BindingFormVC.swift */,
+				8DFA9A122A5C2C840070AB35 /* ListOfStateVC.swift */,
 				8D685B962A49D52100629A37 /* Views */,
 			);
 			path = TCA;
@@ -278,8 +281,6 @@
 		8DAC242B29F3EB890012A85F /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				8D1860F52A28DD2D00F89D18 /* MainNaviVC.swift */,
-				8D1860F72A28DDC500F89D18 /* LabsVC.swift */,
 				8D36172029F2CA7F00231628 /* MainVC.swift */,
 				8D1860F92A28FD7000F89D18 /* Web */,
 				8D4D3D3D2A3E0861009A64F6 /* Segmented */,
@@ -305,6 +306,8 @@
 		8DD713912A48511A00209EEF /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8D1860F52A28DD2D00F89D18 /* MainNaviVC.swift */,
+				8D1860F72A28DDC500F89D18 /* LabsVC.swift */,
 				8D685B902A49B71900629A37 /* TCABaseVC.swift */,
 				8D685B992A49D8C500629A37 /* TCABaseView.swift */,
 				8DD713922A48512D00209EEF /* NavigationBarView.swift */,
@@ -417,6 +420,7 @@
 				8D5F6FE52A51C9AC0051A402 /* StepperFormView.swift in Sources */,
 				8D98EBB22A4486B8009DF067 /* TypiCodeAPI.swift in Sources */,
 				8D1860F82A28DDC500F89D18 /* LabsVC.swift in Sources */,
+				8DFA9A132A5C2C840070AB35 /* ListOfStateVC.swift in Sources */,
 				8DAC242E29F412480012A85F /* MainTableViewCell.swift in Sources */,
 				8D8BA24A2A58593700A2A525 /* TodosDTO.swift in Sources */,
 				8D38229E29F5107D00B71F26 /* PractiseThenVM.swift in Sources */,

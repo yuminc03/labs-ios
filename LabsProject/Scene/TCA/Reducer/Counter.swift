@@ -10,11 +10,12 @@ import Foundation
 import ComposableArchitecture
 
 struct Counter: ReducerProtocol {
-    struct State: Equatable {
+    struct State: Equatable, Identifiable {
+        let id = UUID()
         var value = 0
     }
     
-    enum Action {
+    enum Action: Equatable {
         case didTapDecrementButton
         case didTapIncrementButton
     }
