@@ -13,6 +13,7 @@
 		8D1860F82A28DDC500F89D18 /* LabsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1860F72A28DDC500F89D18 /* LabsVC.swift */; };
 		8D1860FB2A29070B00F89D18 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1860FA2A29070B00F89D18 /* WebVC.swift */; };
 		8D1860FD2A290BBB00F89D18 /* Test.html in Resources */ = {isa = PBXBuildFile; fileRef = 8D1860FC2A290BBB00F89D18 /* Test.html */; };
+		8D32C35E2A5D96A600233A2F /* CounterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D32C35D2A5D96A600233A2F /* CounterList.swift */; };
 		8D36171D29F2CA7F00231628 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D36171C29F2CA7F00231628 /* AppDelegate.swift */; };
 		8D36171F29F2CA7F00231628 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D36171E29F2CA7F00231628 /* SceneDelegate.swift */; };
 		8D36172129F2CA7F00231628 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D36172029F2CA7F00231628 /* MainVC.swift */; };
@@ -64,6 +65,7 @@
 		8D1860F72A28DDC500F89D18 /* LabsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabsVC.swift; sourceTree = "<group>"; };
 		8D1860FA2A29070B00F89D18 /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		8D1860FC2A290BBB00F89D18 /* Test.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Test.html; sourceTree = "<group>"; };
+		8D32C35D2A5D96A600233A2F /* CounterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterList.swift; sourceTree = "<group>"; };
 		8D36171929F2CA7F00231628 /* LabsProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LabsProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D36171C29F2CA7F00231628 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D36171E29F2CA7F00231628 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				8D01AED92A5AE2F80008902E /* Counter.swift */,
 				8D01AEDB2A5AE3420008902E /* TwoCounters.swift */,
+				8D32C35D2A5D96A600233A2F /* CounterList.swift */,
 			);
 			path = Reducer;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				8D685B952A49C30B00629A37 /* TwoCountersVC.swift in Sources */,
 				8D8BA2472A58579100A2A525 /* SegmentedVM.swift in Sources */,
 				8D5F6FD82A5166560051A402 /* StepperView.swift in Sources */,
+				8D32C35E2A5D96A600233A2F /* CounterList.swift in Sources */,
 				8DAC243629F433F50012A85F /* PractiseThenVC.swift in Sources */,
 				8D8BA2432A5853E900A2A525 /* TodoListCell.swift in Sources */,
 				8D36171D29F2CA7F00231628 /* AppDelegate.swift in Sources */,
