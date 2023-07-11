@@ -13,7 +13,7 @@ import SnapKit
 import Then
 
 final class MainVC: LabsVC {
-
+    
     private let datas = [
         "Practise Then library",
         "WebView Test",
@@ -22,20 +22,21 @@ final class MainVC: LabsVC {
         "TCA - Counter",
         "TCA - Two Counters",
         "TCA - BindingBasicsView",
-        "TCA - BindingFormView"
+        "TCA - BindingFormView",
+        "TCA - ListOfStateVC"
     ]
     
     private let tableView = UITableView(frame: .zero, style: .insetGrouped).then {
         $0.backgroundColor = .clear
         $0.register(MainTableViewCell.self, forCellReuseIdentifier: "mainCell")
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setupConstraints()
     }
-
+    
     private func setupUI() {
         view.backgroundColor = .systemGray6
         navigationController?.isNavigationBarHidden = true
@@ -97,6 +98,23 @@ extension MainVC: UITableViewDelegate {
                 store: Store(
                     initialState: BindingForm.State(),
                     reducer: BindingForm()
+                )
+            )
+            navigationController?.pushViewController(vc, animated: true)
+            
+        case 8:
+            let vc = ListOfStateVC(
+                store: Store(
+                    initialState:
+                        CounterList.State(
+                            counters: [
+                                Counter.State(),
+                                Counter.State(),
+                                Counter.State(),
+                            ]
+                            
+                        ),
+                    reducer: CounterList()
                 )
             )
             navigationController?.pushViewController(vc, animated: true)

@@ -10,12 +10,13 @@ import Combine
 
 import CombineCocoa
 import ComposableArchitecture
+import SnapKit
 
 class TCABaseVC<R: ReducerProtocol>: LabsVC where R.State: Equatable {
     
     var store: StoreOf<R>
     var viewStore: ViewStoreOf<R>
-    private let navigationBar = NavigationBarView(title: "Counter")
+    let navigationBar = NavigationBarView(title: "Counter")
 
     init(store: StoreOf<R>) {
         self.store = store
