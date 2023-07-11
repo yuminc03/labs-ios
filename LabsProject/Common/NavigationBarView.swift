@@ -23,6 +23,7 @@ final class NavigationBarView: UIView {
     let backButton: UIButton = {
         let view = UIButton()
         view.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
+        view.tintColor = .black
         return view
     }()
     
