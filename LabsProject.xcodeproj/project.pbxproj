@@ -51,6 +51,7 @@
 		8DAC243629F433F50012A85F /* PractiseThenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAC243529F433F50012A85F /* PractiseThenVC.swift */; };
 		8DD6F8DB2A62A35100FF977A /* OptionalBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DA2A62A35100FF977A /* OptionalBasics.swift */; };
 		8DD6F8DD2A62A4AA00FF977A /* OptionalBasicsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DC2A62A4AA00FF977A /* OptionalBasicsVC.swift */; };
+		8DD6F8DF2A62E95F00FF977A /* BindingBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DE2A62E95F00FF977A /* BindingBasics.swift */; };
 		8DD7138B2A4846D800209EEF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8DD7138A2A4846D800209EEF /* Alamofire */; };
 		8DD7138E2A4848D600209EEF /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 8DD7138D2A4848D600209EEF /* ComposableArchitecture */; };
 		8DD713932A48512D00209EEF /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD713922A48512D00209EEF /* NavigationBarView.swift */; };
@@ -105,6 +106,7 @@
 		8DAC243529F433F50012A85F /* PractiseThenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PractiseThenVC.swift; sourceTree = "<group>"; };
 		8DD6F8DA2A62A35100FF977A /* OptionalBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalBasics.swift; sourceTree = "<group>"; };
 		8DD6F8DC2A62A4AA00FF977A /* OptionalBasicsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalBasicsVC.swift; sourceTree = "<group>"; };
+		8DD6F8DE2A62E95F00FF977A /* BindingBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBasics.swift; sourceTree = "<group>"; };
 		8DD713922A48512D00209EEF /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		8DD713962A4853DD00209EEF /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		8DD7139D2A485CC000209EEF /* TableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+.swift"; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			children = (
 				8D01AED92A5AE2F80008902E /* Counter.swift */,
 				8D01AEDB2A5AE3420008902E /* TwoCounters.swift */,
+				8DD6F8DE2A62E95F00FF977A /* BindingBasics.swift */,
 				8D32C35D2A5D96A600233A2F /* CounterList.swift */,
 				8DD6F8DA2A62A35100FF977A /* OptionalBasics.swift */,
 			);
@@ -444,6 +447,7 @@
 				8D5F6FE72A51C9CB0051A402 /* SliderFormView.swift in Sources */,
 				8D98EBB32A4486B8009DF067 /* NetworkManager.swift in Sources */,
 				8D1860FB2A29070B00F89D18 /* WebVC.swift in Sources */,
+				8DD6F8DF2A62E95F00FF977A /* BindingBasics.swift in Sources */,
 				8D8BA2452A58568000A2A525 /* CollectionView+.swift in Sources */,
 				8D5F6FDC2A51BD1C0051A402 /* BindingFormVC.swift in Sources */,
 				8D3822A129F512CF00B71F26 /* PractiseThenTableViewHeader.swift in Sources */,
