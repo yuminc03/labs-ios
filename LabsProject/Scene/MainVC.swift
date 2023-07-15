@@ -19,11 +19,12 @@ final class MainVC: LabsVC {
         "WebView Test",
         "WebView Cookie Test",
         "Todos",
-        "TCA - Counter",
-        "TCA - Two Counters",
-        "TCA - BindingBasicsView",
-        "TCA - BindingFormView",
-        "TCA - ListOfStateVC"
+        "TCA - Basics > Counter",
+        "TCA - Combining reducers > Two Counters",
+        "TCA - Bindings",
+        "TCA - Form bindings",
+        "TCA - ListOfStateVC",
+        "TCA - Optional state"
     ]
     
     private let tableView = UITableView(frame: .zero, style: .insetGrouped).then {
@@ -119,6 +120,14 @@ extension MainVC: UITableViewDelegate {
             )
             navigationController?.pushViewController(vc, animated: true)
             
+        case 9:
+            let vc = OptionalBasicsVC(
+                store: Store(
+                    initialState: OptionalBasics.State(),
+                    reducer: OptionalBasics()
+                )
+            )
+            navigationController?.pushViewController(vc, animated: true)
         default:
             break
         }
