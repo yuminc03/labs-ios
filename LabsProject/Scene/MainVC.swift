@@ -25,7 +25,8 @@ final class MainVC: LabsVC {
         "TCA - Form bindings",
         "TCA - ListOfStateVC",
         "TCA - Optional state",
-        "TCA - Shared state"
+        "TCA - Shared state",
+        "TCA - Alerts and Confirmation Dialogs"
     ]
     
     private let tableView = UITableView(frame: .zero, style: .insetGrouped).then {
@@ -135,6 +136,15 @@ extension MainVC: UITableViewDelegate {
                 store: Store(
                     initialState: SharedState.State(),
                     reducer: SharedState()
+                )
+            )
+            navigationController?.pushViewController(vc, animated: true)
+            
+        case 11:
+            let vc = AlertAndConfirmationDialogVC(
+                store: Store(
+                    initialState: AlertAndConfirmationDialog.State(),
+                    reducer: AlertAndConfirmationDialog()
                 )
             )
             navigationController?.pushViewController(vc, animated: true)

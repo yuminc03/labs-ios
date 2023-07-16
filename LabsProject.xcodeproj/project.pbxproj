@@ -25,6 +25,8 @@
 		8D4560CE2A63E5EB00A31C6B /* SharedStateCounterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4560CD2A63E5EB00A31C6B /* SharedStateCounterVC.swift */; };
 		8D4560D12A640F0000A31C6B /* SharedStateCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4560D02A640F0000A31C6B /* SharedStateCounterView.swift */; };
 		8D4560D32A640F2C00A31C6B /* SharedStateProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4560D22A640F2C00A31C6B /* SharedStateProfileView.swift */; };
+		8D4560D52A641CD800A31C6B /* AlertAndConfirmationDialogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4560D42A641CD800A31C6B /* AlertAndConfirmationDialogVC.swift */; };
+		8D4560D72A641CE700A31C6B /* AlertAndConfirmationDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4560D62A641CE700A31C6B /* AlertAndConfirmationDialog.swift */; };
 		8D5F6FD22A5151740051A402 /* BindingBasicsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F6FD12A5151740051A402 /* BindingBasicsVC.swift */; };
 		8D5F6FD42A5162BB0051A402 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F6FD32A5162BB0051A402 /* TextFieldView.swift */; };
 		8D5F6FD62A5165720051A402 /* SwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F6FD52A5165720051A402 /* SwitchView.swift */; };
@@ -87,6 +89,8 @@
 		8D4560CD2A63E5EB00A31C6B /* SharedStateCounterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStateCounterVC.swift; sourceTree = "<group>"; };
 		8D4560D02A640F0000A31C6B /* SharedStateCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStateCounterView.swift; sourceTree = "<group>"; };
 		8D4560D22A640F2C00A31C6B /* SharedStateProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStateProfileView.swift; sourceTree = "<group>"; };
+		8D4560D42A641CD800A31C6B /* AlertAndConfirmationDialogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAndConfirmationDialogVC.swift; sourceTree = "<group>"; };
+		8D4560D62A641CE700A31C6B /* AlertAndConfirmationDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAndConfirmationDialog.swift; sourceTree = "<group>"; };
 		8D5F6FD12A5151740051A402 /* BindingBasicsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBasicsVC.swift; sourceTree = "<group>"; };
 		8D5F6FD32A5162BB0051A402 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		8D5F6FD52A5165720051A402 /* SwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchView.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 				8D32C35D2A5D96A600233A2F /* CounterList.swift */,
 				8DD6F8DA2A62A35100FF977A /* OptionalBasics.swift */,
 				8D4560CB2A63D90900A31C6B /* SharedState.swift */,
+				8D4560D62A641CE700A31C6B /* AlertAndConfirmationDialog.swift */,
 			);
 			path = Reducer;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 				8DFA9A122A5C2C840070AB35 /* ListOfStateVC.swift */,
 				8DD6F8DC2A62A4AA00FF977A /* OptionalBasicsVC.swift */,
 				8D4560CD2A63E5EB00A31C6B /* SharedStateCounterVC.swift */,
+				8D4560D42A641CD800A31C6B /* AlertAndConfirmationDialogVC.swift */,
 				8D685B962A49D52100629A37 /* Views */,
 			);
 			path = TCA;
@@ -446,6 +452,7 @@
 				8D4560D32A640F2C00A31C6B /* SharedStateProfileView.swift in Sources */,
 				8DAC243629F433F50012A85F /* PractiseThenVC.swift in Sources */,
 				8D8BA2432A5853E900A2A525 /* TodoListCell.swift in Sources */,
+				8D4560D52A641CD800A31C6B /* AlertAndConfirmationDialogVC.swift in Sources */,
 				8D36171D29F2CA7F00231628 /* AppDelegate.swift in Sources */,
 				8DD7139E2A485CC000209EEF /* TableView+.swift in Sources */,
 				8D01AEDC2A5AE3420008902E /* TwoCounters.swift in Sources */,
@@ -478,6 +485,7 @@
 				8D8BA2452A58568000A2A525 /* CollectionView+.swift in Sources */,
 				8D5F6FDC2A51BD1C0051A402 /* BindingFormVC.swift in Sources */,
 				8D3822A129F512CF00B71F26 /* PractiseThenTableViewHeader.swift in Sources */,
+				8D4560D72A641CE700A31C6B /* AlertAndConfirmationDialog.swift in Sources */,
 				8D685B912A49B71900629A37 /* TCABaseVC.swift in Sources */,
 				8D4560D12A640F0000A31C6B /* SharedStateCounterView.swift in Sources */,
 				8D5F6FD62A5165720051A402 /* SwitchView.swift in Sources */,
