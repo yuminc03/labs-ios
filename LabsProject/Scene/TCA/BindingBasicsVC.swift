@@ -44,7 +44,7 @@ final class BindingBasicsVC: TCABaseVC<BindingBasics> {
         super.setup()
         view.backgroundColor = labsColor(.gray_EAEAEA)
         view.addSubview(containerView)
-        setNavigationTitle(title: "TCA - BindingBasicsView")
+        setNavigationTitle(title: "Bindings basics")
         containerView.addSubview(stackView)
         
         containerView.snp.makeConstraints {
