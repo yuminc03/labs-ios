@@ -27,6 +27,7 @@ final class CounterVC: TCABaseVC<Counter> {
     }
     
     override func setup() {
+        setNavigationTitle(title: "Counter demo")
         view.backgroundColor = .systemGray6
         view.addSubview(stackView)
         stackView.addArrangedSubview(counterView)

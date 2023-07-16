@@ -60,7 +60,7 @@ final class BindingFormVC: TCABaseVC<BindingForm> {
         super.setup()
         view.backgroundColor = labsColor(.gray_EAEAEA)
         view.addSubview(containerView)
-        setNavigationTitle(title: "TCA - BindingBasicsView")
+        setNavigationTitle(title: "Bindings form")
         containerView.addSubview(stackView)
         
         containerView.snp.makeConstraints {

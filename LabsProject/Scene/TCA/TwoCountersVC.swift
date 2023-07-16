@@ -41,7 +41,7 @@ final class TwoCountersVC: TCABaseVC<TwoCounters> {
     override func setup() {
         view.backgroundColor = .systemGray6
         view.addSubview(stackView)
-        setNavigationTitle(title: "Counter2")
+        setNavigationTitle(title: "Two counters demo")
         
         [counter1, counter2].forEach {
             stackView.addArrangedSubview($0)
