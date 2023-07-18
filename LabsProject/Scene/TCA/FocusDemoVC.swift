@@ -26,6 +26,34 @@ final class FocusDemoVC: TCABaseVC<FocusDemo> {
         return view
     }()
     
+    private let userNameTextField: UITextField = {
+        let view = UITextField()
+        view.layer.borderColor = labsColor(.gray_EAEAEA)?.cgColor
+        view.layer.borderWidth = 1
+        view.layer.cornerRadius = 10
+        view.placeholder = "Username"
+        return view
+    }()
+    
+    private let passwordTextField: UITextField = {
+        let view = UITextField()
+        view.layer.borderColor = labsColor(.gray_EAEAEA)?.cgColor
+        view.layer.borderWidth = 1
+        view.layer.cornerRadius = 10
+        view.placeholder = "Password"
+        return view
+    }()
+    
+    private let signInButton: UIButton = {
+        let view = UIButton()
+        view.setTitle("Sign In", for: .normal)
+        view.setTitleColor(.white, for: .normal)
+        view.titleLabel?.font = .systemFont(ofSize: 16)
+        view.layer.cornerRadius = 10
+        view.backgroundColor = .systemBlue
+        return view
+    }()
+
     override func setup() {
         super.setup()
         view.backgroundColor = .systemGray6
@@ -40,6 +68,18 @@ final class FocusDemoVC: TCABaseVC<FocusDemo> {
         
         stackView.snp.makeConstraints {
             $0.edges.equalToSuperview().inset(20)
+        }
+        
+        [userNameTextField, passwordTextField, signInButton].forEach { subview in
+            stackView.addArrangedSubview(subview)
+        }
+        
+        userNameTextField.snp.makeConstraints {
+            $0.height.equalTo(36)
+        }
+
+        passwordTextField.snp.makeConstraints {
+            $0.height.equalTo(36)
         }
     }
     
