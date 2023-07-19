@@ -6,7 +6,9 @@
 //
 
 import UIKit
+import Combine
 
+import CombineCocoa
 import ComposableArchitecture
 import SnapKit
 
@@ -41,6 +43,7 @@ final class FocusDemoVC: TCABaseVC<FocusDemo> {
         view.layer.borderWidth = 1
         view.layer.cornerRadius = 10
         view.placeholder = "Password"
+        view.isSecureTextEntry = true
         return view
     }()
     
@@ -85,6 +88,26 @@ final class FocusDemoVC: TCABaseVC<FocusDemo> {
     
     override func bind() {
         super.bind()
+        userNameTextField.textPublisher
+            .compactMap { $0 }
+            .print()
+            .sink { [weak self] in
+                self?.viewStore.send(.didChangeUserName($0))
+            }
+            .store(in: &cancelBag)
         
+        passwordTextField.textPublisher
+            .compactMap { $0 }
+            .print()
+            .sink { [weak self] in
+                self?.viewStore.send(.didChangePassword($0))
+            }
+            .store(in: &cancelBag)
+        
+        signInButton.tapPublisher
+            .sink { [weak self] in
+                self?.viewStore.send(.didTapSignInButton)
+            }
+            .store(in: &cancelBag)
     }
 }
