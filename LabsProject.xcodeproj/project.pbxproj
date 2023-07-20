@@ -43,7 +43,6 @@
 		8D685B952A49C30B00629A37 /* TwoCountersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D685B942A49C30B00629A37 /* TwoCountersVC.swift */; };
 		8D685B982A49D53100629A37 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D685B972A49D53100629A37 /* CounterView.swift */; };
 		8D685B9A2A49D8C500629A37 /* TCABaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D685B992A49D8C500629A37 /* TCABaseView.swift */; };
-		8D89F9A22A6810C20021D6F6 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D89F9A12A6810C20021D6F6 /* Animations.swift */; };
 		8D8BA2432A5853E900A2A525 /* TodoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8BA2422A5853E900A2A525 /* TodoListCell.swift */; };
 		8D8BA2452A58568000A2A525 /* CollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8BA2442A58568000A2A525 /* CollectionView+.swift */; };
 		8D8BA2472A58579100A2A525 /* SegmentedVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8BA2462A58579100A2A525 /* SegmentedVM.swift */; };
@@ -52,8 +51,6 @@
 		8D98EBB22A4486B8009DF067 /* TypiCodeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98EBAF2A4486B8009DF067 /* TypiCodeAPI.swift */; };
 		8D98EBB32A4486B8009DF067 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98EBB02A4486B8009DF067 /* NetworkManager.swift */; };
 		8D98EBB42A4486B8009DF067 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98EBB12A4486B8009DF067 /* API.swift */; };
-		8DA9BA002A670FB900709E97 /* FocusDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9B9FF2A670FB900709E97 /* FocusDemoVC.swift */; };
-		8DA9BA022A670FE100709E97 /* FocusDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9BA012A670FE100709E97 /* FocusDemo.swift */; };
 		8DAC242E29F412480012A85F /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAC242D29F412480012A85F /* MainTableViewCell.swift */; };
 		8DAC243129F417BB0012A85F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8DAC243029F417BB0012A85F /* SnapKit */; };
 		8DAC243429F41A7C0012A85F /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 8DAC243329F41A7C0012A85F /* Then */; };
@@ -110,7 +107,6 @@
 		8D685B942A49C30B00629A37 /* TwoCountersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoCountersVC.swift; sourceTree = "<group>"; };
 		8D685B972A49D53100629A37 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		8D685B992A49D8C500629A37 /* TCABaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCABaseView.swift; sourceTree = "<group>"; };
-		8D89F9A12A6810C20021D6F6 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		8D8BA2422A5853E900A2A525 /* TodoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListCell.swift; sourceTree = "<group>"; };
 		8D8BA2442A58568000A2A525 /* CollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView+.swift"; sourceTree = "<group>"; };
 		8D8BA2462A58579100A2A525 /* SegmentedVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedVM.swift; sourceTree = "<group>"; };
@@ -119,8 +115,6 @@
 		8D98EBAF2A4486B8009DF067 /* TypiCodeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypiCodeAPI.swift; sourceTree = "<group>"; };
 		8D98EBB02A4486B8009DF067 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		8D98EBB12A4486B8009DF067 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		8DA9B9FF2A670FB900709E97 /* FocusDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusDemoVC.swift; sourceTree = "<group>"; };
-		8DA9BA012A670FE100709E97 /* FocusDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusDemo.swift; sourceTree = "<group>"; };
 		8DAC242D29F412480012A85F /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		8DAC243529F433F50012A85F /* PractiseThenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PractiseThenVC.swift; sourceTree = "<group>"; };
 		8DD6F8DA2A62A35100FF977A /* OptionalBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalBasics.swift; sourceTree = "<group>"; };
@@ -160,8 +154,6 @@
 				8DD6F8DA2A62A35100FF977A /* OptionalBasics.swift */,
 				8D4560CB2A63D90900A31C6B /* SharedState.swift */,
 				8D4560D62A641CE700A31C6B /* AlertAndConfirmationDialog.swift */,
-				8DA9BA012A670FE100709E97 /* FocusDemo.swift */,
-				8D89F9A12A6810C20021D6F6 /* Animations.swift */,
 			);
 			path = Reducer;
 			sourceTree = "<group>";
@@ -322,7 +314,6 @@
 				8DD6F8DC2A62A4AA00FF977A /* OptionalBasicsVC.swift */,
 				8D4560CD2A63E5EB00A31C6B /* SharedStateCounterVC.swift */,
 				8D4560D42A641CD800A31C6B /* AlertAndConfirmationDialogVC.swift */,
-				8DA9B9FF2A670FB900709E97 /* FocusDemoVC.swift */,
 				8D685B962A49D52100629A37 /* Views */,
 			);
 			path = TCA;
@@ -467,7 +458,6 @@
 				8D36171D29F2CA7F00231628 /* AppDelegate.swift in Sources */,
 				8DD7139E2A485CC000209EEF /* TableView+.swift in Sources */,
 				8D01AEDC2A5AE3420008902E /* TwoCounters.swift in Sources */,
-				8D89F9A22A6810C20021D6F6 /* Animations.swift in Sources */,
 				8D98EBB42A4486B8009DF067 /* API.swift in Sources */,
 				8D4560CC2A63D90900A31C6B /* SharedState.swift in Sources */,
 				8DD6F8E12A62E9D600FF977A /* BindingForm.swift in Sources */,
@@ -488,11 +478,9 @@
 				8D63FF462A30D8EC002177AA /* CookieWebVC.swift in Sources */,
 				8D5F6FE12A51C96B0051A402 /* TextFieldFormView.swift in Sources */,
 				8D685B932A49B93D00629A37 /* CounterVC.swift in Sources */,
-				8DA9BA002A670FB900709E97 /* FocusDemoVC.swift in Sources */,
 				8DD713972A4853DD00209EEF /* UIColor+.swift in Sources */,
 				8D5F6FE72A51C9CB0051A402 /* SliderFormView.swift in Sources */,
 				8D98EBB32A4486B8009DF067 /* NetworkManager.swift in Sources */,
-				8DA9BA022A670FE100709E97 /* FocusDemo.swift in Sources */,
 				8D1860FB2A29070B00F89D18 /* WebVC.swift in Sources */,
 				8DD6F8DF2A62E95F00FF977A /* BindingBasics.swift in Sources */,
 				8D4560CE2A63E5EB00A31C6B /* SharedStateCounterVC.swift in Sources */,
