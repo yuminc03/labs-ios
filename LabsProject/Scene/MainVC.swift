@@ -26,8 +26,7 @@ final class MainVC: LabsVC {
         "TCA - ListOfStateVC",
         "TCA - Optional state",
         "TCA - Shared state",
-        "TCA - Alerts and Confirmation Dialogs",
-        "TCA - Focus State"
+        "TCA - Alerts and Confirmation Dialogs"
     ]
     
     private let tableView = UITableView(frame: .zero, style: .insetGrouped).then {
@@ -149,15 +148,7 @@ extension MainVC: UITableViewDelegate {
                 )
             )
             navigationController?.pushViewController(vc, animated: true)
-            
-        case 12:
-            let vc = FocusDemoVC(
-                store: Store(
-                    initialState: FocusDemo.State(),
-                    reducer: FocusDemo()
-                )
-            )
-            navigationController?.pushViewController(vc, animated: true)
+        
         default:
             break
         }
