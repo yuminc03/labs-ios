@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		052D5F0E2A6A536200BC715F /* EffectsBasicsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052D5F0D2A6A536200BC715F /* EffectsBasicsVC.swift */; };
 		8D01AEDA2A5AE2F80008902E /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01AED92A5AE2F80008902E /* Counter.swift */; };
 		8D01AEDC2A5AE3420008902E /* TwoCounters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01AEDB2A5AE3420008902E /* TwoCounters.swift */; };
 		8D1860F62A28DD2D00F89D18 /* MainNaviVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1860F52A28DD2D00F89D18 /* MainNaviVC.swift */; };
@@ -69,6 +70,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		052D5F0D2A6A536200BC715F /* EffectsBasicsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsBasicsVC.swift; sourceTree = "<group>"; };
 		8D01AED92A5AE2F80008902E /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		8D01AEDB2A5AE3420008902E /* TwoCounters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoCounters.swift; sourceTree = "<group>"; };
 		8D1860F52A28DD2D00F89D18 /* MainNaviVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNaviVC.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				8DD6F8DC2A62A4AA00FF977A /* OptionalBasicsVC.swift */,
 				8D4560CD2A63E5EB00A31C6B /* SharedStateCounterVC.swift */,
 				8D4560D42A641CD800A31C6B /* AlertAndConfirmationDialogVC.swift */,
+				052D5F0D2A6A536200BC715F /* EffectsBasicsVC.swift */,
 				8D685B962A49D52100629A37 /* Views */,
 			);
 			path = TCA;
@@ -460,6 +463,7 @@
 				8D4560CC2A63D90900A31C6B /* SharedState.swift in Sources */,
 				8DD6F8E12A62E9D600FF977A /* BindingForm.swift in Sources */,
 				8D5F6FDA2A5166F80051A402 /* SliderView.swift in Sources */,
+				052D5F0E2A6A536200BC715F /* EffectsBasicsVC.swift in Sources */,
 				8D5F6FD42A5162BB0051A402 /* TextFieldView.swift in Sources */,
 				8D01AEDA2A5AE2F80008902E /* Counter.swift in Sources */,
 				8D5F6FE52A51C9AC0051A402 /* StepperFormView.swift in Sources */,
