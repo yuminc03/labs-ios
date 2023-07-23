@@ -14,7 +14,7 @@ final class MainTableViewHeader: UITableViewHeaderFooterView {
     private let titleLabel: UILabel = {
         let view = UILabel()
         view.textColor = .lightGray
-        view.font = .systemFont(ofSize: 16)
+        view.font = .systemFont(ofSize: 16, weight: .medium)
         return view
     }()
 
@@ -37,8 +37,7 @@ final class MainTableViewHeader: UITableViewHeaderFooterView {
     
     private func setupConstraints() {
         titleLabel.snp.makeConstraints {
-            $0.top.bottom.equalToSuperview()
-            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.edges.equalToSuperview().inset(10)
         }
     }
     

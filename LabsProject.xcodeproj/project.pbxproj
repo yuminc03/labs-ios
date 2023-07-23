@@ -60,6 +60,7 @@
 		8DB65DF12A6CF2D70063146F /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65DF02A6CF2D70063146F /* MainVM.swift */; };
 		8DB65DF32A6CF52E0063146F /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65DF22A6CF52E0063146F /* Page.swift */; };
 		8DB65DF62A6CF8EA0063146F /* MainTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65DF52A6CF8EA0063146F /* MainTableViewHeader.swift */; };
+		8DB65DF82A6CFD600063146F /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65DF72A6CFD600063146F /* Array+.swift */; };
 		8DD6F8DB2A62A35100FF977A /* OptionalBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DA2A62A35100FF977A /* OptionalBasics.swift */; };
 		8DD6F8DD2A62A4AA00FF977A /* OptionalBasicsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DC2A62A4AA00FF977A /* OptionalBasicsVC.swift */; };
 		8DD6F8DF2A62E95F00FF977A /* BindingBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DE2A62E95F00FF977A /* BindingBasics.swift */; };
@@ -127,6 +128,7 @@
 		8DB65DF02A6CF2D70063146F /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
 		8DB65DF22A6CF52E0063146F /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		8DB65DF52A6CF8EA0063146F /* MainTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewHeader.swift; sourceTree = "<group>"; };
+		8DB65DF72A6CFD600063146F /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		8DD6F8DA2A62A35100FF977A /* OptionalBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalBasics.swift; sourceTree = "<group>"; };
 		8DD6F8DC2A62A4AA00FF977A /* OptionalBasicsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalBasicsVC.swift; sourceTree = "<group>"; };
 		8DD6F8DE2A62E95F00FF977A /* BindingBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBasics.swift; sourceTree = "<group>"; };
@@ -376,6 +378,7 @@
 				8DD713962A4853DD00209EEF /* UIColor+.swift */,
 				8DD7139D2A485CC000209EEF /* TableView+.swift */,
 				8D8BA2442A58568000A2A525 /* CollectionView+.swift */,
+				8DB65DF72A6CFD600063146F /* Array+.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				8D36171F29F2CA7F00231628 /* SceneDelegate.swift in Sources */,
 				8DD6F8DB2A62A35100FF977A /* OptionalBasics.swift in Sources */,
 				8DB65DF12A6CF2D70063146F /* MainVM.swift in Sources */,
+				8DB65DF82A6CFD600063146F /* Array+.swift in Sources */,
 				8DD713932A48512D00209EEF /* NavigationBarView.swift in Sources */,
 				8D63FF462A30D8EC002177AA /* CookieWebVC.swift in Sources */,
 				8D5F6FE12A51C96B0051A402 /* TextFieldFormView.swift in Sources */,
