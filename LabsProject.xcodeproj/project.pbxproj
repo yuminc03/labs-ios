@@ -57,6 +57,9 @@
 		8DAC243429F41A7C0012A85F /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 8DAC243329F41A7C0012A85F /* Then */; };
 		8DAC243629F433F50012A85F /* PractiseThenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAC243529F433F50012A85F /* PractiseThenVC.swift */; };
 		8DB65DEF2A6C01D00063146F /* FactClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65DEE2A6C01D00063146F /* FactClient.swift */; };
+		8DB65DF12A6CF2D70063146F /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65DF02A6CF2D70063146F /* MainVM.swift */; };
+		8DB65DF32A6CF52E0063146F /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65DF22A6CF52E0063146F /* Page.swift */; };
+		8DB65DF62A6CF8EA0063146F /* MainTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65DF52A6CF8EA0063146F /* MainTableViewHeader.swift */; };
 		8DD6F8DB2A62A35100FF977A /* OptionalBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DA2A62A35100FF977A /* OptionalBasics.swift */; };
 		8DD6F8DD2A62A4AA00FF977A /* OptionalBasicsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DC2A62A4AA00FF977A /* OptionalBasicsVC.swift */; };
 		8DD6F8DF2A62E95F00FF977A /* BindingBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DE2A62E95F00FF977A /* BindingBasics.swift */; };
@@ -121,6 +124,9 @@
 		8DAC242D29F412480012A85F /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		8DAC243529F433F50012A85F /* PractiseThenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PractiseThenVC.swift; sourceTree = "<group>"; };
 		8DB65DEE2A6C01D00063146F /* FactClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactClient.swift; sourceTree = "<group>"; };
+		8DB65DF02A6CF2D70063146F /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
+		8DB65DF22A6CF52E0063146F /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		8DB65DF52A6CF8EA0063146F /* MainTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewHeader.swift; sourceTree = "<group>"; };
 		8DD6F8DA2A62A35100FF977A /* OptionalBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalBasics.swift; sourceTree = "<group>"; };
 		8DD6F8DC2A62A4AA00FF977A /* OptionalBasicsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalBasicsVC.swift; sourceTree = "<group>"; };
 		8DD6F8DE2A62E95F00FF977A /* BindingBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBasics.swift; sourceTree = "<group>"; };
@@ -328,7 +334,10 @@
 		8DAC242B29F3EB890012A85F /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				8DB65DF22A6CF52E0063146F /* Page.swift */,
+				8DB65DF02A6CF2D70063146F /* MainVM.swift */,
 				8D36172029F2CA7F00231628 /* MainVC.swift */,
+				8DB65DF42A6CF8DD0063146F /* Header */,
 				8D38229C29F50FC500B71F26 /* Cell */,
 				8D1860F92A28FD7000F89D18 /* Web */,
 				8D4D3D3D2A3E0861009A64F6 /* Segmented */,
@@ -346,6 +355,14 @@
 				8D38229F29F512B300B71F26 /* Header */,
 			);
 			path = Then;
+			sourceTree = "<group>";
+		};
+		8DB65DF42A6CF8DD0063146F /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				8DB65DF52A6CF8EA0063146F /* MainTableViewHeader.swift */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 		8DD713912A48511A00209EEF /* Common */ = {
@@ -479,13 +496,16 @@
 				8D685B9A2A49D8C500629A37 /* TCABaseView.swift in Sources */,
 				8D36171F29F2CA7F00231628 /* SceneDelegate.swift in Sources */,
 				8DD6F8DB2A62A35100FF977A /* OptionalBasics.swift in Sources */,
+				8DB65DF12A6CF2D70063146F /* MainVM.swift in Sources */,
 				8DD713932A48512D00209EEF /* NavigationBarView.swift in Sources */,
 				8D63FF462A30D8EC002177AA /* CookieWebVC.swift in Sources */,
 				8D5F6FE12A51C96B0051A402 /* TextFieldFormView.swift in Sources */,
 				8D685B932A49B93D00629A37 /* CounterVC.swift in Sources */,
 				8DD713972A4853DD00209EEF /* UIColor+.swift in Sources */,
+				8DB65DF62A6CF8EA0063146F /* MainTableViewHeader.swift in Sources */,
 				8D5F6FE72A51C9CB0051A402 /* SliderFormView.swift in Sources */,
 				8D98EBB32A4486B8009DF067 /* NetworkManager.swift in Sources */,
+				8DB65DF32A6CF52E0063146F /* Page.swift in Sources */,
 				8D1860FB2A29070B00F89D18 /* WebVC.swift in Sources */,
 				8DD6F8DF2A62E95F00FF977A /* BindingBasics.swift in Sources */,
 				8D4560CE2A63E5EB00A31C6B /* SharedStateCounterVC.swift in Sources */,

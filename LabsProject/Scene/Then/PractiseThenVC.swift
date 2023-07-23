@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class PractiseThenVC: UIViewController {
+final class PractiseThenVC: LabsVC {
     
     private let vm = PractiseThenVM()
     private let titleLabel = UILabel().then {

@@ -14,25 +14,12 @@ import Then
 
 final class MainVC: LabsVC {
     
-    private let datas = [
-        "Practise Then library",
-        "WebView Test",
-        "WebView Cookie Test",
-        "Todos",
-        "TCA - Basics",
-        "TCA - Combining reducers",
-        "TCA - Bindings",
-        "TCA - Form bindings",
-        "TCA - ListOfStateVC",
-        "TCA - Optional state",
-        "TCA - Shared state",
-        "TCA - Alerts and Confirmation Dialogs",
-        "TCA - Basics"
-    ]
+    private let vm = MainVM()
     
     private let tableView = UITableView(frame: .zero, style: .insetGrouped).then {
         $0.backgroundColor = .clear
-        $0.register(MainTableViewCell.self, forCellReuseIdentifier: "mainCell")
+        $0.registerHeaderFooter(type: MainTableViewHeader.self)
+        $0.registerCell(type: MainTableViewCell.self)
     }
     
     override func viewDidLoad() {
@@ -56,6 +43,10 @@ final class MainVC: LabsVC {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
+    }
+    
+    private func pushAnotherPage(vc: LabsVC) {
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -167,13 +158,23 @@ extension MainVC: UITableViewDelegate {
 
 extension MainVC: UITableViewDataSource {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return vm.numberOfSection
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return datas.count
+        return vm.numberOfRowsInSection(on: section)
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueHeaderFooter(type: MainTableViewHeader.self)
+        header.updateUI(title: vm.titleOfGroup(section: section))
+        return header
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath) as? MainTableViewCell else { return UITableViewCell() }
-        cell.updateUI(titleText: datas[indexPath.row])
+        let cell = tableView.dequeueCell(type: MainTableViewCell.self, indexPath: indexPath)
+        cell.updateUI(titleText: vm.titleOfPage(section: indexPath.section, index: indexPath.row))
         return cell
     }
 }
