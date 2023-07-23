@@ -91,6 +91,12 @@ final class MainVC: LabsVC {
                     initialState: EffectsCancellation.State(),
                     reducer: EffectsCancellation()
                 )
+            ),
+            EffectsLongLivingVC(
+                store: Store(
+                        initialState: EffectsLongLiving.State(),
+                        reducer: EffectsLongLiving()
+                )
             )
         ]
     ]
@@ -118,9 +124,7 @@ final class MainVC: LabsVC {
     
     private func setupConstraints() {
         tableView.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview()
-            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+            $0.edges.equalToSuperview()
         }
     }
     
