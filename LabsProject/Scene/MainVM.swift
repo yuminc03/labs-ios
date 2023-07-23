@@ -40,7 +40,8 @@ final class MainVM {
         Page(
             category: "UIKIT + TCA - EFFECTS",
             childPages: [
-                "TCA - Basics"
+                "TCA - Basics",
+                "TCA - Cancellation"
             ]
         )
     ]

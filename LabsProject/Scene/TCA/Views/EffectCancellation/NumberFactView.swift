@@ -1,5 +1,5 @@
 //
-//  ProgressView.swift
+//  NumberFactView.swift
 //  LabsProject
 //
 //  Created by Yumin Chu on 2023/07/23.
@@ -9,13 +9,7 @@ import UIKit
 
 import SnapKit
 
-final class ProgressView: UIView {
-    
-    private let loadingView: UIActivityIndicatorView = {
-        let view = UIActivityIndicatorView()
-        view.hidesWhenStopped = true
-        return view
-    }()
+final class NumberFactView: UIView {
     
     private let stateLabel: UILabel = {
         let view = UILabel()
@@ -37,22 +31,13 @@ final class ProgressView: UIView {
     }
     
     private func setupUI() {
-        addSubview(loadingView)
         addSubview(stateLabel)
     }
     
     private func setupConstraints() {
-        loadingView.snp.makeConstraints {
-            $0.edges.equalToSuperview().inset(20)
-        }
-        
         stateLabel.snp.makeConstraints {
             $0.edges.equalToSuperview().inset(10)
         }
-    }
-    
-    func updateIndicator(isLoading: Bool) {
-        isLoading ? loadingView.startAnimating() : loadingView.stopAnimating()
     }
     
     func updateUI(numberFact: String?) {

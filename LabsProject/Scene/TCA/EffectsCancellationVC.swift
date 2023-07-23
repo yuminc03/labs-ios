@@ -1,8 +1,8 @@
 //
-//  EffectsBasicsVC.swift
+//  EffectsCancellationVC.swift
 //  LabsProject
 //
-//  Created by Yumin Chu on 2023/07/21.
+//  Created by Yumin Chu on 2023/07/23.
 //
 
 import UIKit
@@ -12,8 +12,7 @@ import CombineCocoa
 import ComposableArchitecture
 import SnapKit
 
-
-final class EffectsBasicsVC: TCABaseVC<EffectsBasics> {
+final class EffectsCancellationVC: TCABaseVC<EffectsCancellation> {
     
     private let stackView: UIStackView = {
         let view = UIStackView()
@@ -33,43 +32,39 @@ final class EffectsBasicsVC: TCABaseVC<EffectsBasics> {
         let view = UIStackView()
         view.axis = .horizontal
         view.spacing = 20
-        view.alignment = .center
+        view.distribution = .fill
         return view
     }()
 
-    private let minusButton: UIButton = {
-        let view = UIButton()
-        view.setImage(UIImage(systemName: "minus"), for: .normal)
-        return view
-    }()
-    
     private let numberLabel: UILabel = {
         let view = UILabel()
         view.textColor = .black
-        view.font = .systemFont(ofSize: 36, weight: .bold)
-        view.textAlignment = .center
-        return view
-    }()
-
-    private let plusButton: UIButton = {
-        let view = UIButton()
-        view.setImage(UIImage(systemName: "plus"), for: .normal)
         return view
     }()
     
-    private let numberFactButton: UIButton = {
-        var config = UIButton.Configuration.plain()
-        config.title = "Number fact"
-        config.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 10)
-        let view = UIButton(configuration: config)
-        view.backgroundColor = .white
-        view.setTitleColor(.systemBlue, for: .normal)
+    private let stepperView: UIStepper = {
+        let view = UIStepper()
+        view.minimumValue = -100
+        view.maximumValue = 100
         return view
     }()
 
     private let separatorView1: UIView = {
         let view = UIView()
         view.backgroundColor = labsColor(.gray_EAEAEA)
+        return view
+    }()
+
+    private let numberFactButton: UIButton = {
+        var config = UIButton.Configuration.plain()
+        config.title = "Number fact"
+        config.titleAlignment = .leading
+        config.imagePlacement = .trailing
+        config.imagePadding = UIScreen.main.bounds.width - 220
+        config.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 10)
+        let view = UIButton(configuration: config)
+        view.backgroundColor = .white
+        view.setTitleColor(.systemBlue, for: .normal)
         return view
     }()
     
@@ -79,28 +74,27 @@ final class EffectsBasicsVC: TCABaseVC<EffectsBasics> {
         return view
     }()
     
-    private let progressView: ProgressView = {
-        let view = ProgressView()
+    private let numberFactView: NumberFactView = {
+        let view = NumberFactView()
         view.backgroundColor = .white
         return view
     }()
     
     override func setup() {
         super.setup()
+        setNavigationTitle(title: "Effect cancellation")
         view.backgroundColor = .systemGray6
         view.addSubview(stackView)
-        setNavigationTitle(title: "Effects")
         
         stackView.addArrangedSubview(counterContainerView)
         stackView.addArrangedSubview(separatorView1)
         stackView.addArrangedSubview(numberFactButton)
         stackView.addArrangedSubview(separatorView2)
-        stackView.addArrangedSubview(progressView)
+        stackView.addArrangedSubview(numberFactView)
         
         counterContainerView.addSubview(counterStackView)
-        counterStackView.addArrangedSubview(minusButton)
         counterStackView.addArrangedSubview(numberLabel)
-        counterStackView.addArrangedSubview(plusButton)
+        counterStackView.addArrangedSubview(stepperView)
         
         stackView.snp.makeConstraints {
             $0.centerY.equalToSuperview()
@@ -108,16 +102,8 @@ final class EffectsBasicsVC: TCABaseVC<EffectsBasics> {
         }
         
         counterStackView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-            $0.centerX.centerY.equalToSuperview()
-        }
-        
-        minusButton.snp.makeConstraints {
-            $0.width.height.equalTo(50)
-        }
-        
-        plusButton.snp.makeConstraints {
-            $0.width.height.equalTo(50)
+            $0.top.bottom.equalToSuperview().inset(10)
+            $0.leading.trailing.equalToSuperview().inset(20)
         }
         
         separatorView1.snp.makeConstraints {
@@ -137,36 +123,31 @@ final class EffectsBasicsVC: TCABaseVC<EffectsBasics> {
         super.bind()
         
         viewStore.publisher.number
-            .sink { [weak self] count in
-                self?.numberLabel.text = count.description
+            .sink { [weak self] number in
+                self?.numberLabel.text = number.description
             }
             .store(in: &cancelBag)
         
-        viewStore.publisher.isNumberFactRequestInFlight
-            .combineLatest(viewStore.publisher.numberFact)
-            .sink { [weak self] isNumberFact, numberFact in
-                self?.separatorView2.isHidden = isNumberFact == false && numberFact == nil
-                self?.progressView.isHidden = isNumberFact == false && numberFact == nil
-                self?.progressView.updateIndicator(isLoading: isNumberFact)
-                self?.progressView.updateUI(numberFact: numberFact)
+        viewStore.publisher.isFactRequestInFlight
+            .combineLatest(viewStore.publisher.currentFact)
+            .sink { [weak self] (isFact, currentFact) in
+                self?.numberFactButton.configuration?.showsActivityIndicator = isFact
+                self?.separatorView2.isHidden = currentFact == nil
+                self?.numberFactView.isHidden = currentFact == nil
+                self?.numberFactView.updateUI(numberFact: currentFact)
             }
             .store(in: &cancelBag)
         
-        minusButton.tapPublisher
-            .sink { [weak self] in
-                self?.viewStore.send(.didTapDecrementButton)
-            }
-            .store(in: &cancelBag)
-        
-        plusButton.tapPublisher
-            .sink { [weak self] in
-                self?.viewStore.send(.didTapIncrementButton)
+        stepperView.valuePublisher
+            .map { Int($0) }
+            .sink { [weak self] value in
+                self?.viewStore.send(.didChangeStepper(value))
             }
             .store(in: &cancelBag)
         
         numberFactButton.tapPublisher
-            .sink { [weak self] in
-                self?.viewStore.send(.didTapNumberFactButton)
+            .sink { [weak self] _ in
+                self?.viewStore.send(.didTapFactButton)
             }
             .store(in: &cancelBag)
     }
