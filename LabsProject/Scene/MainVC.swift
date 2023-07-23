@@ -26,7 +26,8 @@ final class MainVC: LabsVC {
         "TCA - ListOfStateVC",
         "TCA - Optional state",
         "TCA - Shared state",
-        "TCA - Alerts and Confirmation Dialogs"
+        "TCA - Alerts and Confirmation Dialogs",
+        "TCA - Basics"
     ]
     
     private let tableView = UITableView(frame: .zero, style: .insetGrouped).then {
@@ -149,6 +150,15 @@ extension MainVC: UITableViewDelegate {
             )
             navigationController?.pushViewController(vc, animated: true)
         
+        case 12:
+            let vc = EffectsBasicsVC(
+                store: Store(
+                    initialState: EffectsBasics.State(),
+                    reducer: EffectsBasics()
+                )
+            )
+            navigationController?.pushViewController(vc, animated: true)
+            
         default:
             break
         }
