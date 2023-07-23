@@ -20,6 +20,9 @@ final class ProgressView: UIView {
     private let stateLabel: UILabel = {
         let view = UILabel()
         view.textColor = .black
+        view.font = .systemFont(ofSize: 16)
+        view.textAlignment = .center
+        view.numberOfLines = 0
         return view
     }()
     
@@ -40,11 +43,11 @@ final class ProgressView: UIView {
     
     private func setupConstraints() {
         loadingView.snp.makeConstraints {
-            $0.center.equalToSuperview()
+            $0.edges.equalToSuperview().inset(20)
         }
         
         stateLabel.snp.makeConstraints {
-            $0.center.equalToSuperview()
+            $0.edges.equalToSuperview().inset(10)
         }
     }
     

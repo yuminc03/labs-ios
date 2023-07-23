@@ -203,10 +203,6 @@ final class EffectsBasicsVC: TCABaseVC<EffectsBasics> {
         separatorView2.snp.makeConstraints {
             $0.height.equalTo(1)
         }
-        
-        progressView.snp.makeConstraints {
-            $0.height.equalTo(50)
-        }
     }
     
     override func bind() {
@@ -219,15 +215,11 @@ final class EffectsBasicsVC: TCABaseVC<EffectsBasics> {
             .store(in: &cancelBag)
         
         viewStore.publisher.isNumberFactRequestInFlight
-            .sink { [weak self] isNumberFact in
-                self?.separatorView2.isHidden = isNumberFact == false
-                self?.progressView.isHidden = isNumberFact == false
+            .combineLatest(viewStore.publisher.numberFact)
+            .sink { [weak self] isNumberFact, numberFact in
+                self?.separatorView2.isHidden = isNumberFact == false && numberFact == nil
+                self?.progressView.isHidden = isNumberFact == false && numberFact == nil
                 self?.progressView.updateIndicator(isLoading: isNumberFact)
-            }
-            .store(in: &cancelBag)
-        
-        viewStore.publisher.numberFact
-            .sink { [weak self] numberFact in
                 self?.progressView.updateUI(numberFact: numberFact)
             }
             .store(in: &cancelBag)
