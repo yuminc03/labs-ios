@@ -41,7 +41,8 @@ final class MainVM {
             category: "UIKIT + TCA - EFFECTS",
             childPages: [
                 "TCA - Basics",
-                "TCA - Cancellation"
+                "TCA - Cancellation",
+                "TCA - Long-living effects"
             ]
         )
     ]

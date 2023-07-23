@@ -66,6 +66,8 @@
 		8DB65DFF2A6D40480063146F /* EffectsCancellationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65DFE2A6D40480063146F /* EffectsCancellationVC.swift */; };
 		8DB65E022A6D49560063146F /* NumberFactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65E012A6D49560063146F /* NumberFactView.swift */; };
 		8DB65E042A6D55860063146F /* EffectsCancellation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65E032A6D55860063146F /* EffectsCancellation.swift */; };
+		8DC896142A6D68170055C753 /* EffectsLongLiving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC896132A6D68170055C753 /* EffectsLongLiving.swift */; };
+		8DC896162A6D685B0055C753 /* EffectsLongLivingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC896152A6D685B0055C753 /* EffectsLongLivingVC.swift */; };
 		8DD6F8DB2A62A35100FF977A /* OptionalBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DA2A62A35100FF977A /* OptionalBasics.swift */; };
 		8DD6F8DD2A62A4AA00FF977A /* OptionalBasicsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DC2A62A4AA00FF977A /* OptionalBasicsVC.swift */; };
 		8DD6F8DF2A62E95F00FF977A /* BindingBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DE2A62E95F00FF977A /* BindingBasics.swift */; };
@@ -139,6 +141,8 @@
 		8DB65DFE2A6D40480063146F /* EffectsCancellationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsCancellationVC.swift; sourceTree = "<group>"; };
 		8DB65E012A6D49560063146F /* NumberFactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactView.swift; sourceTree = "<group>"; };
 		8DB65E032A6D55860063146F /* EffectsCancellation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsCancellation.swift; sourceTree = "<group>"; };
+		8DC896132A6D68170055C753 /* EffectsLongLiving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsLongLiving.swift; sourceTree = "<group>"; };
+		8DC896152A6D685B0055C753 /* EffectsLongLivingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsLongLivingVC.swift; sourceTree = "<group>"; };
 		8DD6F8DA2A62A35100FF977A /* OptionalBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalBasics.swift; sourceTree = "<group>"; };
 		8DD6F8DC2A62A4AA00FF977A /* OptionalBasicsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalBasicsVC.swift; sourceTree = "<group>"; };
 		8DD6F8DE2A62E95F00FF977A /* BindingBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBasics.swift; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 				8D4560D62A641CE700A31C6B /* AlertAndConfirmationDialog.swift */,
 				8DB65DFC2A6D1BA70063146F /* EffectsBasics.swift */,
 				8DB65E032A6D55860063146F /* EffectsCancellation.swift */,
+				8DC896132A6D68170055C753 /* EffectsLongLiving.swift */,
 			);
 			path = Reducer;
 			sourceTree = "<group>";
@@ -343,6 +348,7 @@
 				8D4560D42A641CD800A31C6B /* AlertAndConfirmationDialogVC.swift */,
 				052D5F0D2A6A536200BC715F /* EffectsBasicsVC.swift */,
 				8DB65DFE2A6D40480063146F /* EffectsCancellationVC.swift */,
+				8DC896152A6D685B0055C753 /* EffectsLongLivingVC.swift */,
 				8D685B962A49D52100629A37 /* Views */,
 			);
 			path = TCA;
@@ -500,10 +506,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D36172129F2CA7F00231628 /* MainVC.swift in Sources */,
+				8DC896142A6D68170055C753 /* EffectsLongLiving.swift in Sources */,
 				8D98EBAD2A44858B009DF067 /* SegmentedVC.swift in Sources */,
 				8D685B952A49C30B00629A37 /* TwoCountersVC.swift in Sources */,
 				8D8BA2472A58579100A2A525 /* SegmentedVM.swift in Sources */,
 				8DB65DFF2A6D40480063146F /* EffectsCancellationVC.swift in Sources */,
+				8DC896162A6D685B0055C753 /* EffectsLongLivingVC.swift in Sources */,
 				8DB65E042A6D55860063146F /* EffectsCancellation.swift in Sources */,
 				8D5F6FD82A5166560051A402 /* StepperView.swift in Sources */,
 				8DD6F8DD2A62A4AA00FF977A /* OptionalBasicsVC.swift in Sources */,
