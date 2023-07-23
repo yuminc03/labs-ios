@@ -29,15 +29,13 @@ final class MainTableViewHeader: UITableViewHeaderFooterView {
     }
     
     private func setupUI() {
-        backgroundView = UIView()
-        backgroundView?.backgroundColor = .clear
-        
         contentView.addSubview(titleLabel)
     }
     
     private func setupConstraints() {
         titleLabel.snp.makeConstraints {
-            $0.edges.equalToSuperview().inset(10)
+            $0.top.bottom.equalToSuperview().inset(10)
+            $0.leading.trailing.equalToSuperview().inset(20)
         }
     }
     
