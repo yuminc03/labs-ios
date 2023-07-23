@@ -26,8 +26,8 @@ final class ProgressView: UIView {
         return view
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init() {
+        super.init(frame: .zero)
         setupUI()
         setupConstraints()
     }

@@ -72,13 +72,7 @@ final class EffectsBasicsVC: TCABaseVC<EffectsBasics> {
         view.backgroundColor = labsColor(.gray_EAEAEA)
         return view
     }()
-
-    private let counterStateView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        return view
-    }()
-
+    
     private let separatorView2: UIView = {
         let view = UIView()
         view.backgroundColor = labsColor(.gray_EAEAEA)

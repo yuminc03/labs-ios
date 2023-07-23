@@ -51,8 +51,8 @@ struct EffectsBasics: ReducerProtocol {
             state.numberFact = nil
             // API에서 number fact를 가져와서 reducer의 numberFactResponse action에 값을 반환하는 effect를 리턴
             return .run { [count = state.number] send in
-                await send(.numberFactResponse(TaskResult { try await
-                    self.factClient.fetch(count)
+                await send(.numberFactResponse(TaskResult {
+                    try await factClient.fetch(count)
                 }))
             }
             
