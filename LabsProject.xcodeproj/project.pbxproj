@@ -63,6 +63,9 @@
 		8DB65DF82A6CFD600063146F /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65DF72A6CFD600063146F /* Array+.swift */; };
 		8DB65DFA2A6D081F0063146F /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65DF92A6D081F0063146F /* ProgressView.swift */; };
 		8DB65DFD2A6D1BA70063146F /* EffectsBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65DFC2A6D1BA70063146F /* EffectsBasics.swift */; };
+		8DB65DFF2A6D40480063146F /* EffectsCancellationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65DFE2A6D40480063146F /* EffectsCancellationVC.swift */; };
+		8DB65E022A6D49560063146F /* NumberFactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65E012A6D49560063146F /* NumberFactView.swift */; };
+		8DB65E042A6D55860063146F /* EffectsCancellation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65E032A6D55860063146F /* EffectsCancellation.swift */; };
 		8DD6F8DB2A62A35100FF977A /* OptionalBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DA2A62A35100FF977A /* OptionalBasics.swift */; };
 		8DD6F8DD2A62A4AA00FF977A /* OptionalBasicsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DC2A62A4AA00FF977A /* OptionalBasicsVC.swift */; };
 		8DD6F8DF2A62E95F00FF977A /* BindingBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DE2A62E95F00FF977A /* BindingBasics.swift */; };
@@ -133,6 +136,9 @@
 		8DB65DF72A6CFD600063146F /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		8DB65DF92A6D081F0063146F /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		8DB65DFC2A6D1BA70063146F /* EffectsBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsBasics.swift; sourceTree = "<group>"; };
+		8DB65DFE2A6D40480063146F /* EffectsCancellationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsCancellationVC.swift; sourceTree = "<group>"; };
+		8DB65E012A6D49560063146F /* NumberFactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactView.swift; sourceTree = "<group>"; };
+		8DB65E032A6D55860063146F /* EffectsCancellation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsCancellation.swift; sourceTree = "<group>"; };
 		8DD6F8DA2A62A35100FF977A /* OptionalBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalBasics.swift; sourceTree = "<group>"; };
 		8DD6F8DC2A62A4AA00FF977A /* OptionalBasicsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalBasicsVC.swift; sourceTree = "<group>"; };
 		8DD6F8DE2A62E95F00FF977A /* BindingBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBasics.swift; sourceTree = "<group>"; };
@@ -171,6 +177,7 @@
 				8D4560CB2A63D90900A31C6B /* SharedState.swift */,
 				8D4560D62A641CE700A31C6B /* AlertAndConfirmationDialog.swift */,
 				8DB65DFC2A6D1BA70063146F /* EffectsBasics.swift */,
+				8DB65E032A6D55860063146F /* EffectsCancellation.swift */,
 			);
 			path = Reducer;
 			sourceTree = "<group>";
@@ -290,6 +297,7 @@
 				8D5F6FDF2A51C81C0051A402 /* BindingForm */,
 				8D4560CF2A640EE500A31C6B /* SharedState */,
 				8DB65DFB2A6D14100063146F /* EffectBasics */,
+				8DB65E002A6D49330063146F /* EffectCancellation */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -334,6 +342,7 @@
 				8D4560CD2A63E5EB00A31C6B /* SharedStateCounterVC.swift */,
 				8D4560D42A641CD800A31C6B /* AlertAndConfirmationDialogVC.swift */,
 				052D5F0D2A6A536200BC715F /* EffectsBasicsVC.swift */,
+				8DB65DFE2A6D40480063146F /* EffectsCancellationVC.swift */,
 				8D685B962A49D52100629A37 /* Views */,
 			);
 			path = TCA;
@@ -379,6 +388,14 @@
 				8DB65DF92A6D081F0063146F /* ProgressView.swift */,
 			);
 			path = EffectBasics;
+			sourceTree = "<group>";
+		};
+		8DB65E002A6D49330063146F /* EffectCancellation */ = {
+			isa = PBXGroup;
+			children = (
+				8DB65E012A6D49560063146F /* NumberFactView.swift */,
+			);
+			path = EffectCancellation;
 			sourceTree = "<group>";
 		};
 		8DD713912A48511A00209EEF /* Common */ = {
@@ -486,10 +503,13 @@
 				8D98EBAD2A44858B009DF067 /* SegmentedVC.swift in Sources */,
 				8D685B952A49C30B00629A37 /* TwoCountersVC.swift in Sources */,
 				8D8BA2472A58579100A2A525 /* SegmentedVM.swift in Sources */,
+				8DB65DFF2A6D40480063146F /* EffectsCancellationVC.swift in Sources */,
+				8DB65E042A6D55860063146F /* EffectsCancellation.swift in Sources */,
 				8D5F6FD82A5166560051A402 /* StepperView.swift in Sources */,
 				8DD6F8DD2A62A4AA00FF977A /* OptionalBasicsVC.swift in Sources */,
 				8D32C35E2A5D96A600233A2F /* CounterList.swift in Sources */,
 				8D4560D32A640F2C00A31C6B /* SharedStateProfileView.swift in Sources */,
+				8DB65E022A6D49560063146F /* NumberFactView.swift in Sources */,
 				8DAC243629F433F50012A85F /* PractiseThenVC.swift in Sources */,
 				8D8BA2432A5853E900A2A525 /* TodoListCell.swift in Sources */,
 				8D4560D52A641CD800A31C6B /* AlertAndConfirmationDialogVC.swift in Sources */,

@@ -85,6 +85,12 @@ final class MainVC: LabsVC {
                     initialState: EffectsBasics.State(),
                     reducer: EffectsBasics()
                 )
+            ),
+            EffectsCancellationVC(
+                store: Store(
+                    initialState: EffectsCancellation.State(),
+                    reducer: EffectsCancellation()
+                )
             )
         ]
     ]
