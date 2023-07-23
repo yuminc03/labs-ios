@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		052D5F0E2A6A536200BC715F /* EffectsBasicsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052D5F0D2A6A536200BC715F /* EffectsBasicsVC.swift */; };
 		8D01AEDA2A5AE2F80008902E /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01AED92A5AE2F80008902E /* Counter.swift */; };
 		8D01AEDC2A5AE3420008902E /* TwoCounters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01AEDB2A5AE3420008902E /* TwoCounters.swift */; };
 		8D1860F62A28DD2D00F89D18 /* MainNaviVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1860F52A28DD2D00F89D18 /* MainNaviVC.swift */; };
@@ -55,6 +56,11 @@
 		8DAC243129F417BB0012A85F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8DAC243029F417BB0012A85F /* SnapKit */; };
 		8DAC243429F41A7C0012A85F /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 8DAC243329F41A7C0012A85F /* Then */; };
 		8DAC243629F433F50012A85F /* PractiseThenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAC243529F433F50012A85F /* PractiseThenVC.swift */; };
+		8DB65DEF2A6C01D00063146F /* FactClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65DEE2A6C01D00063146F /* FactClient.swift */; };
+		8DB65DF12A6CF2D70063146F /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65DF02A6CF2D70063146F /* MainVM.swift */; };
+		8DB65DF32A6CF52E0063146F /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65DF22A6CF52E0063146F /* Page.swift */; };
+		8DB65DF62A6CF8EA0063146F /* MainTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65DF52A6CF8EA0063146F /* MainTableViewHeader.swift */; };
+		8DB65DF82A6CFD600063146F /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65DF72A6CFD600063146F /* Array+.swift */; };
 		8DD6F8DB2A62A35100FF977A /* OptionalBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DA2A62A35100FF977A /* OptionalBasics.swift */; };
 		8DD6F8DD2A62A4AA00FF977A /* OptionalBasicsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DC2A62A4AA00FF977A /* OptionalBasicsVC.swift */; };
 		8DD6F8DF2A62E95F00FF977A /* BindingBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DE2A62E95F00FF977A /* BindingBasics.swift */; };
@@ -69,6 +75,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		052D5F0D2A6A536200BC715F /* EffectsBasicsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsBasicsVC.swift; sourceTree = "<group>"; };
 		8D01AED92A5AE2F80008902E /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		8D01AEDB2A5AE3420008902E /* TwoCounters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoCounters.swift; sourceTree = "<group>"; };
 		8D1860F52A28DD2D00F89D18 /* MainNaviVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNaviVC.swift; sourceTree = "<group>"; };
@@ -117,6 +124,11 @@
 		8D98EBB12A4486B8009DF067 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		8DAC242D29F412480012A85F /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		8DAC243529F433F50012A85F /* PractiseThenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PractiseThenVC.swift; sourceTree = "<group>"; };
+		8DB65DEE2A6C01D00063146F /* FactClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactClient.swift; sourceTree = "<group>"; };
+		8DB65DF02A6CF2D70063146F /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
+		8DB65DF22A6CF52E0063146F /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		8DB65DF52A6CF8EA0063146F /* MainTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewHeader.swift; sourceTree = "<group>"; };
+		8DB65DF72A6CFD600063146F /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		8DD6F8DA2A62A35100FF977A /* OptionalBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalBasics.swift; sourceTree = "<group>"; };
 		8DD6F8DC2A62A4AA00FF977A /* OptionalBasicsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalBasicsVC.swift; sourceTree = "<group>"; };
 		8DD6F8DE2A62E95F00FF977A /* BindingBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBasics.swift; sourceTree = "<group>"; };
@@ -305,6 +317,7 @@
 		8DA817A32A482B05000DCEBB /* TCA */ = {
 			isa = PBXGroup;
 			children = (
+				8DB65DEE2A6C01D00063146F /* FactClient.swift */,
 				8D01AEDD2A5AE34E0008902E /* Reducer */,
 				8D685B922A49B93D00629A37 /* CounterVC.swift */,
 				8D685B942A49C30B00629A37 /* TwoCountersVC.swift */,
@@ -314,6 +327,7 @@
 				8DD6F8DC2A62A4AA00FF977A /* OptionalBasicsVC.swift */,
 				8D4560CD2A63E5EB00A31C6B /* SharedStateCounterVC.swift */,
 				8D4560D42A641CD800A31C6B /* AlertAndConfirmationDialogVC.swift */,
+				052D5F0D2A6A536200BC715F /* EffectsBasicsVC.swift */,
 				8D685B962A49D52100629A37 /* Views */,
 			);
 			path = TCA;
@@ -322,9 +336,10 @@
 		8DAC242B29F3EB890012A85F /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				8DB65DF22A6CF52E0063146F /* Page.swift */,
+				8DB65DF02A6CF2D70063146F /* MainVM.swift */,
 				8D36172029F2CA7F00231628 /* MainVC.swift */,
-				8D1860F92A28FD7000F89D18 /* Web */,
-				8D4D3D3D2A3E0861009A64F6 /* Segmented */,
+				8DB65DF42A6CF8DD0063146F /* Header */,
 				8D38229C29F50FC500B71F26 /* Cell */,
 				8D1860F92A28FD7000F89D18 /* Web */,
 				8D4D3D3D2A3E0861009A64F6 /* Segmented */,
@@ -344,6 +359,14 @@
 			path = Then;
 			sourceTree = "<group>";
 		};
+		8DB65DF42A6CF8DD0063146F /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				8DB65DF52A6CF8EA0063146F /* MainTableViewHeader.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		8DD713912A48511A00209EEF /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,6 +378,7 @@
 				8DD713962A4853DD00209EEF /* UIColor+.swift */,
 				8DD7139D2A485CC000209EEF /* TableView+.swift */,
 				8D8BA2442A58568000A2A525 /* CollectionView+.swift */,
+				8DB65DF72A6CFD600063146F /* Array+.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -462,6 +486,7 @@
 				8D4560CC2A63D90900A31C6B /* SharedState.swift in Sources */,
 				8DD6F8E12A62E9D600FF977A /* BindingForm.swift in Sources */,
 				8D5F6FDA2A5166F80051A402 /* SliderView.swift in Sources */,
+				052D5F0E2A6A536200BC715F /* EffectsBasicsVC.swift in Sources */,
 				8D5F6FD42A5162BB0051A402 /* TextFieldView.swift in Sources */,
 				8D01AEDA2A5AE2F80008902E /* Counter.swift in Sources */,
 				8D5F6FE52A51C9AC0051A402 /* StepperFormView.swift in Sources */,
@@ -474,13 +499,17 @@
 				8D685B9A2A49D8C500629A37 /* TCABaseView.swift in Sources */,
 				8D36171F29F2CA7F00231628 /* SceneDelegate.swift in Sources */,
 				8DD6F8DB2A62A35100FF977A /* OptionalBasics.swift in Sources */,
+				8DB65DF12A6CF2D70063146F /* MainVM.swift in Sources */,
+				8DB65DF82A6CFD600063146F /* Array+.swift in Sources */,
 				8DD713932A48512D00209EEF /* NavigationBarView.swift in Sources */,
 				8D63FF462A30D8EC002177AA /* CookieWebVC.swift in Sources */,
 				8D5F6FE12A51C96B0051A402 /* TextFieldFormView.swift in Sources */,
 				8D685B932A49B93D00629A37 /* CounterVC.swift in Sources */,
 				8DD713972A4853DD00209EEF /* UIColor+.swift in Sources */,
+				8DB65DF62A6CF8EA0063146F /* MainTableViewHeader.swift in Sources */,
 				8D5F6FE72A51C9CB0051A402 /* SliderFormView.swift in Sources */,
 				8D98EBB32A4486B8009DF067 /* NetworkManager.swift in Sources */,
+				8DB65DF32A6CF52E0063146F /* Page.swift in Sources */,
 				8D1860FB2A29070B00F89D18 /* WebVC.swift in Sources */,
 				8DD6F8DF2A62E95F00FF977A /* BindingBasics.swift in Sources */,
 				8D4560CE2A63E5EB00A31C6B /* SharedStateCounterVC.swift in Sources */,
@@ -493,6 +522,7 @@
 				8D5F6FD62A5165720051A402 /* SwitchView.swift in Sources */,
 				8D1860F62A28DD2D00F89D18 /* MainNaviVC.swift in Sources */,
 				8D5F6FD22A5151740051A402 /* BindingBasicsVC.swift in Sources */,
+				8DB65DEF2A6C01D00063146F /* FactClient.swift in Sources */,
 				8D5F6FE32A51C98E0051A402 /* SwitchFormView.swift in Sources */,
 				8D685B982A49D53100629A37 /* CounterView.swift in Sources */,
 			);
@@ -562,7 +592,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -616,7 +646,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -633,7 +663,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 54V3G99LL8;
+				DEVELOPMENT_TEAM = GMHUACJXLZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LabsProject/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "나만의 실험실";
@@ -641,7 +671,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -662,7 +692,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 54V3G99LL8;
+				DEVELOPMENT_TEAM = GMHUACJXLZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LabsProject/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "나만의 실험실";
@@ -670,7 +700,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

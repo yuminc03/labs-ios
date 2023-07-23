@@ -14,24 +14,85 @@ import Then
 
 final class MainVC: LabsVC {
     
-    private let datas = [
-        "Practise Then library",
-        "WebView Test",
-        "WebView Cookie Test",
-        "Todos",
-        "TCA - Basics",
-        "TCA - Combining reducers",
-        "TCA - Bindings",
-        "TCA - Form bindings",
-        "TCA - ListOfStateVC",
-        "TCA - Optional state",
-        "TCA - Shared state",
-        "TCA - Alerts and Confirmation Dialogs"
+    private let vm = MainVM()
+    
+    private let viewControllers = [
+        [
+            PractiseThenVC(),
+            WebVC(),
+            CookieWebVC()
+        ],
+        [
+            SegmentedVC()
+        ],
+        [
+            CounterVC(
+                store: Store(initialState: Counter.State(), reducer: Counter())
+            ),
+            TwoCountersVC(
+                store: Store(
+                    initialState: TwoCounters.State(),
+                    reducer: TwoCounters()
+                )
+            ),
+            BindingBasicsVC(
+                store: Store(
+                    initialState: BindingBasics.State(),
+                    reducer: BindingBasics()
+                )
+            ),
+            BindingFormVC(
+                store: Store(
+                    initialState: BindingForm.State(),
+                    reducer: BindingForm()
+                )
+            ),
+            ListOfStateVC(
+                store: Store(
+                    initialState:
+                        CounterList.State(
+                            counters: [
+                                Counter.State(),
+                                Counter.State(),
+                                Counter.State(),
+                            ]
+                        ),
+                    reducer: CounterList()
+                )
+            ),
+            OptionalBasicsVC(
+                store: Store(
+                    initialState: OptionalBasics.State(),
+                    reducer: OptionalBasics()
+                )
+            ),
+            SharedStateCounterVC(
+                store: Store(
+                    initialState: SharedState.State(),
+                    reducer: SharedState()
+                )
+            ),
+            AlertAndConfirmationDialogVC(
+                store: Store(
+                    initialState: AlertAndConfirmationDialog.State(),
+                    reducer: AlertAndConfirmationDialog()
+                )
+            )
+        ],
+        [
+            EffectsBasicsVC(
+                store: Store(
+                    initialState: EffectsBasics.State(),
+                    reducer: EffectsBasics()
+                )
+            )
+        ]
     ]
     
     private let tableView = UITableView(frame: .zero, style: .insetGrouped).then {
         $0.backgroundColor = .clear
-        $0.register(MainTableViewCell.self, forCellReuseIdentifier: "mainCell")
+        $0.registerHeaderFooter(type: MainTableViewHeader.self)
+        $0.registerCell(type: MainTableViewCell.self)
     }
     
     override func viewDidLoad() {
@@ -56,114 +117,42 @@ final class MainVC: LabsVC {
             $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
     }
+    
+    private func navigateChildVC(section: Int, index: Int) {
+        guard let section = viewControllers[safe: section],
+              let vc = section[safe: index] else {
+            return
+        }
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension MainVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.row {
-        case 0:
-            let vc = PractiseThenVC()
-            navigationController?.pushViewController(vc, animated: true)
-        case 1:
-            let vc = WebVC()
-            navigationController?.pushViewController(vc, animated: true)
-        case 2:
-            let vc = CookieWebVC()
-            navigationController?.pushViewController(vc, animated: true)
-        case 3:
-            let vc = SegmentedVC()
-            navigationController?.pushViewController(vc, animated: true)
-        case 4:
-            let counterVC = CounterVC(
-                store: Store(initialState: Counter.State(), reducer: Counter())
-            )
-            navigationController?.pushViewController(counterVC, animated: true)
-        case 5:
-            let vc = TwoCountersVC(
-                store: Store(
-                    initialState: TwoCounters.State(),
-                    reducer: TwoCounters()
-                )
-            )
-            navigationController?.pushViewController(vc, animated: true)
-        case 6:
-            let vc = BindingBasicsVC(
-                store: Store(
-                    initialState: BindingBasics.State(),
-                    reducer: BindingBasics()
-                )
-            )
-            navigationController?.pushViewController(vc, animated: true)
-            
-        case 7:
-            let vc = BindingFormVC(
-                store: Store(
-                    initialState: BindingForm.State(),
-                    reducer: BindingForm()
-                )
-            )
-            navigationController?.pushViewController(vc, animated: true)
-            
-        case 8:
-            let vc = ListOfStateVC(
-                store: Store(
-                    initialState:
-                        CounterList.State(
-                            counters: [
-                                Counter.State(),
-                                Counter.State(),
-                                Counter.State(),
-                            ]
-                            
-                        ),
-                    reducer: CounterList()
-                )
-            )
-            navigationController?.pushViewController(vc, animated: true)
-            
-        case 9:
-            let vc = OptionalBasicsVC(
-                store: Store(
-                    initialState: OptionalBasics.State(),
-                    reducer: OptionalBasics()
-                )
-            )
-            navigationController?.pushViewController(vc, animated: true)
-            
-        case 10:
-            let vc = SharedStateCounterVC(
-                store: Store(
-                    initialState: SharedState.State(),
-                    reducer: SharedState()
-                )
-            )
-            navigationController?.pushViewController(vc, animated: true)
-            
-        case 11:
-            let vc = AlertAndConfirmationDialogVC(
-                store: Store(
-                    initialState: AlertAndConfirmationDialog.State(),
-                    reducer: AlertAndConfirmationDialog()
-                )
-            )
-            navigationController?.pushViewController(vc, animated: true)
-        
-        default:
-            break
-        }
+        navigateChildVC(section: indexPath.section, index: indexPath.row)
     }
 }
 
 extension MainVC: UITableViewDataSource {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return vm.numberOfSection
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return datas.count
+        return vm.numberOfRowsInSection(on: section)
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueHeaderFooter(type: MainTableViewHeader.self)
+        header.updateUI(title: vm.titleOfGroup(section: section))
+        return header
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath) as? MainTableViewCell else { return UITableViewCell() }
-        cell.updateUI(titleText: datas[indexPath.row])
+        let cell = tableView.dequeueCell(type: MainTableViewCell.self, indexPath: indexPath)
+        cell.updateUI(titleText: vm.titleOfPage(section: indexPath.section, index: indexPath.row))
         return cell
     }
 }
