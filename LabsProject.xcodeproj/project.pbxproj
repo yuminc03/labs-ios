@@ -61,6 +61,7 @@
 		8DB65DF32A6CF52E0063146F /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65DF22A6CF52E0063146F /* Page.swift */; };
 		8DB65DF62A6CF8EA0063146F /* MainTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65DF52A6CF8EA0063146F /* MainTableViewHeader.swift */; };
 		8DB65DF82A6CFD600063146F /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65DF72A6CFD600063146F /* Array+.swift */; };
+		8DB65DFA2A6D081F0063146F /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65DF92A6D081F0063146F /* ProgressView.swift */; };
 		8DD6F8DB2A62A35100FF977A /* OptionalBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DA2A62A35100FF977A /* OptionalBasics.swift */; };
 		8DD6F8DD2A62A4AA00FF977A /* OptionalBasicsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DC2A62A4AA00FF977A /* OptionalBasicsVC.swift */; };
 		8DD6F8DF2A62E95F00FF977A /* BindingBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DE2A62E95F00FF977A /* BindingBasics.swift */; };
@@ -129,6 +130,7 @@
 		8DB65DF22A6CF52E0063146F /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		8DB65DF52A6CF8EA0063146F /* MainTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewHeader.swift; sourceTree = "<group>"; };
 		8DB65DF72A6CFD600063146F /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
+		8DB65DF92A6D081F0063146F /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		8DD6F8DA2A62A35100FF977A /* OptionalBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalBasics.swift; sourceTree = "<group>"; };
 		8DD6F8DC2A62A4AA00FF977A /* OptionalBasicsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalBasicsVC.swift; sourceTree = "<group>"; };
 		8DD6F8DE2A62E95F00FF977A /* BindingBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBasics.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 				8D5F6FDE2A51BDF10051A402 /* BindingBasics */,
 				8D5F6FDF2A51C81C0051A402 /* BindingForm */,
 				8D4560CF2A640EE500A31C6B /* SharedState */,
+				8DB65DFB2A6D14100063146F /* EffectBasics */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -365,6 +368,14 @@
 				8DB65DF52A6CF8EA0063146F /* MainTableViewHeader.swift */,
 			);
 			path = Header;
+			sourceTree = "<group>";
+		};
+		8DB65DFB2A6D14100063146F /* EffectBasics */ = {
+			isa = PBXGroup;
+			children = (
+				8DB65DF92A6D081F0063146F /* ProgressView.swift */,
+			);
+			path = EffectBasics;
 			sourceTree = "<group>";
 		};
 		8DD713912A48511A00209EEF /* Common */ = {
@@ -503,6 +514,7 @@
 				8DB65DF82A6CFD600063146F /* Array+.swift in Sources */,
 				8DD713932A48512D00209EEF /* NavigationBarView.swift in Sources */,
 				8D63FF462A30D8EC002177AA /* CookieWebVC.swift in Sources */,
+				8DB65DFA2A6D081F0063146F /* ProgressView.swift in Sources */,
 				8D5F6FE12A51C96B0051A402 /* TextFieldFormView.swift in Sources */,
 				8D685B932A49B93D00629A37 /* CounterVC.swift in Sources */,
 				8DD713972A4853DD00209EEF /* UIColor+.swift in Sources */,

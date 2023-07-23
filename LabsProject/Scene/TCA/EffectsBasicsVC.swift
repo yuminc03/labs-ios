@@ -151,13 +151,11 @@ final class EffectsBasicsVC: TCABaseVC<EffectsBasics> {
         return view
     }()
     
-    private let stateLabel: UILabel = {
-        let view = UILabel()
-        view.textColor = .black
+    private let progressView: ProgressView = {
+        let view = ProgressView()
+        view.backgroundColor = .white
         return view
     }()
-    
-    private var counterView: CounterView?
     
     override func setup() {
         super.setup()
@@ -168,6 +166,8 @@ final class EffectsBasicsVC: TCABaseVC<EffectsBasics> {
         stackView.addArrangedSubview(counterContainerView)
         stackView.addArrangedSubview(separatorView1)
         stackView.addArrangedSubview(numberFactButton)
+        stackView.addArrangedSubview(separatorView2)
+        stackView.addArrangedSubview(progressView)
         
         counterContainerView.addSubview(counterStackView)
         counterStackView.addArrangedSubview(minusButton)
@@ -199,6 +199,14 @@ final class EffectsBasicsVC: TCABaseVC<EffectsBasics> {
         numberFactButton.snp.makeConstraints {
             $0.height.equalTo(50)
         }
+        
+        separatorView2.snp.makeConstraints {
+            $0.height.equalTo(1)
+        }
+        
+        progressView.snp.makeConstraints {
+            $0.height.equalTo(50)
+        }
     }
     
     override func bind() {
@@ -207,6 +215,20 @@ final class EffectsBasicsVC: TCABaseVC<EffectsBasics> {
         viewStore.publisher.number
             .sink { [weak self] count in
                 self?.numberLabel.text = count.description
+            }
+            .store(in: &cancelBag)
+        
+        viewStore.publisher.isNumberFactRequestInFlight
+            .sink { [weak self] isNumberFact in
+                self?.separatorView2.isHidden = isNumberFact == false
+                self?.progressView.isHidden = isNumberFact == false
+                self?.progressView.updateIndicator(isLoading: isNumberFact)
+            }
+            .store(in: &cancelBag)
+        
+        viewStore.publisher.numberFact
+            .sink { [weak self] numberFact in
+                self?.progressView.updateUI(numberFact: numberFact)
             }
             .store(in: &cancelBag)
         
@@ -219,6 +241,12 @@ final class EffectsBasicsVC: TCABaseVC<EffectsBasics> {
         plusButton.tapPublisher
             .sink { [weak self] in
                 self?.viewStore.send(.didTapIncrementButton)
+            }
+            .store(in: &cancelBag)
+        
+        numberFactButton.tapPublisher
+            .sink { [weak self] in
+                self?.viewStore.send(.didTapNumberFactButton)
             }
             .store(in: &cancelBag)
     }
