@@ -53,7 +53,6 @@ final class BasicCounterView: UIView {
     
     private func setupUI() {
         backgroundColor = .white
-        layer.cornerRadius = 10
         addSubview(counterStackView)
         counterStackView.addArrangedSubview(minusButton)
         counterStackView.addArrangedSubview(numberLabel)

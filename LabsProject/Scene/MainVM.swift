@@ -42,7 +42,8 @@ final class MainVM {
             childPages: [
                 "TCA - Basics",
                 "TCA - Cancellation",
-                "TCA - Long-living effects"
+                "TCA - Long-living effects",
+                "TCA - Refreshable"
             ]
         )
     ]
