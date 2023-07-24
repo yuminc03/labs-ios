@@ -22,6 +22,9 @@
 		8D36172929F2CA8000231628 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D36172729F2CA8000231628 /* LaunchScreen.storyboard */; };
 		8D38229E29F5107D00B71F26 /* PractiseThenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D38229D29F5107D00B71F26 /* PractiseThenVM.swift */; };
 		8D3822A129F512CF00B71F26 /* PractiseThenTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3822A029F512CF00B71F26 /* PractiseThenTableViewHeader.swift */; };
+		8D40081A2A6EAA740030BF7D /* RefreshableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4008192A6EAA740030BF7D /* RefreshableVC.swift */; };
+		8D40081C2A6EAB610030BF7D /* BasicCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D40081B2A6EAB610030BF7D /* BasicCounterView.swift */; };
+		8D40081E2A6EBB910030BF7D /* RefreshableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D40081D2A6EBB910030BF7D /* RefreshableTableViewCell.swift */; };
 		8D4560CC2A63D90900A31C6B /* SharedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4560CB2A63D90900A31C6B /* SharedState.swift */; };
 		8D4560CE2A63E5EB00A31C6B /* SharedStateCounterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4560CD2A63E5EB00A31C6B /* SharedStateCounterVC.swift */; };
 		8D4560D12A640F0000A31C6B /* SharedStateCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4560D02A640F0000A31C6B /* SharedStateCounterView.swift */; };
@@ -99,6 +102,9 @@
 		8D36172A29F2CA8000231628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D38229D29F5107D00B71F26 /* PractiseThenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PractiseThenVM.swift; sourceTree = "<group>"; };
 		8D3822A029F512CF00B71F26 /* PractiseThenTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PractiseThenTableViewHeader.swift; sourceTree = "<group>"; };
+		8D4008192A6EAA740030BF7D /* RefreshableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableVC.swift; sourceTree = "<group>"; };
+		8D40081B2A6EAB610030BF7D /* BasicCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCounterView.swift; sourceTree = "<group>"; };
+		8D40081D2A6EBB910030BF7D /* RefreshableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableTableViewCell.swift; sourceTree = "<group>"; };
 		8D4560CB2A63D90900A31C6B /* SharedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedState.swift; sourceTree = "<group>"; };
 		8D4560CD2A63E5EB00A31C6B /* SharedStateCounterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStateCounterVC.swift; sourceTree = "<group>"; };
 		8D4560D02A640F0000A31C6B /* SharedStateCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStateCounterView.swift; sourceTree = "<group>"; };
@@ -349,6 +355,7 @@
 				052D5F0D2A6A536200BC715F /* EffectsBasicsVC.swift */,
 				8DB65DFE2A6D40480063146F /* EffectsCancellationVC.swift */,
 				8DC896152A6D685B0055C753 /* EffectsLongLivingVC.swift */,
+				8D4008192A6EAA740030BF7D /* RefreshableVC.swift */,
 				8D685B962A49D52100629A37 /* Views */,
 			);
 			path = TCA;
@@ -392,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				8DB65DF92A6D081F0063146F /* ProgressView.swift */,
+				8D40081B2A6EAB610030BF7D /* BasicCounterView.swift */,
 			);
 			path = EffectBasics;
 			sourceTree = "<group>";
@@ -400,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				8DB65E012A6D49560063146F /* NumberFactView.swift */,
+				8D40081D2A6EBB910030BF7D /* RefreshableTableViewCell.swift */,
 			);
 			path = EffectCancellation;
 			sourceTree = "<group>";
@@ -532,11 +541,13 @@
 				8D5F6FD42A5162BB0051A402 /* TextFieldView.swift in Sources */,
 				8D01AEDA2A5AE2F80008902E /* Counter.swift in Sources */,
 				8D5F6FE52A51C9AC0051A402 /* StepperFormView.swift in Sources */,
+				8D40081E2A6EBB910030BF7D /* RefreshableTableViewCell.swift in Sources */,
 				8D98EBB22A4486B8009DF067 /* TypiCodeAPI.swift in Sources */,
 				8D1860F82A28DDC500F89D18 /* LabsVC.swift in Sources */,
 				8DFA9A132A5C2C840070AB35 /* ListOfStateVC.swift in Sources */,
 				8DAC242E29F412480012A85F /* MainTableViewCell.swift in Sources */,
 				8D8BA24A2A58593700A2A525 /* TodosDTO.swift in Sources */,
+				8D40081A2A6EAA740030BF7D /* RefreshableVC.swift in Sources */,
 				8D38229E29F5107D00B71F26 /* PractiseThenVM.swift in Sources */,
 				8D685B9A2A49D8C500629A37 /* TCABaseView.swift in Sources */,
 				8D36171F29F2CA7F00231628 /* SceneDelegate.swift in Sources */,
@@ -562,6 +573,7 @@
 				8D3822A129F512CF00B71F26 /* PractiseThenTableViewHeader.swift in Sources */,
 				8D4560D72A641CE700A31C6B /* AlertAndConfirmationDialog.swift in Sources */,
 				8D685B912A49B71900629A37 /* TCABaseVC.swift in Sources */,
+				8D40081C2A6EAB610030BF7D /* BasicCounterView.swift in Sources */,
 				8D4560D12A640F0000A31C6B /* SharedStateCounterView.swift in Sources */,
 				8D5F6FD62A5165720051A402 /* SwitchView.swift in Sources */,
 				8D1860F62A28DD2D00F89D18 /* MainNaviVC.swift in Sources */,

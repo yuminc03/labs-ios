@@ -97,7 +97,8 @@ final class MainVC: LabsVC {
                         initialState: EffectsLongLiving.State(),
                         reducer: EffectsLongLiving()
                 )
-            )
+            ),
+            RefreshableVC()
         ]
     ]
     
