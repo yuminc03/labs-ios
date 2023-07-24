@@ -67,6 +67,14 @@ struct Refreshable: ReducerProtocol {
 
 final class RefreshableVC: TCABaseVC<Refreshable> {
     
+    var isLoading = false
+    
+    private let refreshControl: UIRefreshControl = {
+        let view = UIRefreshControl()
+        view.endRefreshing()
+        return view
+    }()
+
     private let tableView: UITableView = {
         let view = UITableView(frame: .zero)
         view.backgroundColor = .clear
@@ -90,6 +98,7 @@ final class RefreshableVC: TCABaseVC<Refreshable> {
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.refreshControl = refreshControl
         
         tableView.snp.makeConstraints {
             $0.top.equalTo(navigationBar.snp.bottom)
@@ -109,6 +118,14 @@ final class RefreshableVC: TCABaseVC<Refreshable> {
                 progressView.isHidden = fact == nil
                 separatorView.isHidden = fact == nil
                 progressView.updateUI(numberFact: fact)
+            }
+            .store(in: &cancelBag)
+        
+        refreshControl.isRefreshingPublisher
+            .sink { [weak self] _ in
+                self?.isLoading = true
+                await self?.viewStore.send(.refresh)
+//                isRefresh ? self?.refreshControl.beginRefreshing() : self?.refreshControl.endRefreshing()
             }
             .store(in: &cancelBag)
         
