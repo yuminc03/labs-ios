@@ -15,7 +15,6 @@ import SnapKit
 struct Refreshable: ReducerProtocol {
     struct State: Equatable {
         var counter = Counter.State()
-        var number = 0
         var fact: String?
     }
     
@@ -49,7 +48,7 @@ struct Refreshable: ReducerProtocol {
                 
             case .refresh:
                 state.fact = nil
-                return .run { [number = state.number] send in
+                return .run { [number = state.counter.value] send in
                     await send(
                         .factResponse(TaskResult { try await factClient.fetch(number) }),
                         animation: .default
@@ -101,25 +100,6 @@ final class RefreshableVC: TCABaseVC<Refreshable> {
             $0.top.equalTo(navigationBar.snp.bottom)
             $0.bottom.leading.trailing.equalToSuperview()
         }
-    }
-    
-    private func bindCell(separatorView: UIView, progressView: ProgressView) {
-        viewStore.publisher.fact
-            .sink { fact in
-                progressView.isHidden = fact == nil
-                separatorView.isHidden = fact == nil
-                progressView.updateUI(numberFact: fact)
-            }
-            .store(in: &cancelBag)
-        
-        refreshControl.isRefreshingPublisher
-            .sink { [weak self] _ in
-                Task {
-                    await self?.viewStore.send(.refresh).finish()
-                    self?.refreshControl.endRefreshing()
-                }
-            }
-            .store(in: &cancelBag)
     }
 }
 

@@ -81,6 +81,7 @@ final class TextContainerView: UIView {
     private let cancelButton: UIButton = {
         let view = UIButton()
         view.setTitle("Cancel", for: .normal)
+        view.setTitleColor(.systemBlue, for: .normal)
         return view
     }()
 
