@@ -8,6 +8,7 @@
 import UIKit
 import Combine
 
+import ComposableArchitecture
 import CombineCocoa
 import SnapKit
 
@@ -21,17 +22,9 @@ final class RefreshableTableViewCell: UITableViewCell {
         return view
     }()
     
-    let counterView = BasicCounterView()
-    
     let separatorView: UIView = {
         let view = UIView()
         view.backgroundColor = labsColor(.gray_EAEAEA)
-        return view
-    }()
-    
-    let progressView: ProgressView = {
-        let view = ProgressView()
-        view.backgroundColor = .white
         return view
     }()
     
@@ -49,29 +42,21 @@ final class RefreshableTableViewCell: UITableViewCell {
         backgroundColor = .white
         selectionStyle = .none
         contentView.addSubview(stackView)
-        stackView.addArrangedSubview(counterView)
-        stackView.addArrangedSubview(separatorView)
-        stackView.addArrangedSubview(progressView)
     }
     
     private func setupConstraints() {
         stackView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.top.bottom.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(20)
         }
-        
+    }
+    
+    func bind(store: StoreOf<Counter>) {
+        let counter = CounterView(store: store)
+        stackView.addArrangedSubview(counter)
+        stackView.addArrangedSubview(separatorView)
         separatorView.snp.makeConstraints {
             $0.height.equalTo(1)
         }
-    }
-}
-
-extension RefreshableTableViewCell {
-    
-    var minusButtonTapPublisher: AnyPublisher<Void, Never> {
-        return counterView.minusButtonTapPublisher
-    }
-    
-    var plusButtonTapPublisher: AnyPublisher<Void, Never> {
-        return counterView.plusButtonTapPublisher
     }
 }

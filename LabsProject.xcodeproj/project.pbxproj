@@ -23,7 +23,6 @@
 		8D38229E29F5107D00B71F26 /* PractiseThenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D38229D29F5107D00B71F26 /* PractiseThenVM.swift */; };
 		8D3822A129F512CF00B71F26 /* PractiseThenTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3822A029F512CF00B71F26 /* PractiseThenTableViewHeader.swift */; };
 		8D40081A2A6EAA740030BF7D /* RefreshableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4008192A6EAA740030BF7D /* RefreshableVC.swift */; };
-		8D40081C2A6EAB610030BF7D /* BasicCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D40081B2A6EAB610030BF7D /* BasicCounterView.swift */; };
 		8D40081E2A6EBB910030BF7D /* RefreshableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D40081D2A6EBB910030BF7D /* RefreshableTableViewCell.swift */; };
 		8D4560CC2A63D90900A31C6B /* SharedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4560CB2A63D90900A31C6B /* SharedState.swift */; };
 		8D4560CE2A63E5EB00A31C6B /* SharedStateCounterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4560CD2A63E5EB00A31C6B /* SharedStateCounterVC.swift */; };
@@ -103,7 +102,6 @@
 		8D38229D29F5107D00B71F26 /* PractiseThenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PractiseThenVM.swift; sourceTree = "<group>"; };
 		8D3822A029F512CF00B71F26 /* PractiseThenTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PractiseThenTableViewHeader.swift; sourceTree = "<group>"; };
 		8D4008192A6EAA740030BF7D /* RefreshableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableVC.swift; sourceTree = "<group>"; };
-		8D40081B2A6EAB610030BF7D /* BasicCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCounterView.swift; sourceTree = "<group>"; };
 		8D40081D2A6EBB910030BF7D /* RefreshableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableTableViewCell.swift; sourceTree = "<group>"; };
 		8D4560CB2A63D90900A31C6B /* SharedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedState.swift; sourceTree = "<group>"; };
 		8D4560CD2A63E5EB00A31C6B /* SharedStateCounterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStateCounterVC.swift; sourceTree = "<group>"; };
@@ -399,7 +397,6 @@
 			isa = PBXGroup;
 			children = (
 				8DB65DF92A6D081F0063146F /* ProgressView.swift */,
-				8D40081B2A6EAB610030BF7D /* BasicCounterView.swift */,
 			);
 			path = EffectBasics;
 			sourceTree = "<group>";
@@ -573,7 +570,6 @@
 				8D3822A129F512CF00B71F26 /* PractiseThenTableViewHeader.swift in Sources */,
 				8D4560D72A641CE700A31C6B /* AlertAndConfirmationDialog.swift in Sources */,
 				8D685B912A49B71900629A37 /* TCABaseVC.swift in Sources */,
-				8D40081C2A6EAB610030BF7D /* BasicCounterView.swift in Sources */,
 				8D4560D12A640F0000A31C6B /* SharedStateCounterView.swift in Sources */,
 				8D5F6FD62A5165720051A402 /* SwitchView.swift in Sources */,
 				8D1860F62A28DD2D00F89D18 /* MainNaviVC.swift in Sources */,
