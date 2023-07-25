@@ -13,16 +13,14 @@ import ComposableArchitecture
 import SnapKit
 
 struct Refreshable: ReducerProtocol {
-    
     struct State: Equatable {
-        var number = 0
+        var counter = Counter.State()
         var fact: String?
     }
     
     enum Action {
+        case counter(Counter.Action)
         case didTapCancelButton
-        case didTapDecrementButton
-        case didTapIncrementButton
         case factResponse(TaskResult<String>)
         case refresh
     }
@@ -32,41 +30,47 @@ struct Refreshable: ReducerProtocol {
         case factRequest
     }
     
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
-        switch action {
-        case .didTapCancelButton:
-            return .cancel(id: CancelID.factRequest)
-            
-        case .didTapDecrementButton:
-            state.number -= 1
-            return .none
-            
-        case .didTapIncrementButton:
-            state.number += 1
-            return .none
-            
-        case let .factResponse(.success(fact)):
-            state.fact = fact
-            return .none
-            
-        case .factResponse(.failure):
-            return .none
-            
-        case .refresh:
-            state.fact = nil
-            return .run { [number = state.number] send in
-                await send(
-                    .factResponse(TaskResult { try await factClient.fetch(number) }),
-                    animation: .default
-                )
+    var body: some ReducerProtocol<State, Action> {
+        Scope(state: \.counter, action: /Action.counter) {
+            Counter()
+        }
+        Reduce { state, action in
+            switch action {
+            case .didTapCancelButton:
+                return .cancel(id: CancelID.factRequest)
+                
+            case let .factResponse(.success(fact)):
+                state.fact = fact
+                return .none
+                
+            case .factResponse(.failure):
+                return .none
+                
+            case .refresh:
+                state.fact = nil
+                return .run { [number = state.counter.value] send in
+                    await send(
+                        .factResponse(TaskResult { try await factClient.fetch(number) }),
+                        animation: .default
+                    )
+                }
+                .cancellable(id: CancelID.factRequest)
+                
+            default:
+                return .none
             }
-            .cancellable(id: CancelID.factRequest)
         }
     }
 }
 
 final class RefreshableVC: TCABaseVC<Refreshable> {
     
+    private let refreshControl: UIRefreshControl = {
+        let view = UIRefreshControl()
+        view.endRefreshing()
+        return view
+    }()
+
     private let tableView: UITableView = {
         let view = UITableView(frame: .zero)
         view.backgroundColor = .clear
@@ -90,39 +94,12 @@ final class RefreshableVC: TCABaseVC<Refreshable> {
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.refreshControl = refreshControl
         
         tableView.snp.makeConstraints {
             $0.top.equalTo(navigationBar.snp.bottom)
             $0.bottom.leading.trailing.equalToSuperview()
         }
-    }
-    
-    private func bindCell(counterView: BasicCounterView, separatorView: UIView, progressView: ProgressView) {
-        viewStore.publisher.number
-            .sink { number in
-                counterView.numberLabel.text = number.description
-            }
-            .store(in: &cancelBag)
-        
-        viewStore.publisher.fact
-            .sink { fact in
-                progressView.isHidden = fact == nil
-                separatorView.isHidden = fact == nil
-                progressView.updateUI(numberFact: fact)
-            }
-            .store(in: &cancelBag)
-        
-        counterView.minusButtonTapPublisher
-            .sink { [weak self] _ in
-                self?.viewStore.send(.didTapDecrementButton)
-            }
-            .store(in: &cancelBag)
-        
-        counterView.plusButtonTapPublisher
-            .sink { [weak self] _ in
-                self?.viewStore.send(.didTapIncrementButton)
-            }
-            .store(in: &cancelBag)
     }
 }
 
@@ -134,11 +111,19 @@ extension RefreshableVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueCell(type: RefreshableTableViewCell.self, indexPath: indexPath)
-        bindCell(
-            counterView: cell.counterView,
-            separatorView: cell.separatorView,
-            progressView: cell.progressView
-        )
+        cell.bind(store: store.scope(state: \.counter, action: Refreshable.Action.counter))
+        viewStore.publisher.fact
+            .assign(to: \.text, on: cell.textContainerView.titleLabel)
+            .store(in: &cancelBag)
+        
+        refreshControl.isRefreshingPublisher
+            .sink { [weak self] _ in
+                Task {
+                    await self?.viewStore.send(.refresh).finish()
+                    self?.refreshControl.endRefreshing()
+                }
+            }
+            .store(in: &cancelBag)
         return cell
     }
 }
