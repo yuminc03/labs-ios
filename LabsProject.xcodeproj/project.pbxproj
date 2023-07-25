@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0508F0652A6FB86A00A650A0 /* ProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0508F0642A6FB86A00A650A0 /* ProgressCell.swift */; };
 		052D5F0E2A6A536200BC715F /* EffectsBasicsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052D5F0D2A6A536200BC715F /* EffectsBasicsVC.swift */; };
 		8D01AEDA2A5AE2F80008902E /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01AED92A5AE2F80008902E /* Counter.swift */; };
 		8D01AEDC2A5AE3420008902E /* TwoCounters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01AEDB2A5AE3420008902E /* TwoCounters.swift */; };
@@ -84,6 +85,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0508F0642A6FB86A00A650A0 /* ProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCell.swift; sourceTree = "<group>"; };
 		052D5F0D2A6A536200BC715F /* EffectsBasicsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsBasicsVC.swift; sourceTree = "<group>"; };
 		8D01AED92A5AE2F80008902E /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		8D01AEDB2A5AE3420008902E /* TwoCounters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoCounters.swift; sourceTree = "<group>"; };
@@ -173,6 +175,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0508F0632A6FB84100A650A0 /* EffectRefreshable */ = {
+			isa = PBXGroup;
+			children = (
+				0508F0642A6FB86A00A650A0 /* ProgressCell.swift */,
+			);
+			path = EffectRefreshable;
+			sourceTree = "<group>";
+		};
 		8D01AEDD2A5AE34E0008902E /* Reducer */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +317,7 @@
 				8D4560CF2A640EE500A31C6B /* SharedState */,
 				8DB65DFB2A6D14100063146F /* EffectBasics */,
 				8DB65E002A6D49330063146F /* EffectCancellation */,
+				0508F0632A6FB84100A650A0 /* EffectRefreshable */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -530,6 +541,7 @@
 				8D36171D29F2CA7F00231628 /* AppDelegate.swift in Sources */,
 				8DD7139E2A485CC000209EEF /* TableView+.swift in Sources */,
 				8D01AEDC2A5AE3420008902E /* TwoCounters.swift in Sources */,
+				0508F0652A6FB86A00A650A0 /* ProgressCell.swift in Sources */,
 				8D98EBB42A4486B8009DF067 /* API.swift in Sources */,
 				8D4560CC2A63D90900A31C6B /* SharedState.swift in Sources */,
 				8DD6F8E12A62E9D600FF977A /* BindingForm.swift in Sources */,
