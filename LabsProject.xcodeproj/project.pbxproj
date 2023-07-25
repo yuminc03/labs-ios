@@ -178,6 +178,7 @@
 		0508F0632A6FB84100A650A0 /* EffectRefreshable */ = {
 			isa = PBXGroup;
 			children = (
+				8D40081D2A6EBB910030BF7D /* RefreshableTableViewCell.swift */,
 				0508F0642A6FB86A00A650A0 /* ProgressCell.swift */,
 			);
 			path = EffectRefreshable;
@@ -416,7 +417,6 @@
 			isa = PBXGroup;
 			children = (
 				8DB65E012A6D49560063146F /* NumberFactView.swift */,
-				8D40081D2A6EBB910030BF7D /* RefreshableTableViewCell.swift */,
 			);
 			path = EffectCancellation;
 			sourceTree = "<group>";

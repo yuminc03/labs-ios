@@ -104,12 +104,6 @@ final class RefreshableVC: TCABaseVC<Refreshable> {
     }
     
     private func bindCell(separatorView: UIView, progressView: ProgressView) {
-//        viewStore.publisher.number
-//            .sink { number in
-//                counterView.numberLabel.text = number.description
-//            }
-//            .store(in: &cancelBag)
-        
         viewStore.publisher.fact
             .sink { fact in
                 progressView.isHidden = fact == nil
@@ -138,10 +132,18 @@ extension RefreshableVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueCell(type: RefreshableTableViewCell.self, indexPath: indexPath)
         cell.bind(store: store.scope(state: \.counter, action: Refreshable.Action.counter))
+        viewStore.publisher.fact
+            .assign(to: \.text, on: cell.textContainerView.titleLabel)
+            .store(in: &cancelBag)
+        
+        refreshControl.isRefreshingPublisher
+            .sink { [weak self] _ in
+                Task {
+                    await self?.viewStore.send(.refresh).finish()
+                    self?.refreshControl.endRefreshing()
+                }
+            }
+            .store(in: &cancelBag)
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
     }
 }
