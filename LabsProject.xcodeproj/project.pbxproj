@@ -70,6 +70,7 @@
 		8DB65E022A6D49560063146F /* NumberFactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65E012A6D49560063146F /* NumberFactView.swift */; };
 		8DB65E042A6D55860063146F /* EffectsCancellation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65E032A6D55860063146F /* EffectsCancellation.swift */; };
 		8DB9EC592A713D6D0015CBFA /* TimersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9EC582A713D6D0015CBFA /* TimersVC.swift */; };
+		8DB9EC5C2A7154870015CBFA /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9EC5B2A7154870015CBFA /* ClockView.swift */; };
 		8DC896142A6D68170055C753 /* EffectsLongLiving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC896132A6D68170055C753 /* EffectsLongLiving.swift */; };
 		8DC896162A6D685B0055C753 /* EffectsLongLivingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC896152A6D685B0055C753 /* EffectsLongLivingVC.swift */; };
 		8DD6F8DB2A62A35100FF977A /* OptionalBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DA2A62A35100FF977A /* OptionalBasics.swift */; };
@@ -149,6 +150,7 @@
 		8DB65E012A6D49560063146F /* NumberFactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactView.swift; sourceTree = "<group>"; };
 		8DB65E032A6D55860063146F /* EffectsCancellation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsCancellation.swift; sourceTree = "<group>"; };
 		8DB9EC582A713D6D0015CBFA /* TimersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimersVC.swift; sourceTree = "<group>"; };
+		8DB9EC5B2A7154870015CBFA /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		8DC896132A6D68170055C753 /* EffectsLongLiving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsLongLiving.swift; sourceTree = "<group>"; };
 		8DC896152A6D685B0055C753 /* EffectsLongLivingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsLongLivingVC.swift; sourceTree = "<group>"; };
 		8DD6F8DA2A62A35100FF977A /* OptionalBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalBasics.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 				8DB65DFB2A6D14100063146F /* EffectBasics */,
 				8DB65E002A6D49330063146F /* EffectCancellation */,
 				0508F0632A6FB84100A650A0 /* EffectRefreshable */,
+				8DB9EC5A2A71546A0015CBFA /* Timers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -422,6 +425,14 @@
 				8DB65E012A6D49560063146F /* NumberFactView.swift */,
 			);
 			path = EffectCancellation;
+			sourceTree = "<group>";
+		};
+		8DB9EC5A2A71546A0015CBFA /* Timers */ = {
+			isa = PBXGroup;
+			children = (
+				8DB9EC5B2A7154870015CBFA /* ClockView.swift */,
+			);
+			path = Timers;
 			sourceTree = "<group>";
 		};
 		8DD713912A48511A00209EEF /* Common */ = {
@@ -553,6 +564,7 @@
 				8D01AEDA2A5AE2F80008902E /* Counter.swift in Sources */,
 				055A9AA72A70D9930078C4EF /* Refreshable.swift in Sources */,
 				8D5F6FE52A51C9AC0051A402 /* StepperFormView.swift in Sources */,
+				8DB9EC5C2A7154870015CBFA /* ClockView.swift in Sources */,
 				8D40081E2A6EBB910030BF7D /* RefreshableTableViewCell.swift in Sources */,
 				8D98EBB22A4486B8009DF067 /* TypiCodeAPI.swift in Sources */,
 				8D1860F82A28DDC500F89D18 /* LabsVC.swift in Sources */,

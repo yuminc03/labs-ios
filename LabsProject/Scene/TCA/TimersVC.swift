@@ -60,20 +60,12 @@ final class TimersVC: TCABaseVC<Timers> {
         return view
     }()
 
-    private let clockView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .clear
-        view.layer.masksToBounds = true
-        view.layer.cornerRadius = 140
-        return view
-    }()
+    private let clockView = ClockView()
     
     private let startButton: UIButton = {
         var config = UIButton.Configuration.filled()
         config.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
         let view = UIButton(configuration: config)
-        view.backgroundColor = .systemBlue
-        view.setTitle("Start", for: .normal)
         view.setTitleColor(.white, for: .normal)
         view.layer.cornerRadius = 10
         return view
@@ -82,6 +74,11 @@ final class TimersVC: TCABaseVC<Timers> {
     init() {
         let store = Store(initialState: Timers.State(), reducer: Timers())
         super.init(store: store)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        viewStore.send(.onDisappear)
     }
     
     override func viewDidLayoutSubviews() {
@@ -103,6 +100,28 @@ final class TimersVC: TCABaseVC<Timers> {
         clockView.snp.makeConstraints {
             $0.width.height.equalTo(280)
         }
+    }
+    
+    override func bind() {
+        super.bind()
+        startButton.tapPublisher
+            .sink { [weak self] in
+                self?.viewStore.send(.didTapToggleTimerButton)
+            }
+            .store(in: &cancelBag)
+        
+        viewStore.publisher.isTimerActive
+            .sink { [weak self] in
+                self?.startButton.setTitle($0 ? "Stop" : "Start", for: .normal)
+                self?.startButton.backgroundColor = $0 ? .systemRed : .systemBlue
+            }
+            .store(in: &cancelBag)
+        
+        viewStore.publisher.secondsElapsed
+            .sink { [weak self] seconds in
+                self?.clockView.updateElapsed(secondsElapsed: seconds)
+            }
+            .store(in: &cancelBag)
     }
     
     private func setLayer() {
