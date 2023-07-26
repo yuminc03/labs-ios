@@ -12,57 +12,6 @@ import CombineCocoa
 import ComposableArchitecture
 import SnapKit
 
-struct Refreshable: ReducerProtocol {
-    struct State: Equatable {
-        var counter = Counter.State()
-        var fact: String?
-    }
-    
-    enum Action {
-        case counter(Counter.Action)
-        case didTapCancelButton
-        case factResponse(TaskResult<String>)
-        case refresh
-    }
-    
-    @Dependency(\.factClient) var factClient
-    private enum CancelID {
-        case factRequest
-    }
-    
-    var body: some ReducerProtocol<State, Action> {
-        Scope(state: \.counter, action: /Action.counter) {
-            Counter()
-        }
-        Reduce { state, action in
-            switch action {
-            case .didTapCancelButton:
-                return .cancel(id: CancelID.factRequest)
-                
-            case let .factResponse(.success(fact)):
-                state.fact = fact
-                return .none
-                
-            case .factResponse(.failure):
-                return .none
-                
-            case .refresh:
-                state.fact = nil
-                return .run { [number = state.counter.value] send in
-                    await send(
-                        .factResponse(TaskResult { try await factClient.fetch(number) }),
-                        animation: .default
-                    )
-                }
-                .cancellable(id: CancelID.factRequest)
-                
-            default:
-                return .none
-            }
-        }
-    }
-}
-
 final class RefreshableVC: TCABaseVC<Refreshable> {
     
     private let refreshControl: UIRefreshControl = {
@@ -113,15 +62,24 @@ extension RefreshableVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueCell(type: RefreshableTableViewCell.self, indexPath: indexPath)
         cell.bind(store: store.scope(state: \.counter, action: Refreshable.Action.counter))
         viewStore.publisher.fact
-            .assign(to: \.text, on: cell.textContainerView.titleLabel)
+            .sink { fact in
+                cell.textContainerView.titleLabel.text = fact
+                cell.textContainerView.cancelButton.isHidden = fact != nil
+            }
             .store(in: &cancelBag)
         
         refreshControl.isRefreshingPublisher
-            .sink { [weak self] _ in
+            .sink { [weak self] isRefreshing in
                 Task {
                     await self?.viewStore.send(.refresh).finish()
                     self?.refreshControl.endRefreshing()
                 }
+            }
+            .store(in: &cancelBag)
+        
+        cell.textContainerView.cancelButtonTapPublisher
+            .sink { [weak self] in
+                self?.viewStore.send(.didTapCancelButton)
             }
             .store(in: &cancelBag)
         return cell
