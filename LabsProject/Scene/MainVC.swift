@@ -98,7 +98,8 @@ final class MainVC: LabsVC {
                         reducer: EffectsLongLiving()
                 )
             ),
-            RefreshableVC()
+            RefreshableVC(),
+            TimersVC()
         ]
     ]
     

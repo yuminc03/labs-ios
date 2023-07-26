@@ -69,6 +69,7 @@
 		8DB65DFF2A6D40480063146F /* EffectsCancellationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65DFE2A6D40480063146F /* EffectsCancellationVC.swift */; };
 		8DB65E022A6D49560063146F /* NumberFactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65E012A6D49560063146F /* NumberFactView.swift */; };
 		8DB65E042A6D55860063146F /* EffectsCancellation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB65E032A6D55860063146F /* EffectsCancellation.swift */; };
+		8DB9EC592A713D6D0015CBFA /* TimersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9EC582A713D6D0015CBFA /* TimersVC.swift */; };
 		8DC896142A6D68170055C753 /* EffectsLongLiving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC896132A6D68170055C753 /* EffectsLongLiving.swift */; };
 		8DC896162A6D685B0055C753 /* EffectsLongLivingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC896152A6D685B0055C753 /* EffectsLongLivingVC.swift */; };
 		8DD6F8DB2A62A35100FF977A /* OptionalBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DA2A62A35100FF977A /* OptionalBasics.swift */; };
@@ -147,6 +148,7 @@
 		8DB65DFE2A6D40480063146F /* EffectsCancellationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsCancellationVC.swift; sourceTree = "<group>"; };
 		8DB65E012A6D49560063146F /* NumberFactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactView.swift; sourceTree = "<group>"; };
 		8DB65E032A6D55860063146F /* EffectsCancellation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsCancellation.swift; sourceTree = "<group>"; };
+		8DB9EC582A713D6D0015CBFA /* TimersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimersVC.swift; sourceTree = "<group>"; };
 		8DC896132A6D68170055C753 /* EffectsLongLiving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsLongLiving.swift; sourceTree = "<group>"; };
 		8DC896152A6D685B0055C753 /* EffectsLongLivingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsLongLivingVC.swift; sourceTree = "<group>"; };
 		8DD6F8DA2A62A35100FF977A /* OptionalBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalBasics.swift; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 				8DB65DFE2A6D40480063146F /* EffectsCancellationVC.swift */,
 				8DC896152A6D685B0055C753 /* EffectsLongLivingVC.swift */,
 				8D4008192A6EAA740030BF7D /* RefreshableVC.swift */,
+				8DB9EC582A713D6D0015CBFA /* TimersVC.swift */,
 				8D685B962A49D52100629A37 /* Views */,
 			);
 			path = TCA;
@@ -572,6 +575,7 @@
 				8DD713972A4853DD00209EEF /* UIColor+.swift in Sources */,
 				8DB65DF62A6CF8EA0063146F /* MainTableViewHeader.swift in Sources */,
 				8D5F6FE72A51C9CB0051A402 /* SliderFormView.swift in Sources */,
+				8DB9EC592A713D6D0015CBFA /* TimersVC.swift in Sources */,
 				8D98EBB32A4486B8009DF067 /* NetworkManager.swift in Sources */,
 				8DB65DF32A6CF52E0063146F /* Page.swift in Sources */,
 				8D1860FB2A29070B00F89D18 /* WebVC.swift in Sources */,
