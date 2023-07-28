@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		052D5F0E2A6A536200BC715F /* EffectsBasicsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052D5F0D2A6A536200BC715F /* EffectsBasicsVC.swift */; };
 		055A9AA72A70D9930078C4EF /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055A9AA62A70D9930078C4EF /* Refreshable.swift */; };
+		05AB26D12A739AC300ED39F9 /* EagerNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB26D02A739AC300ED39F9 /* EagerNavigationVC.swift */; };
 		8D01AEDA2A5AE2F80008902E /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01AED92A5AE2F80008902E /* Counter.swift */; };
 		8D01AEDC2A5AE3420008902E /* TwoCounters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01AEDB2A5AE3420008902E /* TwoCounters.swift */; };
 		8D1860F62A28DD2D00F89D18 /* MainNaviVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1860F52A28DD2D00F89D18 /* MainNaviVC.swift */; };
@@ -89,6 +90,7 @@
 /* Begin PBXFileReference section */
 		052D5F0D2A6A536200BC715F /* EffectsBasicsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsBasicsVC.swift; sourceTree = "<group>"; };
 		055A9AA62A70D9930078C4EF /* Refreshable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
+		05AB26D02A739AC300ED39F9 /* EagerNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EagerNavigationVC.swift; sourceTree = "<group>"; };
 		8D01AED92A5AE2F80008902E /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		8D01AEDB2A5AE3420008902E /* TwoCounters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoCounters.swift; sourceTree = "<group>"; };
 		8D1860F52A28DD2D00F89D18 /* MainNaviVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNaviVC.swift; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 				8DC896152A6D685B0055C753 /* EffectsLongLivingVC.swift */,
 				8D4008192A6EAA740030BF7D /* RefreshableVC.swift */,
 				8DB9EC582A713D6D0015CBFA /* TimersVC.swift */,
+				05AB26D02A739AC300ED39F9 /* EagerNavigationVC.swift */,
 				8D685B962A49D52100629A37 /* Views */,
 			);
 			path = TCA;
@@ -539,6 +542,7 @@
 				8D36172129F2CA7F00231628 /* MainVC.swift in Sources */,
 				8DC896142A6D68170055C753 /* EffectsLongLiving.swift in Sources */,
 				8D98EBAD2A44858B009DF067 /* SegmentedVC.swift in Sources */,
+				05AB26D12A739AC300ED39F9 /* EagerNavigationVC.swift in Sources */,
 				8D685B952A49C30B00629A37 /* TwoCountersVC.swift in Sources */,
 				8D8BA2472A58579100A2A525 /* SegmentedVM.swift in Sources */,
 				8DB65DFF2A6D40480063146F /* EffectsCancellationVC.swift in Sources */,
