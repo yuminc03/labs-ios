@@ -74,6 +74,7 @@
 		8DB9EC5C2A7154870015CBFA /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9EC5B2A7154870015CBFA /* ClockView.swift */; };
 		8DC896142A6D68170055C753 /* EffectsLongLiving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC896132A6D68170055C753 /* EffectsLongLiving.swift */; };
 		8DC896162A6D685B0055C753 /* EffectsLongLivingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC896152A6D685B0055C753 /* EffectsLongLivingVC.swift */; };
+		8DCCF5E82A7561690076C258 /* EagerNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCF5E72A7561690076C258 /* EagerNavigation.swift */; };
 		8DD6F8DB2A62A35100FF977A /* OptionalBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DA2A62A35100FF977A /* OptionalBasics.swift */; };
 		8DD6F8DD2A62A4AA00FF977A /* OptionalBasicsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DC2A62A4AA00FF977A /* OptionalBasicsVC.swift */; };
 		8DD6F8DF2A62E95F00FF977A /* BindingBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6F8DE2A62E95F00FF977A /* BindingBasics.swift */; };
@@ -155,6 +156,7 @@
 		8DB9EC5B2A7154870015CBFA /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		8DC896132A6D68170055C753 /* EffectsLongLiving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsLongLiving.swift; sourceTree = "<group>"; };
 		8DC896152A6D685B0055C753 /* EffectsLongLivingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsLongLivingVC.swift; sourceTree = "<group>"; };
+		8DCCF5E72A7561690076C258 /* EagerNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EagerNavigation.swift; sourceTree = "<group>"; };
 		8DD6F8DA2A62A35100FF977A /* OptionalBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalBasics.swift; sourceTree = "<group>"; };
 		8DD6F8DC2A62A4AA00FF977A /* OptionalBasicsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalBasicsVC.swift; sourceTree = "<group>"; };
 		8DD6F8DE2A62E95F00FF977A /* BindingBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBasics.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				8DB65E032A6D55860063146F /* EffectsCancellation.swift */,
 				8DC896132A6D68170055C753 /* EffectsLongLiving.swift */,
 				055A9AA62A70D9930078C4EF /* Refreshable.swift */,
+				8DCCF5E72A7561690076C258 /* EagerNavigation.swift */,
 			);
 			path = Reducer;
 			sourceTree = "<group>";
@@ -608,6 +611,7 @@
 				8D5F6FD22A5151740051A402 /* BindingBasicsVC.swift in Sources */,
 				8DB65DEF2A6C01D00063146F /* FactClient.swift in Sources */,
 				8D5F6FE32A51C98E0051A402 /* SwitchFormView.swift in Sources */,
+				8DCCF5E82A7561690076C258 /* EagerNavigation.swift in Sources */,
 				8D685B982A49D53100629A37 /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
