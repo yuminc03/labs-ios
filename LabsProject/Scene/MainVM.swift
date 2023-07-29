@@ -44,7 +44,8 @@ final class MainVM {
                 "TCA - Cancellation",
                 "TCA - Long-living effects",
                 "TCA - Refreshable",
-                "TCA - Timers"
+                "TCA - Timers",
+                "TCA - Navigate and load"
             ]
         )
     ]

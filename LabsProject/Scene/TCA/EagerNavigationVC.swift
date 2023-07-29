@@ -12,50 +12,12 @@ import CombineCocoa
 import ComposableArchitecture
 import SnapKit
 
-struct EagerNavigation: ReducerProtocol {
-    struct State: Equatable {
-        var isNavigationActive = false
-        var optionalCounter: Counter.State?
-    }
-    
-    enum Action {
-        case optionalCounter(Counter.Action)
-        case setNavigation(isActive: Bool)
-        case setNavigationIsActiveDelayCompleted
-    }
-    
-    private enum CancelID {
-        case load
-    }
-    @Dependency(\.continuousClock) var clock
-    
-    var body: some ReducerProtocol<State, Action> {
-        Reduce { state, action in
-            switch action {
-            case .setNavigation(isActive: true):
-                return .none
-                
-            case .setNavigation(isActive: false):
-                return .none
-                
-            case .setNavigationIsActiveDelayCompleted:
-                return .none
-                
-            case .optionalCounter:
-                return .none
-            }
-        }
-        .ifLet(\.optionalCounter, action: /Action.optionalCounter) {
-            Counter()
-        }
-    }
-}
-
 final class EagerNavigationVC: TCABaseVC<EagerNavigation> {
     
     private let loadOptionalCounterButton: UIButton = {
         let view = UIButton()
         view.setTitle("Load optional counter", for: .normal)
+        view.setTitleColor(.systemBlue, for: .normal)
         return view
     }()
     
@@ -67,13 +29,21 @@ final class EagerNavigationVC: TCABaseVC<EagerNavigation> {
         super.init(store: store)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if isMovingToParent == false {
+            viewStore.send(.setNavigation(isActive: false))
+        }
+    }
+    
     override func setup() {
         super.setup()
         setNavigationTitle(title: "Navigate and load")
         view.addSubview(loadOptionalCounterButton)
         
         loadOptionalCounterButton.snp.makeConstraints {
-            $0.center.equalToSuperview()
+            $0.centerX.centerY.equalToSuperview()
         }
     }
     
@@ -172,7 +142,7 @@ final class ActivityIndicatorVC: LabsVC {
         view.addSubview(activityIndicatorView)
         
         activityIndicatorView.snp.makeConstraints {
-            $0.center.equalToSuperview()
+            $0.centerX.centerY.equalToSuperview()
         }
     }
 }
