@@ -38,6 +38,26 @@ final class SharedStateCounterVC: TCABaseVC<SharedState> {
         super.init(store: store)
     }
     
+    init() {
+        let store = Store(
+            initialState: SharedState.State(),
+            reducer: SharedState()
+        )
+        self.counterView = SharedStateCounterView(
+            store: store.scope(
+                state: \.counter,
+                action: SharedState.Action.counter
+            )
+        )
+        self.profileView = SharedStateProfileView(
+            store: store.scope(
+                state: \.profile,
+                action: SharedState.Action.profile
+            )
+        )
+        super.init(store: store)
+    }
+    
     override func setup() {
         super.setup()
         setNavigationTitle(title: "Shared State Demo")

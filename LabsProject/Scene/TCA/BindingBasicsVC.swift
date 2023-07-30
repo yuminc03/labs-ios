@@ -40,6 +40,18 @@ final class BindingBasicsVC: TCABaseVC<BindingBasics> {
         super.init(store: store)
     }
     
+    init() {
+        let store = Store(
+            initialState: BindingBasics.State(),
+            reducer: BindingBasics()
+        )
+        self.textFieldView = TextFieldView(store: store)
+        self.switchView = SwitchView(store: store)
+        self.stepperView = StepperView(store: store)
+        self.sliderView = SliderView(store: store)
+        super.init(store: store)
+    }
+    
     override func setup() {
         super.setup()
         view.backgroundColor = labsColor(.gray_EAEAEA)

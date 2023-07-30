@@ -85,6 +85,14 @@ final class EffectsBasicsVC: TCABaseVC<EffectsBasics> {
         return view
     }()
     
+    init() {
+        let store = Store(
+            initialState: EffectsBasics.State(),
+            reducer: EffectsBasics()
+        )
+        super.init(store: store)
+    }
+    
     override func setup() {
         super.setup()
         view.backgroundColor = .systemGray6

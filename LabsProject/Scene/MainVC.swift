@@ -26,82 +26,23 @@ final class MainVC: LabsVC {
             SegmentedVC()
         ],
         [
-            CounterVC(
-                store: Store(initialState: Counter.State(), reducer: Counter())
-            ),
-            TwoCountersVC(
-                store: Store(
-                    initialState: TwoCounters.State(),
-                    reducer: TwoCounters()
-                )
-            ),
-            BindingBasicsVC(
-                store: Store(
-                    initialState: BindingBasics.State(),
-                    reducer: BindingBasics()
-                )
-            ),
-            BindingFormVC(
-                store: Store(
-                    initialState: BindingForm.State(),
-                    reducer: BindingForm()
-                )
-            ),
-            OptionalBasicsVC(
-                store: Store(
-                    initialState: OptionalBasics.State(),
-                    reducer: OptionalBasics()
-                )
-            ),
-            SharedStateCounterVC(
-                store: Store(
-                    initialState: SharedState.State(),
-                    reducer: SharedState()
-                )
-            ),
-            AlertAndConfirmationDialogVC(
-                store: Store(
-                    initialState: AlertAndConfirmationDialog.State(),
-                    reducer: AlertAndConfirmationDialog()
-                )
-            )
+            CounterVC(),
+            TwoCountersVC(),
+            BindingBasicsVC(),
+            BindingFormVC(),
+            OptionalBasicsVC(),
+            SharedStateCounterVC(),
+            AlertAndConfirmationDialogVC()
         ],
         [
-            EffectsBasicsVC(
-                store: Store(
-                    initialState: EffectsBasics.State(),
-                    reducer: EffectsBasics()
-                )
-            ),
-            EffectsCancellationVC(
-                store: Store(
-                    initialState: EffectsCancellation.State(),
-                    reducer: EffectsCancellation()
-                )
-            ),
-            EffectsLongLivingVC(
-                store: Store(
-                        initialState: EffectsLongLiving.State(),
-                        reducer: EffectsLongLiving()
-                )
-            ),
+            EffectsBasicsVC(),
+            EffectsCancellationVC(),
+            EffectsLongLivingVC(),
             RefreshableVC(),
             TimersVC()
         ],
         [
-            ListOfStateVC(
-                store: Store(
-                    initialState:
-                        CounterList.State(
-                            counters: [
-                                Counter.State(),
-                                Counter.State(),
-                                Counter.State(),
-                            ]
-                        ),
-                    reducer: CounterList()
-                )
-            ),
+            ListOfStateVC(),
             EagerNavigationVC(),
             LazyNavigationVC()
         ]

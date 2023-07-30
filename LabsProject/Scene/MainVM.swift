@@ -27,31 +27,31 @@ final class MainVM {
         Page(
             category: "UIKIT + TCA - GETTING STARTED",
             childPages: [
-                "TCA - Basics",
-                "TCA - Combining reducers",
-                "TCA - Bindings",
-                "TCA - Form bindings",
-                "TCA - Optional state",
-                "TCA - Shared state",
-                "TCA - Alerts and Confirmation Dialogs"
+                "Basics",
+                "Combining reducers",
+                "Bindings",
+                "Form bindings",
+                "Optional state",
+                "Shared state",
+                "Alerts and Confirmation Dialogs"
             ]
         ),
         Page(
             category: "UIKIT + TCA - EFFECTS",
             childPages: [
-                "TCA - Basics",
-                "TCA - Cancellation",
-                "TCA - Long-living effects",
-                "TCA - Refreshable",
-                "TCA - Timers"
+                "Basics",
+                "Cancellation",
+                "Long-living effects",
+                "Refreshable",
+                "Timers"
             ]
         ),
         Page(
             category: "UIKit + TCA - Case Studies",
             childPages: [
-                "TCA - Lists",
-                "TCA - Navigate and load",
-                "TCA - Load then navigate"
+                "Lists",
+                "Navigate and load",
+                "Load then navigate"
             ]
         )
     ]
