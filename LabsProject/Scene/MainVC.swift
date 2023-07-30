@@ -100,7 +100,8 @@ final class MainVC: LabsVC {
             ),
             RefreshableVC(),
             TimersVC(),
-            EagerNavigationVC()
+            EagerNavigationVC(),
+            LazyNavigationVC()
         ]
     ]
     
