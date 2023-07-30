@@ -107,11 +107,14 @@ final class MainVC: LabsVC {
         ]
     ]
     
-    private let tableView = UITableView(frame: .zero, style: .insetGrouped).then {
-        $0.backgroundColor = .clear
-        $0.registerHeaderFooter(type: MainTableViewHeader.self)
-        $0.registerCell(type: MainTableViewCell.self)
-    }
+    private let tableView: UITableView = {
+        let view = UITableView(frame: .zero, style: .insetGrouped)
+        view.backgroundColor = .clear
+        view.separatorStyle = .none
+        view.registerHeaderFooter(type: MainTableViewHeader.self)
+        view.registerCell(type: MainTableViewCell.self)
+        return view
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -120,12 +123,11 @@ final class MainVC: LabsVC {
     }
     
     private func setupUI() {
-        view.backgroundColor = .systemGray6
         navigationController?.isNavigationBarHidden = true
-        
+        view.backgroundColor = .systemGray6
+        view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
-        view.addSubview(tableView)
     }
     
     private func setupConstraints() {
@@ -170,5 +172,19 @@ extension MainVC: UITableViewDataSource {
         let cell = tableView.dequeueCell(type: MainTableViewCell.self, indexPath: indexPath)
         cell.updateUI(titleText: vm.titleOfPage(section: indexPath.section, index: indexPath.row))
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footer = UIView()
+        footer.backgroundColor = .clear
+        return footer
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 10
     }
 }
