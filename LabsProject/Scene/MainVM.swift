@@ -47,6 +47,11 @@ final class MainVM {
             ]
         ),
         Page(
+            category: "UIKIT + TCA - Navigation",
+            childPages: [
+                "Stack"
+            ]),
+        Page(
             category: "UIKit + TCA - Case Studies",
             childPages: [
                 "Lists",

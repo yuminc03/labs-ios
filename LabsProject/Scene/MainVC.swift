@@ -45,6 +45,9 @@ final class MainVC: LabsVC {
             ListOfStateVC(),
             EagerNavigationVC(),
             LazyNavigationVC()
+        ],
+        [
+            NavigationDemoVC()
         ]
     ]
     
