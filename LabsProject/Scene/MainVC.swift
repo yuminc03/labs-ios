@@ -47,19 +47,6 @@ final class MainVC: LabsVC {
                     reducer: BindingForm()
                 )
             ),
-            ListOfStateVC(
-                store: Store(
-                    initialState:
-                        CounterList.State(
-                            counters: [
-                                Counter.State(),
-                                Counter.State(),
-                                Counter.State(),
-                            ]
-                        ),
-                    reducer: CounterList()
-                )
-            ),
             OptionalBasicsVC(
                 store: Store(
                     initialState: OptionalBasics.State(),
@@ -99,7 +86,22 @@ final class MainVC: LabsVC {
                 )
             ),
             RefreshableVC(),
-            TimersVC(),
+            TimersVC()
+        ],
+        [
+            ListOfStateVC(
+                store: Store(
+                    initialState:
+                        CounterList.State(
+                            counters: [
+                                Counter.State(),
+                                Counter.State(),
+                                Counter.State(),
+                            ]
+                        ),
+                    reducer: CounterList()
+                )
+            ),
             EagerNavigationVC(),
             LazyNavigationVC()
         ]

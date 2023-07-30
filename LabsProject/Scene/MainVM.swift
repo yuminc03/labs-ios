@@ -31,7 +31,6 @@ final class MainVM {
                 "TCA - Combining reducers",
                 "TCA - Bindings",
                 "TCA - Form bindings",
-                "TCA - ListOfStateVC",
                 "TCA - Optional state",
                 "TCA - Shared state",
                 "TCA - Alerts and Confirmation Dialogs"
@@ -44,7 +43,13 @@ final class MainVM {
                 "TCA - Cancellation",
                 "TCA - Long-living effects",
                 "TCA - Refreshable",
-                "TCA - Timers",
+                "TCA - Timers"
+            ]
+        ),
+        Page(
+            category: "UIKit + TCA - Case Studies",
+            childPages: [
+                "TCA - Lists",
                 "TCA - Navigate and load",
                 "TCA - Load then navigate"
             ]
