@@ -45,7 +45,8 @@ final class MainVM {
                 "TCA - Long-living effects",
                 "TCA - Refreshable",
                 "TCA - Timers",
-                "TCA - Navigate and load"
+                "TCA - Navigate and load",
+                "TCA - Load then navigate"
             ]
         )
     ]
