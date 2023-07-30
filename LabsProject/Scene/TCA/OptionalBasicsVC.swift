@@ -8,6 +8,7 @@
 import UIKit
 
 import CombineCocoa
+import ComposableArchitecture
 import SnapKit
 
 final class OptionalBasicsVC: TCABaseVC<OptionalBasics> {
@@ -56,6 +57,14 @@ final class OptionalBasicsVC: TCABaseVC<OptionalBasics> {
     
     private var counterView: CounterView?
 
+    init() {
+        let store = Store(
+            initialState: OptionalBasics.State(),
+            reducer: OptionalBasics()
+        )
+        super.init(store: store)
+    }
+    
     override func setup() {
         super.setup()
         view.backgroundColor = .systemGray6

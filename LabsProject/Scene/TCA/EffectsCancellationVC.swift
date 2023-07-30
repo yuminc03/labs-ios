@@ -80,6 +80,14 @@ final class EffectsCancellationVC: TCABaseVC<EffectsCancellation> {
         return view
     }()
     
+    init() {
+        let store = Store(
+            initialState: EffectsCancellation.State(),
+            reducer: EffectsCancellation()
+        )
+        super.init(store: store)
+    }
+    
     override func setup() {
         super.setup()
         setNavigationTitle(title: "Effect cancellation")

@@ -50,6 +50,14 @@ final class EffectsLongLivingVC: TCABaseVC<EffectsLongLiving> {
         view.layer.cornerRadius = 10
         return view
     }()
+    
+    init() {
+        let store = Store(
+                initialState: EffectsLongLiving.State(),
+                reducer: EffectsLongLiving()
+        )
+        super.init(store: store)
+    }
 
     override func setup() {
         super.setup()

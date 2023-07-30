@@ -26,90 +26,36 @@ final class MainVC: LabsVC {
             SegmentedVC()
         ],
         [
-            CounterVC(
-                store: Store(initialState: Counter.State(), reducer: Counter())
-            ),
-            TwoCountersVC(
-                store: Store(
-                    initialState: TwoCounters.State(),
-                    reducer: TwoCounters()
-                )
-            ),
-            BindingBasicsVC(
-                store: Store(
-                    initialState: BindingBasics.State(),
-                    reducer: BindingBasics()
-                )
-            ),
-            BindingFormVC(
-                store: Store(
-                    initialState: BindingForm.State(),
-                    reducer: BindingForm()
-                )
-            ),
-            ListOfStateVC(
-                store: Store(
-                    initialState:
-                        CounterList.State(
-                            counters: [
-                                Counter.State(),
-                                Counter.State(),
-                                Counter.State(),
-                            ]
-                        ),
-                    reducer: CounterList()
-                )
-            ),
-            OptionalBasicsVC(
-                store: Store(
-                    initialState: OptionalBasics.State(),
-                    reducer: OptionalBasics()
-                )
-            ),
-            SharedStateCounterVC(
-                store: Store(
-                    initialState: SharedState.State(),
-                    reducer: SharedState()
-                )
-            ),
-            AlertAndConfirmationDialogVC(
-                store: Store(
-                    initialState: AlertAndConfirmationDialog.State(),
-                    reducer: AlertAndConfirmationDialog()
-                )
-            )
+            CounterVC(),
+            TwoCountersVC(),
+            BindingBasicsVC(),
+            BindingFormVC(),
+            OptionalBasicsVC(),
+            SharedStateCounterVC(),
+            AlertAndConfirmationDialogVC()
         ],
         [
-            EffectsBasicsVC(
-                store: Store(
-                    initialState: EffectsBasics.State(),
-                    reducer: EffectsBasics()
-                )
-            ),
-            EffectsCancellationVC(
-                store: Store(
-                    initialState: EffectsCancellation.State(),
-                    reducer: EffectsCancellation()
-                )
-            ),
-            EffectsLongLivingVC(
-                store: Store(
-                        initialState: EffectsLongLiving.State(),
-                        reducer: EffectsLongLiving()
-                )
-            ),
+            EffectsBasicsVC(),
+            EffectsCancellationVC(),
+            EffectsLongLivingVC(),
             RefreshableVC(),
-            TimersVC(),
+            TimersVC()
+        ],
+        [
+            ListOfStateVC(),
             EagerNavigationVC(),
             LazyNavigationVC()
         ]
     ]
     
-    private let tableView = UITableView(frame: .zero, style: .insetGrouped).then {
-        $0.backgroundColor = .clear
-        $0.registerHeaderFooter(type: MainTableViewHeader.self)
-        $0.registerCell(type: MainTableViewCell.self)
-    }
+    private let tableView: UITableView = {
+        let view = UITableView(frame: .zero, style: .insetGrouped)
+        view.backgroundColor = .clear
+        view.separatorStyle = .none
+        view.registerHeaderFooter(type: MainTableViewHeader.self)
+        view.registerCell(type: MainTableViewCell.self)
+        return view
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,12 +64,11 @@ final class MainVC: LabsVC {
     }
     
     private func setupUI() {
-        view.backgroundColor = .systemGray6
         navigationController?.isNavigationBarHidden = true
-        
+        view.backgroundColor = .systemGray6
+        view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
-        view.addSubview(tableView)
     }
     
     private func setupConstraints() {
@@ -168,5 +113,19 @@ extension MainVC: UITableViewDataSource {
         let cell = tableView.dequeueCell(type: MainTableViewCell.self, indexPath: indexPath)
         cell.updateUI(titleText: vm.titleOfPage(section: indexPath.section, index: indexPath.row))
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footer = UIView()
+        footer.backgroundColor = .clear
+        return footer
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 10
     }
 }

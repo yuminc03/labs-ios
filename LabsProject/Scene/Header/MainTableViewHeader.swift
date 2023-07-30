@@ -34,7 +34,7 @@ final class MainTableViewHeader: UITableViewHeaderFooterView {
     
     private func setupConstraints() {
         titleLabel.snp.makeConstraints {
-            $0.top.bottom.equalToSuperview().inset(10)
+            $0.centerY.equalToSuperview()
             $0.leading.trailing.equalToSuperview().inset(20)
         }
     }

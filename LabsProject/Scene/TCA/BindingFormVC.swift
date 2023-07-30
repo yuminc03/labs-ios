@@ -47,6 +47,18 @@ final class BindingFormVC: TCABaseVC<BindingForm> {
         super.init(store: store)
     }
     
+    init() {
+        let store = Store(
+            initialState: BindingForm.State(),
+            reducer: BindingForm()
+        )
+        self.textFieldView = TextFieldFormView(store: store)
+        self.switchView = SwitchFormView(store: store)
+        self.stepperView = StepperFormView(store: store)
+        self.sliderView = SliderFormView(store: store)
+        super.init(store: store)
+    }
+    
     override func bind() {
         super.bind()
         resetButton.tapPublisher

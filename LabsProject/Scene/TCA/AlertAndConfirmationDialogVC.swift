@@ -64,6 +64,14 @@ final class AlertAndConfirmationDialogVC: TCABaseVC<AlertAndConfirmationDialog> 
         return view
     }()
     
+    init() {
+        let store = Store(
+            initialState: AlertAndConfirmationDialog.State(),
+            reducer: AlertAndConfirmationDialog()
+        )
+        super.init(store: store)
+    }
+    
     override func setup() {
         view.backgroundColor = .systemGray6
         view.addSubview(stackView)

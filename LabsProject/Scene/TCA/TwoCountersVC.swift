@@ -21,15 +21,35 @@ final class TwoCountersVC: TCABaseVC<TwoCounters> {
     
     let counter1: CounterView
     let counter2: CounterView
-
-    override init(store: StoreOf<TwoCounters>) {
-        counter1 = CounterView(
+    
+    init() {
+        let store = Store(
+            initialState: TwoCounters.State(),
+            reducer: TwoCounters()
+        )
+        self.counter1 = CounterView(
             store: store.scope(
                 state: \.counter1,
                 action: TwoCounters.Action.counter1
             )
         )
-        counter2 = CounterView(
+        self.counter2 = CounterView(
+            store: store.scope(
+                state: \.counter2,
+                action: TwoCounters.Action.counter2
+            )
+        )
+        super.init(store: store)
+    }
+    
+    override init(store: StoreOf<TwoCounters>) {
+        self.counter1 = CounterView(
+            store: store.scope(
+                state: \.counter1,
+                action: TwoCounters.Action.counter1
+            )
+        )
+        self.counter2 = CounterView(
             store: store.scope(
                 state: \.counter2,
                 action: TwoCounters.Action.counter2

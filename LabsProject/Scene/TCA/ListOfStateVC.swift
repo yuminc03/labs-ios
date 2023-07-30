@@ -25,6 +25,22 @@ final class ListOfStateVC: TCABaseVC<CounterList> {
         self.viewStore = ViewStore(store, observe: { $0 })
     }
     
+    init() {
+        let store = Store(
+            initialState:
+                CounterList.State(
+                    counters: [
+                        Counter.State(),
+                        Counter.State(),
+                        Counter.State(),
+                    ]
+                ),
+            reducer: CounterList()
+        )
+        super.init(store: store)
+        self.viewStore = ViewStore(store, observe: { $0 })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
