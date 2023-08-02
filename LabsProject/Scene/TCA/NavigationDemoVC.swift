@@ -33,13 +33,41 @@ struct NavigationDemo: ReducerProtocol {
             Path()
         }
     }
+    
+    struct Path: ReducerProtocol {
+        enum State: Codable, Equatable, Hashable {
+            case screenA(ScreenA)
+        }
+    }
+}
+
+struct ScreenA: ReducerProtocol {
+    struct State: Codable, Equatable, Hashable {
+        var count = 0
+        var fact: String?
+        var isLoading = false
+    }
+    
+    enum Action: Equatable {
+        case didTapDecrementButton
+        case didTapDismissButton
+        case didTapIncrementButton
+        case didTapFactButton
+        case factResponse(TaskResult<String>)
+    }
+    
+    @Dependency(\.dismiss) var dismiss
+    @Dependency(\.factClient) var factClient
+    
+    
 }
 final class NavigationDemoVC: TCABaseVC<NavigationDemo> {
     
     init() {
         store = Store(
             initialState: NavigationDemo.State(),
-            reducer: NavigationDemo.Action)
+            reducer: NavigationDemo())
         super.init(store: store)
     }
 }
+
