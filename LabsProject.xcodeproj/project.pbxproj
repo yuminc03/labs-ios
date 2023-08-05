@@ -12,6 +12,10 @@
 		05AB26D12A739AC300ED39F9 /* EagerNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB26D02A739AC300ED39F9 /* EagerNavigationVC.swift */; };
 		8D01AEDA2A5AE2F80008902E /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01AED92A5AE2F80008902E /* Counter.swift */; };
 		8D01AEDC2A5AE3420008902E /* TwoCounters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01AEDB2A5AE3420008902E /* TwoCounters.swift */; };
+		8D12DA892A7E910F00B2C190 /* NavigationDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D12DA882A7E910F00B2C190 /* NavigationDemo.swift */; };
+		8D12DA8B2A7E916000B2C190 /* ScreenA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D12DA8A2A7E916000B2C190 /* ScreenA.swift */; };
+		8D12DA8D2A7E918300B2C190 /* ScreenB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D12DA8C2A7E918300B2C190 /* ScreenB.swift */; };
+		8D12DA8F2A7E918900B2C190 /* ScreenC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D12DA8E2A7E918900B2C190 /* ScreenC.swift */; };
 		8D1860F62A28DD2D00F89D18 /* MainNaviVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1860F52A28DD2D00F89D18 /* MainNaviVC.swift */; };
 		8D1860F82A28DDC500F89D18 /* LabsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1860F72A28DDC500F89D18 /* LabsVC.swift */; };
 		8D1860FB2A29070B00F89D18 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1860FA2A29070B00F89D18 /* WebVC.swift */; };
@@ -97,6 +101,10 @@
 		05AB26D02A739AC300ED39F9 /* EagerNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EagerNavigationVC.swift; sourceTree = "<group>"; };
 		8D01AED92A5AE2F80008902E /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		8D01AEDB2A5AE3420008902E /* TwoCounters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoCounters.swift; sourceTree = "<group>"; };
+		8D12DA882A7E910F00B2C190 /* NavigationDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDemo.swift; sourceTree = "<group>"; };
+		8D12DA8A2A7E916000B2C190 /* ScreenA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenA.swift; sourceTree = "<group>"; };
+		8D12DA8C2A7E918300B2C190 /* ScreenB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenB.swift; sourceTree = "<group>"; };
+		8D12DA8E2A7E918900B2C190 /* ScreenC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenC.swift; sourceTree = "<group>"; };
 		8D1860F52A28DD2D00F89D18 /* MainNaviVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNaviVC.swift; sourceTree = "<group>"; };
 		8D1860F72A28DDC500F89D18 /* LabsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabsVC.swift; sourceTree = "<group>"; };
 		8D1860FA2A29070B00F89D18 /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
@@ -214,8 +222,27 @@
 				055A9AA62A70D9930078C4EF /* Refreshable.swift */,
 				8DCCF5E72A7561690076C258 /* EagerNavigation.swift */,
 				8D9D63D42A767FF1009795FF /* LazyNavigation.swift */,
+				8D12DA872A7E910000B2C190 /* NavigationDemo */,
 			);
 			path = Reducer;
+			sourceTree = "<group>";
+		};
+		8D12DA872A7E910000B2C190 /* NavigationDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8D12DA882A7E910F00B2C190 /* NavigationDemo.swift */,
+				8D12DA8A2A7E916000B2C190 /* ScreenA.swift */,
+				8D12DA8C2A7E918300B2C190 /* ScreenB.swift */,
+				8D12DA8E2A7E918900B2C190 /* ScreenC.swift */,
+			);
+			path = NavigationDemo;
+			sourceTree = "<group>";
+		};
+		8D12DA902A7E91F700B2C190 /* NavigationDemo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NavigationDemo;
 			sourceTree = "<group>";
 		};
 		8D1860F92A28FD7000F89D18 /* Web */ = {
@@ -336,6 +363,7 @@
 				8DB65E002A6D49330063146F /* EffectCancellation */,
 				0508F0632A6FB84100A650A0 /* EffectRefreshable */,
 				8DB9EC5A2A71546A0015CBFA /* Timers */,
+				8D12DA902A7E91F700B2C190 /* NavigationDemo */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -555,6 +583,7 @@
 				8DC896142A6D68170055C753 /* EffectsLongLiving.swift in Sources */,
 				8D98EBAD2A44858B009DF067 /* SegmentedVC.swift in Sources */,
 				05AB26D12A739AC300ED39F9 /* EagerNavigationVC.swift in Sources */,
+				8D12DA8D2A7E918300B2C190 /* ScreenB.swift in Sources */,
 				8D685B952A49C30B00629A37 /* TwoCountersVC.swift in Sources */,
 				8D8BA2472A58579100A2A525 /* SegmentedVM.swift in Sources */,
 				8DB65DFF2A6D40480063146F /* EffectsCancellationVC.swift in Sources */,
@@ -576,6 +605,7 @@
 				8D4560CC2A63D90900A31C6B /* SharedState.swift in Sources */,
 				8DD6F8E12A62E9D600FF977A /* BindingForm.swift in Sources */,
 				8D5F6FDA2A5166F80051A402 /* SliderView.swift in Sources */,
+				8D12DA8B2A7E916000B2C190 /* ScreenA.swift in Sources */,
 				052D5F0E2A6A536200BC715F /* EffectsBasicsVC.swift in Sources */,
 				8D5F6FD42A5162BB0051A402 /* TextFieldView.swift in Sources */,
 				8D01AEDA2A5AE2F80008902E /* Counter.swift in Sources */,
@@ -600,6 +630,7 @@
 				8DB65DFA2A6D081F0063146F /* ProgressView.swift in Sources */,
 				8DB65DFD2A6D1BA70063146F /* EffectsBasics.swift in Sources */,
 				8D5F6FE12A51C96B0051A402 /* TextFieldFormView.swift in Sources */,
+				8D12DA8F2A7E918900B2C190 /* ScreenC.swift in Sources */,
 				8D685B932A49B93D00629A37 /* CounterVC.swift in Sources */,
 				8DD713972A4853DD00209EEF /* UIColor+.swift in Sources */,
 				8D69FE4F2A76B64A0063963C /* NavigationDemoVC.swift in Sources */,
@@ -607,6 +638,7 @@
 				8D5F6FE72A51C9CB0051A402 /* SliderFormView.swift in Sources */,
 				8DB9EC592A713D6D0015CBFA /* TimersVC.swift in Sources */,
 				8D98EBB32A4486B8009DF067 /* NetworkManager.swift in Sources */,
+				8D12DA892A7E910F00B2C190 /* NavigationDemo.swift in Sources */,
 				8DB65DF32A6CF52E0063146F /* Page.swift in Sources */,
 				8D1860FB2A29070B00F89D18 /* WebVC.swift in Sources */,
 				8DD6F8DF2A62E95F00FF977A /* BindingBasics.swift in Sources */,
