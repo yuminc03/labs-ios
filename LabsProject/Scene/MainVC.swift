@@ -42,9 +42,6 @@ final class MainVC: LabsVC {
             TimersVC()
         ],
         [
-            NavigationDemoVC()
-        ],
-        [
             ListOfStateVC(),
             EagerNavigationVC(),
             LazyNavigationVC()
