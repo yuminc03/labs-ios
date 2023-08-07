@@ -47,7 +47,7 @@ final class MainVC: LabsVC {
             LazyNavigationVC()
         ],
         [
-            NavigationDemoVC()
+            SearchVC()
         ]
     ]
     
