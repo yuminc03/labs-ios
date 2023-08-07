@@ -53,6 +53,12 @@ final class MainVM {
                 "Navigate and load",
                 "Load then navigate"
             ]
+        ),
+        Page(
+            category: "UIKit + Search",
+            childPages: [
+                "Search"
+            ]
         )
     ]
     var numberOfSection: Int {
