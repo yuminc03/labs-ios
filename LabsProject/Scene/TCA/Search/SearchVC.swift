@@ -73,6 +73,19 @@ final class SearchVC: TCABaseVC<Search> {
         super.init(store: store)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        Task {
+            do {
+                try await Task.sleep(nanoseconds: NSEC_PER_SEC / 3)
+                await viewStore.send(.didChangeSearchQueryDebounced).finish()
+                print("Send didChangeSearchQueryDebounced")
+            } catch {
+                
+            }
+        }
+    }
+    
     override func setup() {
         super.setup()
         setNavigationTitle(title: "Search")
@@ -105,11 +118,6 @@ final class SearchVC: TCABaseVC<Search> {
                 self?.tableView.reloadData()
             }
             .store(in: &cancelBag)
-        
-        viewStore.publisher.searchQuery
-            .sink { [weak self] in
-                self?.viewStore.send(.didChangeSearchQueryDebounced).finish()
-            }
         
         textField.textPublisher
             .compactMap { $0 }
