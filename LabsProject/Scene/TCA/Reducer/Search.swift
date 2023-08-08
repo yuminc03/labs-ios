@@ -43,7 +43,6 @@ struct Search: ReducerProtocol {
         case didChangeSearchQueryDebounced
         case searchResponse(TaskResult<GeocodingSearch>)
         case didTapSearchResult(GeocodingSearch.Result)
-        case searchQueryTesk
     }
     
     func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
@@ -103,6 +102,7 @@ struct Search: ReducerProtocol {
             
         case let .didTapSearchResult(location):
             state.resultForecastRequestInFlight = location
+            
             return .run { send in
                 await send(.forecastResponse(
                     location.id,
@@ -113,8 +113,6 @@ struct Search: ReducerProtocol {
             }
             .cancellable(id: CancelID.weather, cancelInFlight: true)
             
-        case .searchQueryTesk:
-            lk
         }
     }
 }
