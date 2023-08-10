@@ -92,6 +92,7 @@
 		8DD713972A4853DD00209EEF /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD713962A4853DD00209EEF /* UIColor+.swift */; };
 		8DD7139C2A485A9000209EEF /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8DD7139B2A485A9000209EEF /* CombineCocoa */; };
 		8DD7139E2A485CC000209EEF /* TableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7139D2A485CC000209EEF /* TableView+.swift */; };
+		8DF15DC82A83D47A00F5D68A /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF15DC72A83D47A00F5D68A /* SearchTableViewCell.swift */; };
 		8DFA9A132A5C2C840070AB35 /* ListOfStateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFA9A122A5C2C840070AB35 /* ListOfStateVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -178,6 +179,7 @@
 		8DD713922A48512D00209EEF /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		8DD713962A4853DD00209EEF /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		8DD7139D2A485CC000209EEF /* TableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+.swift"; sourceTree = "<group>"; };
+		8DF15DC72A83D47A00F5D68A /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		8DFA9A122A5C2C840070AB35 /* ListOfStateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfStateVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -209,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				051B833D2A80BFF7007B51B8 /* SearchVC.swift */,
+				8DF15DC72A83D47A00F5D68A /* SearchTableViewCell.swift */,
 				051B83402A80C155007B51B8 /* WeatherClient.swift */,
 			);
 			path = Search;
@@ -652,6 +655,7 @@
 				8D5F6FD62A5165720051A402 /* SwitchView.swift in Sources */,
 				8D1860F62A28DD2D00F89D18 /* MainNaviVC.swift in Sources */,
 				8D5F6FD22A5151740051A402 /* BindingBasicsVC.swift in Sources */,
+				8DF15DC82A83D47A00F5D68A /* SearchTableViewCell.swift in Sources */,
 				8DB65DEF2A6C01D00063146F /* FactClient.swift in Sources */,
 				8D87D11B2A8120A400215097 /* UIView+.swift in Sources */,
 				8D5F6FE32A51C98E0051A402 /* SwitchFormView.swift in Sources */,
