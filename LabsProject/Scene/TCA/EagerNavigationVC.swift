@@ -22,10 +22,9 @@ final class EagerNavigationVC: TCABaseVC<EagerNavigation> {
     }()
     
     init() {
-        let store = Store(
-            initialState: EagerNavigation.State(),
-            reducer: EagerNavigation()
-        )
+        let store = Store(initialState: EagerNavigation.State()) {
+            EagerNavigation()
+        }
         super.init(store: store)
     }
     

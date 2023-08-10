@@ -69,7 +69,9 @@ final class SearchVC: TCABaseVC<Search> {
     }()
     
     init() {
-        let store = Store(initialState: Search.State(), reducer: Search())
+        let store = Store(initialState: Search.State()) {
+            Search()
+        }
         super.init(store: store)
     }
     

@@ -9,7 +9,7 @@ import Foundation
 
 import ComposableArchitecture
 
-struct BindingForm: ReducerProtocol {
+struct BindingForm: Reducer {
     
     struct State: Equatable {
         var sliderValue = 5.0
@@ -26,7 +26,7 @@ struct BindingForm: ReducerProtocol {
         case didTapResetButton
     }
     
-    func reduce(into state: inout State, action: Action) -> ComposableArchitecture.EffectTask<Action> {
+    func reduce(into state: inout State, action: Action) -> ComposableArchitecture.Effect<Action> {
         switch action {
         case .didChangeSliderValue(let value):
             state.sliderValue = value

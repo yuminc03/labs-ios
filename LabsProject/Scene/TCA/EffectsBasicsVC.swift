@@ -86,10 +86,9 @@ final class EffectsBasicsVC: TCABaseVC<EffectsBasics> {
     }()
     
     init() {
-        let store = Store(
-            initialState: EffectsBasics.State(),
-            reducer: EffectsBasics()
-        )
+        let store = Store(initialState: EffectsBasics.State()) {
+            EffectsBasics()
+        }
         super.init(store: store)
     }
     

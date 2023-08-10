@@ -9,7 +9,7 @@ import Foundation
 
 import ComposableArchitecture
 
-struct EffectsBasics: ReducerProtocol {
+struct EffectsBasics: Reducer {
     struct State: Equatable {
         var number = 0
         var isNumberFactRequestInFlight = false
@@ -30,7 +30,7 @@ struct EffectsBasics: ReducerProtocol {
         case delay
     }
     
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case .didTapDecrementButton:
             state.number -= 1

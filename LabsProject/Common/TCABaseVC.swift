@@ -12,7 +12,7 @@ import CombineCocoa
 import ComposableArchitecture
 import SnapKit
 
-class TCABaseVC<R: ReducerProtocol>: LabsVC where R.State: Equatable {
+class TCABaseVC<R: Reducer>: LabsVC where R.State: Equatable {
     
     var store: StoreOf<R>
     var viewStore: ViewStoreOf<R>
@@ -20,7 +20,7 @@ class TCABaseVC<R: ReducerProtocol>: LabsVC where R.State: Equatable {
 
     init(store: StoreOf<R>) {
         self.store = store
-        self.viewStore = ViewStore(store)
+        self.viewStore = ViewStore(store, observe: { $0 })
         super.init(nibName: nil, bundle: nil)
     }
     

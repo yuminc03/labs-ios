@@ -9,7 +9,7 @@ import Foundation
 
 import ComposableArchitecture
 
-struct Refreshable: ReducerProtocol {
+struct Refreshable: Reducer {
     struct State: Equatable {
         var counter = Counter.State()
         var fact: String?
@@ -27,7 +27,7 @@ struct Refreshable: ReducerProtocol {
         case factRequest
     }
     
-    var body: some ReducerProtocol<State, Action> {
+    var body: some Reducer<State, Action> {
         Scope(state: \.counter, action: /Action.counter) {
             Counter()
         }
