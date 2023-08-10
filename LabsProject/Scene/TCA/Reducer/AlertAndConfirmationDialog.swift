@@ -9,7 +9,7 @@ import Foundation
 
 import ComposableArchitecture
 
-struct AlertAndConfirmationDialog: ReducerProtocol {
+struct AlertAndConfirmationDialog: Reducer {
     
     struct State: Equatable {
         var alert: AlertState<Action>?
@@ -26,7 +26,7 @@ struct AlertAndConfirmationDialog: ReducerProtocol {
         case didTapIncrementButton
     }
     
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case .didTapAlertButton:
             state.alert = AlertState(title: {

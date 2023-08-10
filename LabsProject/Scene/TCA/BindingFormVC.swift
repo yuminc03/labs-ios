@@ -48,10 +48,9 @@ final class BindingFormVC: TCABaseVC<BindingForm> {
     }
     
     init() {
-        let store = Store(
-            initialState: BindingForm.State(),
-            reducer: BindingForm()
-        )
+        let store = Store(initialState: BindingForm.State()) {
+            BindingForm()
+        }
         self.textFieldView = TextFieldFormView(store: store)
         self.switchView = SwitchFormView(store: store)
         self.stepperView = StepperFormView(store: store)

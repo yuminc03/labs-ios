@@ -35,10 +35,9 @@ final class LazyNavigationVC: TCABaseVC<LazyNavigation> {
     }()
     
     init() {
-        let store = Store(
-            initialState: LazyNavigation.State(),
-            reducer: LazyNavigation()
-        )
+        let store = Store(initialState: LazyNavigation.State()) {
+            LazyNavigation()
+        }
         super.init(store: store)
     }
     

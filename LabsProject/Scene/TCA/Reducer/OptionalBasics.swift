@@ -7,7 +7,7 @@
 
 import ComposableArchitecture
 
-struct OptionalBasics: ReducerProtocol {
+struct OptionalBasics: Reducer {
     struct State: Equatable {
         var optionalCounter: Counter.State?
     }
@@ -17,7 +17,7 @@ struct OptionalBasics: ReducerProtocol {
         case didTapToggleCounterButton
     }
     
-    var body: some ReducerProtocol<State, Action> {
+    var body: some Reducer<State, Action> {
         Reduce { state, action in
             switch action {
             case .didTapToggleCounterButton:

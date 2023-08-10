@@ -41,10 +41,9 @@ final class BindingBasicsVC: TCABaseVC<BindingBasics> {
     }
     
     init() {
-        let store = Store(
-            initialState: BindingBasics.State(),
-            reducer: BindingBasics()
-        )
+        let store = Store(initialState: BindingBasics.State()) {
+            BindingBasics()
+        }
         self.textFieldView = TextFieldView(store: store)
         self.switchView = SwitchView(store: store)
         self.stepperView = StepperView(store: store)
