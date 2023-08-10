@@ -22,10 +22,9 @@ final class CounterVC: TCABaseVC<Counter> {
     }()
     
     init() {
-        let store = Store(
-            initialState: Counter.State(),
-            reducer: Counter()
-         )
+        let store = Store(initialState: Counter.State()) {
+                Counter()
+            }
         self.counterView = CounterView(store: store)
         super.init(store: store)
     }

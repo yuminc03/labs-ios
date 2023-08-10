@@ -29,10 +29,9 @@ final class RefreshableVC: TCABaseVC<Refreshable> {
     }()
     
     init() {
-        let store = Store(
-            initialState: Refreshable.State(),
-            reducer: Refreshable()
-        )
+        let store = Store(initialState: Refreshable.State()) {
+            Refreshable()
+        }
         super.init(store: store)
     }
     

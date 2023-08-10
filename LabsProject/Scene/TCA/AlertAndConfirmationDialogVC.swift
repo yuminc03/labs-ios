@@ -65,10 +65,9 @@ final class AlertAndConfirmationDialogVC: TCABaseVC<AlertAndConfirmationDialog> 
     }()
     
     init() {
-        let store = Store(
-            initialState: AlertAndConfirmationDialog.State(),
-            reducer: AlertAndConfirmationDialog()
-        )
+        let store = Store(initialState: AlertAndConfirmationDialog.State()) {
+            AlertAndConfirmationDialog()
+        }
         super.init(store: store)
     }
     

@@ -9,7 +9,7 @@ import Foundation
 
 import ComposableArchitecture
 
-struct BindingBasics: ReducerProtocol {
+struct BindingBasics: Reducer {
     
     struct State: Equatable {
         var sliderValue = 5.0
@@ -25,7 +25,7 @@ struct BindingBasics: ReducerProtocol {
         case didChangeToggle(isOn: Bool)
     }
     
-    func reduce(into state: inout State, action: Action) -> ComposableArchitecture.EffectTask<Action> {
+    func reduce(into state: inout State, action: Action) -> ComposableArchitecture.Effect<Action> {
         switch action {
         case .didChangeSliderValue(let value):
             state.sliderValue = value

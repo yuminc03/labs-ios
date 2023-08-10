@@ -10,7 +10,7 @@ import Combine
 
 import ComposableArchitecture
 
-struct LazyNavigation: ReducerProtocol {
+struct LazyNavigation: Reducer {
     
     struct State: Equatable {
         var optionalCounter: Counter.State?
@@ -29,7 +29,7 @@ struct LazyNavigation: ReducerProtocol {
     }
     @Dependency(\.continuousClock) var clock
     
-    var body: some ReducerProtocol<State, Action> {
+    var body: some Reducer<State, Action> {
         Reduce { state, action in
             switch action {
             case .onDisappear:

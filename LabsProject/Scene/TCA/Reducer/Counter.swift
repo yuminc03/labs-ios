@@ -9,7 +9,7 @@ import Foundation
 
 import ComposableArchitecture
 
-struct Counter: ReducerProtocol {
+struct Counter: Reducer {
     struct State: Equatable, Identifiable {
         let id = UUID()
         var value = 0
@@ -20,7 +20,7 @@ struct Counter: ReducerProtocol {
         case didTapIncrementButton
     }
     
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case .didTapDecrementButton:
             state.value -= 1
