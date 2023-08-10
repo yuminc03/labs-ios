@@ -55,9 +55,9 @@ final class MainVM {
             ]
         ),
         Page(
-            category: "UIKit + Search",
+            category: "SwiftUI + TCA",
             childPages: [
-                "Search"
+                "Counter"
             ]
         )
     ]

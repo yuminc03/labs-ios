@@ -92,6 +92,8 @@
 		8DD713972A4853DD00209EEF /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD713962A4853DD00209EEF /* UIColor+.swift */; };
 		8DD7139C2A485A9000209EEF /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8DD7139B2A485A9000209EEF /* CombineCocoa */; };
 		8DD7139E2A485CC000209EEF /* TableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7139D2A485CC000209EEF /* TableView+.swift */; };
+		8DECE5732A850F43003FBDB8 /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE5722A850F43003FBDB8 /* CounterFeature.swift */; };
+		8DECE5762A852E4A003FBDB8 /* CounterFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE5752A852E4A003FBDB8 /* CounterFeatureView.swift */; };
 		8DF15DC82A83D47A00F5D68A /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF15DC72A83D47A00F5D68A /* SearchTableViewCell.swift */; };
 		8DFA9A132A5C2C840070AB35 /* ListOfStateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFA9A122A5C2C840070AB35 /* ListOfStateVC.swift */; };
 /* End PBXBuildFile section */
@@ -179,6 +181,8 @@
 		8DD713922A48512D00209EEF /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		8DD713962A4853DD00209EEF /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		8DD7139D2A485CC000209EEF /* TableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+.swift"; sourceTree = "<group>"; };
+		8DECE5722A850F43003FBDB8 /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
+		8DECE5752A852E4A003FBDB8 /* CounterFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeatureView.swift; sourceTree = "<group>"; };
 		8DF15DC72A83D47A00F5D68A /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		8DFA9A122A5C2C840070AB35 /* ListOfStateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfStateVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -235,6 +239,7 @@
 				8DCCF5E72A7561690076C258 /* EagerNavigation.swift */,
 				8D9D63D42A767FF1009795FF /* LazyNavigation.swift */,
 				8D87D11D2A81247C00215097 /* Search.swift */,
+				8DECE5742A850F47003FBDB8 /* SwiftUI */,
 			);
 			path = Reducer;
 			sourceTree = "<group>";
@@ -415,6 +420,7 @@
 				8DB9EC582A713D6D0015CBFA /* TimersVC.swift */,
 				05AB26D02A739AC300ED39F9 /* EagerNavigationVC.swift */,
 				8D9D63D22A767662009795FF /* LazyNavigationVC.swift */,
+				8DECE5772A853E23003FBDB8 /* SwiftUI */,
 				051B833F2A80C14C007B51B8 /* Search */,
 				8D685B962A49D52100629A37 /* Views */,
 			);
@@ -495,6 +501,22 @@
 				8D87D1192A8120A400215097 /* UIView+.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		8DECE5742A850F47003FBDB8 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				8DECE5722A850F43003FBDB8 /* CounterFeature.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		8DECE5772A853E23003FBDB8 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				8DECE5752A852E4A003FBDB8 /* CounterFeatureView.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -618,6 +640,7 @@
 				8D1860F82A28DDC500F89D18 /* LabsVC.swift in Sources */,
 				8DFA9A132A5C2C840070AB35 /* ListOfStateVC.swift in Sources */,
 				8DAC242E29F412480012A85F /* MainTableViewCell.swift in Sources */,
+				8DECE5762A852E4A003FBDB8 /* CounterFeatureView.swift in Sources */,
 				8D8BA24A2A58593700A2A525 /* TodosDTO.swift in Sources */,
 				8D40081A2A6EAA740030BF7D /* RefreshableVC.swift in Sources */,
 				8D38229E29F5107D00B71F26 /* PractiseThenVM.swift in Sources */,
@@ -625,6 +648,7 @@
 				8D685B9A2A49D8C500629A37 /* TCABaseView.swift in Sources */,
 				8D36171F29F2CA7F00231628 /* SceneDelegate.swift in Sources */,
 				051B83412A80C155007B51B8 /* WeatherClient.swift in Sources */,
+				8DECE5732A850F43003FBDB8 /* CounterFeature.swift in Sources */,
 				8DD6F8DB2A62A35100FF977A /* OptionalBasics.swift in Sources */,
 				8DB65DF12A6CF2D70063146F /* MainVM.swift in Sources */,
 				8DB65DF82A6CFD600063146F /* Array+.swift in Sources */,
