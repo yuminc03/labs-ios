@@ -52,10 +52,9 @@ final class EffectsLongLivingVC: TCABaseVC<EffectsLongLiving> {
     }()
     
     init() {
-        let store = Store(
-                initialState: EffectsLongLiving.State(),
-                reducer: EffectsLongLiving()
-        )
+        let store = Store(initialState: EffectsLongLiving.State()) {
+            EffectsLongLiving()
+        }
         super.init(store: store)
     }
 

@@ -23,10 +23,9 @@ final class TwoCountersVC: TCABaseVC<TwoCounters> {
     let counter2: CounterView
     
     init() {
-        let store = Store(
-            initialState: TwoCounters.State(),
-            reducer: TwoCounters()
-        )
+        let store = Store(initialState: TwoCounters.State()) {
+            TwoCounters()
+        }
         self.counter1 = CounterView(
             store: store.scope(
                 state: \.counter1,

@@ -9,7 +9,7 @@ import Foundation
 
 import ComposableArchitecture
 
-struct Search: ReducerProtocol {
+struct Search: Reducer {
     
     @Dependency(\.weatherClient) var weatherClient
     private enum CancelID {
@@ -45,7 +45,7 @@ struct Search: ReducerProtocol {
         case didTapSearchResult(GeocodingSearch.Result)
     }
     
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case .forecastResponse(_, .failure):
             state.weather = nil

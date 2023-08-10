@@ -9,7 +9,7 @@ import Foundation
 
 import ComposableArchitecture
 
-struct EffectsCancellation: ReducerProtocol {
+struct EffectsCancellation: Reducer {
     struct State: Equatable {
         var number = 0
         var isFactRequestInFlight = false
@@ -28,7 +28,7 @@ struct EffectsCancellation: ReducerProtocol {
         case factRequest
     }
     
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case .didTapCancelButton:
             state.isFactRequestInFlight = false

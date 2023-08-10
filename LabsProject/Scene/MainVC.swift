@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import SwiftUI
 
 import ComposableArchitecture
 import SnapKit
@@ -47,7 +48,14 @@ final class MainVC: LabsVC {
             LazyNavigationVC()
         ],
         [
-            SearchVC()
+            UIHostingController(
+                rootView: CounterFeatureView(
+                    store: Store(
+                        initialState: CounterFeature.State()) {
+                            CounterFeature()
+                    }
+                )
+            )
         ]
     ]
     

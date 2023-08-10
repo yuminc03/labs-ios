@@ -10,7 +10,7 @@ import UIKit
 
 import ComposableArchitecture
 
-struct EffectsLongLiving: ReducerProtocol {
+struct EffectsLongLiving: Reducer {
     struct State: Equatable {
         var screenShotCount = 0
     }
@@ -22,7 +22,7 @@ struct EffectsLongLiving: ReducerProtocol {
     
     @Dependency(\.screenshots) var screenshots
     
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case .task:
             return .run { send in

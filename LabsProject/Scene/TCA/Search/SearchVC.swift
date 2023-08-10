@@ -62,38 +62,37 @@ final class SearchVC: TCABaseVC<Search> {
     
     private let tableView: UITableView = {
         let v = UITableView(frame: .zero, style: .insetGrouped)
-        v.backgroundColor = .clear
-        v.separatorStyle = .none
-        v.registerCell(type: MainTableViewCell.self)
+        v.backgroundColor = labsColor(.gray_EAEAEA)
+        v.registerCell(type: SearchTableViewCell.self)
+        return v
+    }()
+    
+    private let apiButton: UIButton = {
+        let v = UIButton()
+        v.setTitle("Weather API provided by Open-Meteo", for: .normal)
+        v.setTitleColor(.lightGray, for: .normal)
         return v
     }()
     
     init() {
-        let store = Store(initialState: Search.State(), reducer: Search())
+        let store = Store(initialState: Search.State()) {
+            Search()
+        }
         super.init(store: store)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Task {
-            do {
-                try await Task.sleep(nanoseconds: NSEC_PER_SEC / 3)
-                await viewStore.send(.didChangeSearchQueryDebounced).finish()
-                print("Send didChangeSearchQueryDebounced")
-            } catch {
-                
-            }
-        }
     }
     
     override func setup() {
         super.setup()
         setNavigationTitle(title: "Search")
-        view.addSubview(stackView)
+        view.addSubviews([stackView, tableView, apiButton])
         tableView.dataSource = self
         stackView.addArrangedSubviews([
             titleLabel, contentLabel,
-            innerStackView, tableView
+            innerStackView
         ])
         innerStackView.addArrangedSubviews([
             imageView, textField
@@ -101,12 +100,22 @@ final class SearchVC: TCABaseVC<Search> {
         
         stackView.snp.makeConstraints {
             $0.top.equalTo(navigationBar.snp.bottom).offset(20)
-            $0.bottom.equalToSuperview()
             $0.leading.trailing.equalToSuperview().inset(20)
+        }
+        
+        tableView.snp.makeConstraints {
+            $0.top.equalTo(stackView.snp.bottom).offset(20)
+            $0.leading.trailing.equalToSuperview()
         }
         
         imageView.snp.makeConstraints {
             $0.width.height.equalTo(30)
+        }
+        
+        apiButton.snp.makeConstraints {
+            $0.top.equalTo(tableView.snp.bottom).offset(20)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+            $0.leading.trailing.equalToSuperview().inset(20)
         }
     }
     
@@ -114,8 +123,20 @@ final class SearchVC: TCABaseVC<Search> {
         super.bind()
         
         viewStore.publisher.results
-            .sink { [weak self] _ in
+            .sink { [weak self] results in
+                self?.tableView.isHidden = results.count == 0
                 self?.tableView.reloadData()
+            }
+            .store(in: &cancelBag)
+        
+        viewStore.publisher.searchQuery
+            .sink { [weak self] _ in
+                Task {
+                    do {
+                        try await Task.sleep(nanoseconds: NSEC_PER_SEC / 3)
+                        await self?.viewStore.send(.didChangeSearchQueryDebounced).finish()
+                    } catch { }
+                }
             }
             .store(in: &cancelBag)
         
@@ -132,6 +153,15 @@ final class SearchVC: TCABaseVC<Search> {
                 self?.viewStore.send(.didTapSearchResult(location))
             }
             .store(in: &cancelBag)
+        
+        apiButton.tapPublisher
+            .sink(receiveValue: didTapApiButton)
+            .store(in: &cancelBag)
+    }
+    
+    private func didTapApiButton() {
+        guard let url = URL(string: "https://open-meteo.com/en") else { return }
+        UIApplication.shared.open(url)
     }
 }
 
@@ -142,8 +172,13 @@ extension SearchVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueCell(type: MainTableViewCell.self, indexPath: indexPath)
-        cell.updateUI(titleText: viewStore.results[indexPath.row].name)
+//        guard let id = viewStore.resultForecastRequestInFlight?.id,
+//              id != viewStore.results[indexPath.row].id else {
+//            return UITableViewCell()
+//        }
+        
+        let cell = tableView.dequeueCell(type: SearchTableViewCell.self, indexPath: indexPath)
+        cell.updateUI(titleText: viewStore.results[indexPath.row].name, textColor: .systemBlue)
         return cell
     }
 }

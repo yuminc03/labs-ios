@@ -12,7 +12,7 @@ import CombineCocoa
 import ComposableArchitecture
 import SnapKit
 
-struct Timers: ReducerProtocol {
+struct Timers: Reducer {
     struct State: Equatable {
       var isTimerActive = false
       var secondsElapsed = 0
@@ -29,7 +29,7 @@ struct Timers: ReducerProtocol {
         case timer
     }
     
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case .onDisappear:
             return .cancel(id: CancelID.timer)
@@ -72,7 +72,9 @@ final class TimersVC: TCABaseVC<Timers> {
     }()
     
     init() {
-        let store = Store(initialState: Timers.State(), reducer: Timers())
+        let store = Store(initialState: Timers.State()) {
+            Timers()
+        }
         super.init(store: store)
     }
     

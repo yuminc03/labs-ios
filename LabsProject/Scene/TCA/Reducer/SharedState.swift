@@ -9,7 +9,7 @@ import Foundation
 
 import ComposableArchitecture
 
-struct SharedState: ReducerProtocol {
+struct SharedState: Reducer {
     
     enum Tab: Int {
         case counter
@@ -45,7 +45,7 @@ struct SharedState: ReducerProtocol {
         case selectTab(Tab)
     }
     
-    var body: some ReducerProtocol<State, Action> {
+    var body: some Reducer<State, Action> {
         Scope(state: \.counter, action: /Action.counter) {
             Counter()
         }
@@ -65,7 +65,7 @@ struct SharedState: ReducerProtocol {
         }
     }
     
-    struct Profile: ReducerProtocol {
+    struct Profile: Reducer {
         
         struct State: Equatable {
             private(set) var currentTab: Tab
@@ -87,7 +87,7 @@ struct SharedState: ReducerProtocol {
             case didTapResetCounterButton
         }
         
-        func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+        func reduce(into state: inout State, action: Action) -> Effect<Action> {
             switch action {
             case .didTapResetCounterButton:
                 state.resetCount()
@@ -96,7 +96,7 @@ struct SharedState: ReducerProtocol {
         }
     }
     
-    struct Counter: ReducerProtocol {
+    struct Counter: Reducer {
         
         struct State: Equatable {
             var alert: AlertState<Action>?
@@ -113,7 +113,7 @@ struct SharedState: ReducerProtocol {
             case didTapIsPrimeButton
         }
         
-        func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+        func reduce(into state: inout State, action: Action) -> Effect<Action> {
             switch action {
             case .alertDismissed:
                 state.alert = nil

@@ -81,10 +81,9 @@ final class EffectsCancellationVC: TCABaseVC<EffectsCancellation> {
     }()
     
     init() {
-        let store = Store(
-            initialState: EffectsCancellation.State(),
-            reducer: EffectsCancellation()
-        )
+        let store = Store(initialState: EffectsCancellation.State()) {
+            EffectsCancellation()
+        }
         super.init(store: store)
     }
     

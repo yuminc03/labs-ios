@@ -9,7 +9,7 @@ import Foundation
 
 import ComposableArchitecture
 
-struct EagerNavigation: ReducerProtocol {
+struct EagerNavigation: Reducer {
     struct State: Equatable {
         var isNavigationActive = false
         var optionalCounter: Counter.State?
@@ -26,7 +26,7 @@ struct EagerNavigation: ReducerProtocol {
     }
     @Dependency(\.continuousClock) var clock
     
-    var body: some ReducerProtocol<State, Action> {
+    var body: some Reducer<State, Action> {
         Reduce { state, action in
             switch action {
             case .setNavigation(isActive: true):

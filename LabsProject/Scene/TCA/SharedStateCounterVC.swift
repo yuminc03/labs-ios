@@ -39,10 +39,9 @@ final class SharedStateCounterVC: TCABaseVC<SharedState> {
     }
     
     init() {
-        let store = Store(
-            initialState: SharedState.State(),
-            reducer: SharedState()
-        )
+        let store = Store(initialState: SharedState.State()) {
+            SharedState()
+        }
         self.counterView = SharedStateCounterView(
             store: store.scope(
                 state: \.counter,

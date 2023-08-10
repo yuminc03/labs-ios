@@ -58,10 +58,9 @@ final class OptionalBasicsVC: TCABaseVC<OptionalBasics> {
     private var counterView: CounterView?
 
     init() {
-        let store = Store(
-            initialState: OptionalBasics.State(),
-            reducer: OptionalBasics()
-        )
+        let store = Store(initialState: OptionalBasics.State()) {
+            OptionalBasics()
+        }
         super.init(store: store)
     }
     
