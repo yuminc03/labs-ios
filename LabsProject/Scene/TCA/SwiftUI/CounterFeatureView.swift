@@ -21,26 +21,17 @@ struct CounterFeatureView: View {
     var body: some View {
         VStack {
             Text("\(viewStore.count)")
-                .font(.largeTitle)
-                .padding()
-                .background(Color.black.opacity(0.1))
-                .cornerRadius(10)
+                .common()
             HStack {
                 Button("-") {
                     store.send(.didTapDecrementButton)
                 }
-                .font(.largeTitle)
-                .padding()
-                .background(Color.black.opacity(0.1))
-                .cornerRadius(10)
+                .common()
                 
                 Button("+") {
                     store.send(.didTapIncrementButton)
                 }
-                .font(.largeTitle)
-                .padding()
-                .background(Color.black.opacity(0.1))
-                .cornerRadius(10)
+                .common()
             }
         }
     }
