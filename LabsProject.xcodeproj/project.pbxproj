@@ -19,6 +19,7 @@
 		8D1860F82A28DDC500F89D18 /* LabsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1860F72A28DDC500F89D18 /* LabsVC.swift */; };
 		8D1860FB2A29070B00F89D18 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1860FA2A29070B00F89D18 /* WebVC.swift */; };
 		8D1860FD2A290BBB00F89D18 /* Test.html in Resources */ = {isa = PBXBuildFile; fileRef = 8D1860FC2A290BBB00F89D18 /* Test.html */; };
+		8D25A51E2AC0673200F71B04 /* PresentAndLoadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D25A51D2AC0673200F71B04 /* PresentAndLoadVC.swift */; };
 		8D32C35E2A5D96A600233A2F /* CounterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D32C35D2A5D96A600233A2F /* CounterList.swift */; };
 		8D36171D29F2CA7F00231628 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D36171C29F2CA7F00231628 /* AppDelegate.swift */; };
 		8D36171F29F2CA7F00231628 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D36171E29F2CA7F00231628 /* SceneDelegate.swift */; };
@@ -110,6 +111,7 @@
 		8D1860F72A28DDC500F89D18 /* LabsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabsVC.swift; sourceTree = "<group>"; };
 		8D1860FA2A29070B00F89D18 /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		8D1860FC2A290BBB00F89D18 /* Test.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Test.html; sourceTree = "<group>"; };
+		8D25A51D2AC0673200F71B04 /* PresentAndLoadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentAndLoadVC.swift; sourceTree = "<group>"; };
 		8D32C35D2A5D96A600233A2F /* CounterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterList.swift; sourceTree = "<group>"; };
 		8D36171929F2CA7F00231628 /* LabsProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LabsProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D36171C29F2CA7F00231628 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -420,6 +422,7 @@
 				8DB9EC582A713D6D0015CBFA /* TimersVC.swift */,
 				05AB26D02A739AC300ED39F9 /* EagerNavigationVC.swift */,
 				8D9D63D22A767662009795FF /* LazyNavigationVC.swift */,
+				8D25A51D2AC0673200F71B04 /* PresentAndLoadVC.swift */,
 				8DECE5772A853E23003FBDB8 /* SwiftUI */,
 				051B833F2A80C14C007B51B8 /* Search */,
 				8D685B962A49D52100629A37 /* Views */,
@@ -684,6 +687,7 @@
 				8D87D11B2A8120A400215097 /* UIView+.swift in Sources */,
 				8D5F6FE32A51C98E0051A402 /* SwitchFormView.swift in Sources */,
 				8DCCF5E82A7561690076C258 /* EagerNavigation.swift in Sources */,
+				8D25A51E2AC0673200F71B04 /* PresentAndLoadVC.swift in Sources */,
 				8D685B982A49D53100629A37 /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

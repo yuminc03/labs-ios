@@ -51,7 +51,8 @@ final class MainVM {
             childPages: [
                 "Lists",
                 "Navigate and load",
-                "Load then navigate"
+                "Load then navigate",
+                "Sheets: Present and load data"
             ]
         ),
         Page(

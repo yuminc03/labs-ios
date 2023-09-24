@@ -45,7 +45,8 @@ final class MainVC: LabsVC {
         [
             ListOfStateVC(),
             EagerNavigationVC(),
-            LazyNavigationVC()
+            LazyNavigationVC(),
+            PresentAndLoadVC()
         ],
         [
             UIHostingController(
