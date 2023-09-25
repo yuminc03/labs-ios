@@ -18,6 +18,9 @@
 		05EB16252AC171A200137B7D /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 05EB16242AC171A200137B7D /* FlexLayout */; };
 		05EB16282AC171B500137B7D /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 05EB16272AC171B500137B7D /* PinLayout */; };
 		05EB162B2AC1738000137B7D /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB162A2AC1738000137B7D /* UIViewController+.swift */; };
+		8DB505312AC1CA9B0005B012 /* HeartScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB505302AC1CA9B0005B012 /* HeartScrollView.swift */; };
+		8DB505332AC1CFD20005B012 /* HeartTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB505322AC1CFD20005B012 /* HeartTableViewHeader.swift */; };
+		8DB505352AC1D0FB0005B012 /* HeartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB505342AC1D0FB0005B012 /* HeartTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		05EB16142AC16E9F00137B7D /* HealthHeartCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthHeartCloneUITests.swift; sourceTree = "<group>"; };
 		05EB16162AC16E9F00137B7D /* HealthHeartCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthHeartCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		05EB162A2AC1738000137B7D /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		8DB505302AC1CA9B0005B012 /* HeartScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartScrollView.swift; sourceTree = "<group>"; };
+		8DB505322AC1CFD20005B012 /* HeartTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartTableViewHeader.swift; sourceTree = "<group>"; };
+		8DB505342AC1D0FB0005B012 /* HeartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				05EB15F32AC16E9D00137B7D /* AppDelegate.swift */,
 				05EB15F52AC16E9D00137B7D /* SceneDelegate.swift */,
 				05EB15F72AC16E9D00137B7D /* HeartVC.swift */,
+				8DB505302AC1CA9B0005B012 /* HeartScrollView.swift */,
+				8DB505322AC1CFD20005B012 /* HeartTableViewHeader.swift */,
+				8DB505342AC1D0FB0005B012 /* HeartTableViewCell.swift */,
 				05EB16292AC1736700137B7D /* Extension */,
 				05EB15FC2AC16E9F00137B7D /* Assets.xcassets */,
 				05EB15FE2AC16E9F00137B7D /* LaunchScreen.storyboard */,
@@ -278,9 +287,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				05EB15F82AC16E9D00137B7D /* HeartVC.swift in Sources */,
+				8DB505352AC1D0FB0005B012 /* HeartTableViewCell.swift in Sources */,
+				8DB505312AC1CA9B0005B012 /* HeartScrollView.swift in Sources */,
 				05EB15F42AC16E9D00137B7D /* AppDelegate.swift in Sources */,
 				05EB162B2AC1738000137B7D /* UIViewController+.swift in Sources */,
 				05EB15F62AC16E9D00137B7D /* SceneDelegate.swift in Sources */,
+				8DB505332AC1CFD20005B012 /* HeartTableViewHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

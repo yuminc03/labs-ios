@@ -4,13 +4,10 @@ import FlexLayout
 import PinLayout
 
 final class HeartVC: UIViewController {
-  private let tableView: UITableView = {
-    let v = UITableView()
-    v.backgroundColor = .clear
-    v.separatorStyle = .none
+  private let scrollView: UIScrollView = {
+    let v = UIScrollView()
     return v
   }()
-  
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -27,4 +24,3 @@ final class HeartVC: UIViewController {
     
   }
 }
-
