@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05EB15F42AC16E9D00137B7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB15F32AC16E9D00137B7D /* AppDelegate.swift */; };
+		05EB15F62AC16E9D00137B7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB15F52AC16E9D00137B7D /* SceneDelegate.swift */; };
+		05EB15F82AC16E9D00137B7D /* HeartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB15F72AC16E9D00137B7D /* HeartVC.swift */; };
+		05EB15FD2AC16E9F00137B7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05EB15FC2AC16E9F00137B7D /* Assets.xcassets */; };
+		05EB16002AC16E9F00137B7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05EB15FE2AC16E9F00137B7D /* LaunchScreen.storyboard */; };
+		05EB160B2AC16E9F00137B7D /* HealthHeartCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB160A2AC16E9F00137B7D /* HealthHeartCloneTests.swift */; };
+		05EB16152AC16E9F00137B7D /* HealthHeartCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB16142AC16E9F00137B7D /* HealthHeartCloneUITests.swift */; };
+		05EB16172AC16E9F00137B7D /* HealthHeartCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB16162AC16E9F00137B7D /* HealthHeartCloneUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		05EB16072AC16E9F00137B7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05EB15E82AC16E9D00137B7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05EB15EF2AC16E9D00137B7D;
+			remoteInfo = HealthHeartClone;
+		};
+		05EB16112AC16E9F00137B7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05EB15E82AC16E9D00137B7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05EB15EF2AC16E9D00137B7D;
+			remoteInfo = HealthHeartClone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05EB15F02AC16E9D00137B7D /* HealthHeartClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthHeartClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05EB15F32AC16E9D00137B7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		05EB15F52AC16E9D00137B7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		05EB15F72AC16E9D00137B7D /* HeartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartVC.swift; sourceTree = "<group>"; };
+		05EB15FC2AC16E9F00137B7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		05EB15FF2AC16E9F00137B7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		05EB16012AC16E9F00137B7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05EB16062AC16E9F00137B7D /* HealthHeartCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthHeartCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		05EB160A2AC16E9F00137B7D /* HealthHeartCloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthHeartCloneTests.swift; sourceTree = "<group>"; };
+		05EB16102AC16E9F00137B7D /* HealthHeartCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthHeartCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		05EB16142AC16E9F00137B7D /* HealthHeartCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthHeartCloneUITests.swift; sourceTree = "<group>"; };
+		05EB16162AC16E9F00137B7D /* HealthHeartCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthHeartCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05EB15ED2AC16E9D00137B7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05EB16032AC16E9F00137B7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05EB160D2AC16E9F00137B7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05EB15E72AC16E9D00137B7D = {
+			isa = PBXGroup;
+			children = (
+				05EB15F22AC16E9D00137B7D /* HealthHeartClone */,
+				05EB16092AC16E9F00137B7D /* HealthHeartCloneTests */,
+				05EB16132AC16E9F00137B7D /* HealthHeartCloneUITests */,
+				05EB15F12AC16E9D00137B7D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		05EB15F12AC16E9D00137B7D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05EB15F02AC16E9D00137B7D /* HealthHeartClone.app */,
+				05EB16062AC16E9F00137B7D /* HealthHeartCloneTests.xctest */,
+				05EB16102AC16E9F00137B7D /* HealthHeartCloneUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		05EB15F22AC16E9D00137B7D /* HealthHeartClone */ = {
+			isa = PBXGroup;
+			children = (
+				05EB15F32AC16E9D00137B7D /* AppDelegate.swift */,
+				05EB15F52AC16E9D00137B7D /* SceneDelegate.swift */,
+				05EB15F72AC16E9D00137B7D /* HeartVC.swift */,
+				05EB15FC2AC16E9F00137B7D /* Assets.xcassets */,
+				05EB15FE2AC16E9F00137B7D /* LaunchScreen.storyboard */,
+				05EB16012AC16E9F00137B7D /* Info.plist */,
+			);
+			path = HealthHeartClone;
+			sourceTree = "<group>";
+		};
+		05EB16092AC16E9F00137B7D /* HealthHeartCloneTests */ = {
+			isa = PBXGroup;
+			children = (
+				05EB160A2AC16E9F00137B7D /* HealthHeartCloneTests.swift */,
+			);
+			path = HealthHeartCloneTests;
+			sourceTree = "<group>";
+		};
+		05EB16132AC16E9F00137B7D /* HealthHeartCloneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				05EB16142AC16E9F00137B7D /* HealthHeartCloneUITests.swift */,
+				05EB16162AC16E9F00137B7D /* HealthHeartCloneUITestsLaunchTests.swift */,
+			);
+			path = HealthHeartCloneUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		05EB15EF2AC16E9D00137B7D /* HealthHeartClone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05EB161A2AC16E9F00137B7D /* Build configuration list for PBXNativeTarget "HealthHeartClone" */;
+			buildPhases = (
+				05EB15EC2AC16E9D00137B7D /* Sources */,
+				05EB15ED2AC16E9D00137B7D /* Frameworks */,
+				05EB15EE2AC16E9D00137B7D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HealthHeartClone;
+			productName = HealthHeartClone;
+			productReference = 05EB15F02AC16E9D00137B7D /* HealthHeartClone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		05EB16052AC16E9F00137B7D /* HealthHeartCloneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05EB161D2AC16E9F00137B7D /* Build configuration list for PBXNativeTarget "HealthHeartCloneTests" */;
+			buildPhases = (
+				05EB16022AC16E9F00137B7D /* Sources */,
+				05EB16032AC16E9F00137B7D /* Frameworks */,
+				05EB16042AC16E9F00137B7D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05EB16082AC16E9F00137B7D /* PBXTargetDependency */,
+			);
+			name = HealthHeartCloneTests;
+			productName = HealthHeartCloneTests;
+			productReference = 05EB16062AC16E9F00137B7D /* HealthHeartCloneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		05EB160F2AC16E9F00137B7D /* HealthHeartCloneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05EB16202AC16E9F00137B7D /* Build configuration list for PBXNativeTarget "HealthHeartCloneUITests" */;
+			buildPhases = (
+				05EB160C2AC16E9F00137B7D /* Sources */,
+				05EB160D2AC16E9F00137B7D /* Frameworks */,
+				05EB160E2AC16E9F00137B7D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05EB16122AC16E9F00137B7D /* PBXTargetDependency */,
+			);
+			name = HealthHeartCloneUITests;
+			productName = HealthHeartCloneUITests;
+			productReference = 05EB16102AC16E9F00137B7D /* HealthHeartCloneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		05EB15E82AC16E9D00137B7D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					05EB15EF2AC16E9D00137B7D = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					05EB16052AC16E9F00137B7D = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 05EB15EF2AC16E9D00137B7D;
+					};
+					05EB160F2AC16E9F00137B7D = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 05EB15EF2AC16E9D00137B7D;
+					};
+				};
+			};
+			buildConfigurationList = 05EB15EB2AC16E9D00137B7D /* Build configuration list for PBXProject "HealthHeartClone" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 05EB15E72AC16E9D00137B7D;
+			productRefGroup = 05EB15F12AC16E9D00137B7D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				05EB15EF2AC16E9D00137B7D /* HealthHeartClone */,
+				05EB16052AC16E9F00137B7D /* HealthHeartCloneTests */,
+				05EB160F2AC16E9F00137B7D /* HealthHeartCloneUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		05EB15EE2AC16E9D00137B7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05EB16002AC16E9F00137B7D /* LaunchScreen.storyboard in Resources */,
+				05EB15FD2AC16E9F00137B7D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05EB16042AC16E9F00137B7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05EB160E2AC16E9F00137B7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05EB15EC2AC16E9D00137B7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05EB15F82AC16E9D00137B7D /* HeartVC.swift in Sources */,
+				05EB15F42AC16E9D00137B7D /* AppDelegate.swift in Sources */,
+				05EB15F62AC16E9D00137B7D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05EB16022AC16E9F00137B7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05EB160B2AC16E9F00137B7D /* HealthHeartCloneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05EB160C2AC16E9F00137B7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05EB16152AC16E9F00137B7D /* HealthHeartCloneUITests.swift in Sources */,
+				05EB16172AC16E9F00137B7D /* HealthHeartCloneUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05EB16082AC16E9F00137B7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05EB15EF2AC16E9D00137B7D /* HealthHeartClone */;
+			targetProxy = 05EB16072AC16E9F00137B7D /* PBXContainerItemProxy */;
+		};
+		05EB16122AC16E9F00137B7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05EB15EF2AC16E9D00137B7D /* HealthHeartClone */;
+			targetProxy = 05EB16112AC16E9F00137B7D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		05EB15FE2AC16E9F00137B7D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05EB15FF2AC16E9F00137B7D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		05EB16182AC16E9F00137B7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		05EB16192AC16E9F00137B7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		05EB161B2AC16E9F00137B7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 54V3G99LL8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HealthHeartClone/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lonalia.HealthHeartClone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		05EB161C2AC16E9F00137B7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 54V3G99LL8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HealthHeartClone/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lonalia.HealthHeartClone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		05EB161E2AC16E9F00137B7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 54V3G99LL8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lonalia.HealthHeartCloneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthHeartClone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HealthHeartClone";
+			};
+			name = Debug;
+		};
+		05EB161F2AC16E9F00137B7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 54V3G99LL8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lonalia.HealthHeartCloneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthHeartClone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HealthHeartClone";
+			};
+			name = Release;
+		};
+		05EB16212AC16E9F00137B7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 54V3G99LL8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lonalia.HealthHeartCloneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HealthHeartClone;
+			};
+			name = Debug;
+		};
+		05EB16222AC16E9F00137B7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 54V3G99LL8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lonalia.HealthHeartCloneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HealthHeartClone;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05EB15EB2AC16E9D00137B7D /* Build configuration list for PBXProject "HealthHeartClone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05EB16182AC16E9F00137B7D /* Debug */,
+				05EB16192AC16E9F00137B7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05EB161A2AC16E9F00137B7D /* Build configuration list for PBXNativeTarget "HealthHeartClone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05EB161B2AC16E9F00137B7D /* Debug */,
+				05EB161C2AC16E9F00137B7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05EB161D2AC16E9F00137B7D /* Build configuration list for PBXNativeTarget "HealthHeartCloneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05EB161E2AC16E9F00137B7D /* Debug */,
+				05EB161F2AC16E9F00137B7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05EB16202AC16E9F00137B7D /* Build configuration list for PBXNativeTarget "HealthHeartCloneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05EB16212AC16E9F00137B7D /* Debug */,
+				05EB16222AC16E9F00137B7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 05EB15E82AC16E9D00137B7D /* Project object */;
+}
