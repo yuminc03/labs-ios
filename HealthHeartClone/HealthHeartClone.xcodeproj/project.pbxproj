@@ -15,6 +15,9 @@
 		05EB160B2AC16E9F00137B7D /* HealthHeartCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB160A2AC16E9F00137B7D /* HealthHeartCloneTests.swift */; };
 		05EB16152AC16E9F00137B7D /* HealthHeartCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB16142AC16E9F00137B7D /* HealthHeartCloneUITests.swift */; };
 		05EB16172AC16E9F00137B7D /* HealthHeartCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB16162AC16E9F00137B7D /* HealthHeartCloneUITestsLaunchTests.swift */; };
+		05EB16252AC171A200137B7D /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 05EB16242AC171A200137B7D /* FlexLayout */; };
+		05EB16282AC171B500137B7D /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 05EB16272AC171B500137B7D /* PinLayout */; };
+		05EB162B2AC1738000137B7D /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB162A2AC1738000137B7D /* UIViewController+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,7 @@
 		05EB16102AC16E9F00137B7D /* HealthHeartCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthHeartCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05EB16142AC16E9F00137B7D /* HealthHeartCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthHeartCloneUITests.swift; sourceTree = "<group>"; };
 		05EB16162AC16E9F00137B7D /* HealthHeartCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthHeartCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		05EB162A2AC1738000137B7D /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05EB16282AC171B500137B7D /* PinLayout in Frameworks */,
+				05EB16252AC171A200137B7D /* FlexLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +106,7 @@
 				05EB15F32AC16E9D00137B7D /* AppDelegate.swift */,
 				05EB15F52AC16E9D00137B7D /* SceneDelegate.swift */,
 				05EB15F72AC16E9D00137B7D /* HeartVC.swift */,
+				05EB16292AC1736700137B7D /* Extension */,
 				05EB15FC2AC16E9F00137B7D /* Assets.xcassets */,
 				05EB15FE2AC16E9F00137B7D /* LaunchScreen.storyboard */,
 				05EB16012AC16E9F00137B7D /* Info.plist */,
@@ -124,6 +131,14 @@
 			path = HealthHeartCloneUITests;
 			sourceTree = "<group>";
 		};
+		05EB16292AC1736700137B7D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				05EB162A2AC1738000137B7D /* UIViewController+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,6 +155,10 @@
 			dependencies = (
 			);
 			name = HealthHeartClone;
+			packageProductDependencies = (
+				05EB16242AC171A200137B7D /* FlexLayout */,
+				05EB16272AC171B500137B7D /* PinLayout */,
+			);
 			productName = HealthHeartClone;
 			productReference = 05EB15F02AC16E9D00137B7D /* HealthHeartClone.app */;
 			productType = "com.apple.product-type.application";
@@ -212,6 +231,10 @@
 				Base,
 			);
 			mainGroup = 05EB15E72AC16E9D00137B7D;
+			packageReferences = (
+				05EB16232AC171A200137B7D /* XCRemoteSwiftPackageReference "FlexLayout" */,
+				05EB16262AC171B500137B7D /* XCRemoteSwiftPackageReference "PinLayout" */,
+			);
 			productRefGroup = 05EB15F12AC16E9D00137B7D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -256,6 +279,7 @@
 			files = (
 				05EB15F82AC16E9D00137B7D /* HeartVC.swift in Sources */,
 				05EB15F42AC16E9D00137B7D /* AppDelegate.swift in Sources */,
+				05EB162B2AC1738000137B7D /* UIViewController+.swift in Sources */,
 				05EB15F62AC16E9D00137B7D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +450,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 54V3G99LL8;
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "FLEXLAYOUT_SWIFT_PACKAGE=1";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HealthHeartClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -453,6 +478,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 54V3G99LL8;
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "FLEXLAYOUT_SWIFT_PACKAGE=1";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HealthHeartClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -588,6 +614,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		05EB16232AC171A200137B7D /* XCRemoteSwiftPackageReference "FlexLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/FlexLayout#create_modify_define_containers";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		05EB16262AC171B500137B7D /* XCRemoteSwiftPackageReference "PinLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/PinLayout#intro_usage_examples";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		05EB16242AC171A200137B7D /* FlexLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05EB16232AC171A200137B7D /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			productName = FlexLayout;
+		};
+		05EB16272AC171B500137B7D /* PinLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05EB16262AC171B500137B7D /* XCRemoteSwiftPackageReference "PinLayout" */;
+			productName = PinLayout;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 05EB15E82AC16E9D00137B7D /* Project object */;
 }
