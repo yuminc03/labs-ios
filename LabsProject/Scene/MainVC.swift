@@ -57,6 +57,9 @@ final class MainVC: LabsVC {
                     }
                 )
             )
+        ],
+        [
+          FlexLayoutFirstExampleVC()
         ]
     ]
     
