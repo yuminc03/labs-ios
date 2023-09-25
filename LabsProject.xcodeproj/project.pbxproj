@@ -11,7 +11,11 @@
 		051B83412A80C155007B51B8 /* WeatherClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051B83402A80C155007B51B8 /* WeatherClient.swift */; };
 		052D5F0E2A6A536200BC715F /* EffectsBasicsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052D5F0D2A6A536200BC715F /* EffectsBasicsVC.swift */; };
 		055A9AA72A70D9930078C4EF /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055A9AA62A70D9930078C4EF /* Refreshable.swift */; };
+		0561E48A2AC127050019E19D /* FlexLayoutFirstExampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561E4892AC127050019E19D /* FlexLayoutFirstExampleVC.swift */; };
 		05AB26D12A739AC300ED39F9 /* EagerNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB26D02A739AC300ED39F9 /* EagerNavigationVC.swift */; };
+		05EB15D42AC14E4C00137B7D /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 05EB15D32AC14E4C00137B7D /* PinLayout */; };
+		05EB15E42AC152EB00137B7D /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 05EB15E32AC152EB00137B7D /* FlexLayout */; };
+		05EB15E62AC15A5E00137B7D /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB15E52AC15A5E00137B7D /* IntroView.swift */; };
 		05F2616B2A84989200BFC7A7 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 05F2616A2A84989200BFC7A7 /* ComposableArchitecture */; };
 		8D01AEDA2A5AE2F80008902E /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01AED92A5AE2F80008902E /* Counter.swift */; };
 		8D01AEDC2A5AE3420008902E /* TwoCounters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01AEDB2A5AE3420008902E /* TwoCounters.swift */; };
@@ -104,7 +108,9 @@
 		051B83402A80C155007B51B8 /* WeatherClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherClient.swift; sourceTree = "<group>"; };
 		052D5F0D2A6A536200BC715F /* EffectsBasicsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsBasicsVC.swift; sourceTree = "<group>"; };
 		055A9AA62A70D9930078C4EF /* Refreshable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
+		0561E4892AC127050019E19D /* FlexLayoutFirstExampleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexLayoutFirstExampleVC.swift; sourceTree = "<group>"; };
 		05AB26D02A739AC300ED39F9 /* EagerNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EagerNavigationVC.swift; sourceTree = "<group>"; };
+		05EB15E52AC15A5E00137B7D /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		8D01AED92A5AE2F80008902E /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		8D01AEDB2A5AE3420008902E /* TwoCounters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoCounters.swift; sourceTree = "<group>"; };
 		8D1860F52A28DD2D00F89D18 /* MainNaviVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNaviVC.swift; sourceTree = "<group>"; };
@@ -190,18 +196,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-        8D36171629F2CA7F00231628 /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                05F2616B2A84989200BFC7A7 /* ComposableArchitecture in Frameworks */,
-                8DD7138B2A4846D800209EEF /* Alamofire in Frameworks */,
-                8DAC243129F417BB0012A85F /* SnapKit in Frameworks */,
-                8DD7139C2A485A9000209EEF /* CombineCocoa in Frameworks */,
-                8DAC243429F41A7C0012A85F /* Then in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		8D36171629F2CA7F00231628 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05EB15E42AC152EB00137B7D /* FlexLayout in Frameworks */,
+				05F2616B2A84989200BFC7A7 /* ComposableArchitecture in Frameworks */,
+				8DD7138B2A4846D800209EEF /* Alamofire in Frameworks */,
+				8DAC243129F417BB0012A85F /* SnapKit in Frameworks */,
+				8DD7139C2A485A9000209EEF /* CombineCocoa in Frameworks */,
+				05EB15D42AC14E4C00137B7D /* PinLayout in Frameworks */,
+				8DAC243429F41A7C0012A85F /* Then in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -221,6 +229,15 @@
 				051B83402A80C155007B51B8 /* WeatherClient.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		0561E4882AC126E30019E19D /* FlexPinLayout */ = {
+			isa = PBXGroup;
+			children = (
+				0561E4892AC127050019E19D /* FlexLayoutFirstExampleVC.swift */,
+				05EB15E52AC15A5E00137B7D /* IntroView.swift */,
+			);
+			path = FlexPinLayout;
 			sourceTree = "<group>";
 		};
 		8D01AEDD2A5AE34E0008902E /* Reducer */ = {
@@ -442,6 +459,7 @@
 				8D4D3D3D2A3E0861009A64F6 /* Segmented */,
 				8DAC242C29F3EBB50012A85F /* Then */,
 				8DA817A32A482B05000DCEBB /* TCA */,
+				0561E4882AC126E30019E19D /* FlexPinLayout */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -525,68 +543,72 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-        8D36171829F2CA7F00231628 /* LabsProject */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 8D36172D29F2CA8000231628 /* Build configuration list for PBXNativeTarget "LabsProject" */;
-            buildPhases = (
-                8D36171529F2CA7F00231628 /* Sources */,
-                8D36171629F2CA7F00231628 /* Frameworks */,
-                8D36171729F2CA7F00231628 /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-            );
-            name = LabsProject;
-            packageProductDependencies = (
-                8DAC243029F417BB0012A85F /* SnapKit */,
-                8DAC243329F41A7C0012A85F /* Then */,
-                8DD7138A2A4846D800209EEF /* Alamofire */,
-                8DD7139B2A485A9000209EEF /* CombineCocoa */,
-                05F2616A2A84989200BFC7A7 /* ComposableArchitecture */,
-            );
-            productName = LabsProject;
-            productReference = 8D36171929F2CA7F00231628 /* LabsProject.app */;
-            productType = "com.apple.product-type.application";
-        };
+		8D36171829F2CA7F00231628 /* LabsProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D36172D29F2CA8000231628 /* Build configuration list for PBXNativeTarget "LabsProject" */;
+			buildPhases = (
+				8D36171529F2CA7F00231628 /* Sources */,
+				8D36171629F2CA7F00231628 /* Frameworks */,
+				8D36171729F2CA7F00231628 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LabsProject;
+			packageProductDependencies = (
+				8DAC243029F417BB0012A85F /* SnapKit */,
+				8DAC243329F41A7C0012A85F /* Then */,
+				8DD7138A2A4846D800209EEF /* Alamofire */,
+				8DD7139B2A485A9000209EEF /* CombineCocoa */,
+				05F2616A2A84989200BFC7A7 /* ComposableArchitecture */,
+				05EB15D32AC14E4C00137B7D /* PinLayout */,
+				05EB15E32AC152EB00137B7D /* FlexLayout */,
+			);
+			productName = LabsProject;
+			productReference = 8D36171929F2CA7F00231628 /* LabsProject.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-        8D36171129F2CA7F00231628 /* Project object */ = {
-            isa = PBXProject;
-            attributes = {
-                BuildIndependentTargetsInParallel = 1;
-                LastSwiftUpdateCheck = 1430;
-                LastUpgradeCheck = 1430;
-                TargetAttributes = {
-                    8D36171829F2CA7F00231628 = {
-                        CreatedOnToolsVersion = 14.3;
-                    };
-                };
-            };
-            buildConfigurationList = 8D36171429F2CA7F00231628 /* Build configuration list for PBXProject "LabsProject" */;
-            compatibilityVersion = "Xcode 14.0";
-            developmentRegion = en;
-            hasScannedForEncodings = 0;
-            knownRegions = (
-                en,
-                Base,
-            );
-            mainGroup = 8D36171029F2CA7F00231628;
-            packageReferences = (
-                8DAC242F29F417BB0012A85F /* XCRemoteSwiftPackageReference "SnapKit" */,
-                8DAC243229F41A7C0012A85F /* XCRemoteSwiftPackageReference "Then" */,
-                8DD713892A4846D800209EEF /* XCRemoteSwiftPackageReference "Alamofire" */,
-                8DD7139A2A485A9000209EEF /* XCRemoteSwiftPackageReference "CombineCocoa" */,
-                05F261692A84989200BFC7A7 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
-            );
-            productRefGroup = 8D36171A29F2CA7F00231628 /* Products */;
-            projectDirPath = "";
-            projectRoot = "";
-            targets = (
-                8D36171829F2CA7F00231628 /* LabsProject */,
-            );
-        };
+		8D36171129F2CA7F00231628 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					8D36171829F2CA7F00231628 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 8D36171429F2CA7F00231628 /* Build configuration list for PBXProject "LabsProject" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8D36171029F2CA7F00231628;
+			packageReferences = (
+				8DAC242F29F417BB0012A85F /* XCRemoteSwiftPackageReference "SnapKit" */,
+				8DAC243229F41A7C0012A85F /* XCRemoteSwiftPackageReference "Then" */,
+				8DD713892A4846D800209EEF /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8DD7139A2A485A9000209EEF /* XCRemoteSwiftPackageReference "CombineCocoa" */,
+				05F261692A84989200BFC7A7 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				05EB15D22AC14E4C00137B7D /* XCRemoteSwiftPackageReference "PinLayout" */,
+				05EB15E22AC152EB00137B7D /* XCRemoteSwiftPackageReference "FlexLayout" */,
+			);
+			productRefGroup = 8D36171A29F2CA7F00231628 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D36171829F2CA7F00231628 /* LabsProject */,
+			);
+		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -655,6 +677,7 @@
 				8DD6F8DB2A62A35100FF977A /* OptionalBasics.swift in Sources */,
 				8DB65DF12A6CF2D70063146F /* MainVM.swift in Sources */,
 				8DB65DF82A6CFD600063146F /* Array+.swift in Sources */,
+				0561E48A2AC127050019E19D /* FlexLayoutFirstExampleVC.swift in Sources */,
 				8DD713932A48512D00209EEF /* NavigationBarView.swift in Sources */,
 				8D63FF462A30D8EC002177AA /* CookieWebVC.swift in Sources */,
 				8DB65DFA2A6D081F0063146F /* ProgressView.swift in Sources */,
@@ -683,6 +706,7 @@
 				8D1860F62A28DD2D00F89D18 /* MainNaviVC.swift in Sources */,
 				8D5F6FD22A5151740051A402 /* BindingBasicsVC.swift in Sources */,
 				8DF15DC82A83D47A00F5D68A /* SearchTableViewCell.swift in Sources */,
+				05EB15E62AC15A5E00137B7D /* IntroView.swift in Sources */,
 				8DB65DEF2A6C01D00063146F /* FactClient.swift in Sources */,
 				8D87D11B2A8120A400215097 /* UIView+.swift in Sources */,
 				8D5F6FE32A51C98E0051A402 /* SwitchFormView.swift in Sources */,
@@ -828,6 +852,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GMHUACJXLZ;
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "FLEXLAYOUT_SWIFT_PACKAGE=1";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LabsProject/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "나만의 실험실";
@@ -857,6 +882,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GMHUACJXLZ;
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "FLEXLAYOUT_SWIFT_PACKAGE=1";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LabsProject/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "나만의 실험실";
@@ -902,74 +928,100 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-        05F261692A84989200BFC7A7 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
-            isa = XCRemoteSwiftPackageReference;
-            repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
-            requirement = {
-                kind = upToNextMajorVersion;
-                minimumVersion = 1.0.0;
-            };
-        };
-        8DAC242F29F417BB0012A85F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-            isa = XCRemoteSwiftPackageReference;
-            repositoryURL = "https://github.com/SnapKit/SnapKit";
-            requirement = {
-                kind = upToNextMajorVersion;
-                minimumVersion = 5.0.0;
-            };
-        };
-        8DAC243229F41A7C0012A85F /* XCRemoteSwiftPackageReference "Then" */ = {
-            isa = XCRemoteSwiftPackageReference;
-            repositoryURL = "https://github.com/devxoul/Then";
-            requirement = {
-                kind = upToNextMajorVersion;
-                minimumVersion = 3.0.0;
-            };
-        };
-        8DD713892A4846D800209EEF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-            isa = XCRemoteSwiftPackageReference;
-            repositoryURL = "https://github.com/Alamofire/Alamofire#features";
-            requirement = {
-                kind = upToNextMinorVersion;
-                minimumVersion = 5.7.0;
-            };
-        };
-        8DD7139A2A485A9000209EEF /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
-            isa = XCRemoteSwiftPackageReference;
-            repositoryURL = "https://github.com/CombineCommunity/CombineCocoa";
-            requirement = {
-                kind = upToNextMajorVersion;
-                minimumVersion = 0.4.1;
-            };
-        };
+		05EB15D22AC14E4C00137B7D /* XCRemoteSwiftPackageReference "PinLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/PinLayout#intro_usage_examples";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		05EB15E22AC152EB00137B7D /* XCRemoteSwiftPackageReference "FlexLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/FlexLayout#create_modify_define_containers";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		05F261692A84989200BFC7A7 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		8DAC242F29F417BB0012A85F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		8DAC243229F41A7C0012A85F /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		8DD713892A4846D800209EEF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire#features";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.7.0;
+			};
+		};
+		8DD7139A2A485A9000209EEF /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-        05F2616A2A84989200BFC7A7 /* ComposableArchitecture */ = {
-            isa = XCSwiftPackageProductDependency;
-            package = 05F261692A84989200BFC7A7 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-            productName = ComposableArchitecture;
-        };
-        8DAC243029F417BB0012A85F /* SnapKit */ = {
-            isa = XCSwiftPackageProductDependency;
-            package = 8DAC242F29F417BB0012A85F /* XCRemoteSwiftPackageReference "SnapKit" */;
-            productName = SnapKit;
-        };
-        8DAC243329F41A7C0012A85F /* Then */ = {
-            isa = XCSwiftPackageProductDependency;
-            package = 8DAC243229F41A7C0012A85F /* XCRemoteSwiftPackageReference "Then" */;
-            productName = Then;
-        };
-        8DD7138A2A4846D800209EEF /* Alamofire */ = {
-            isa = XCSwiftPackageProductDependency;
-            package = 8DD713892A4846D800209EEF /* XCRemoteSwiftPackageReference "Alamofire" */;
-            productName = Alamofire;
-        };
-        8DD7139B2A485A9000209EEF /* CombineCocoa */ = {
-            isa = XCSwiftPackageProductDependency;
-            package = 8DD7139A2A485A9000209EEF /* XCRemoteSwiftPackageReference "CombineCocoa" */;
-            productName = CombineCocoa;
-        };
+		05EB15D32AC14E4C00137B7D /* PinLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05EB15D22AC14E4C00137B7D /* XCRemoteSwiftPackageReference "PinLayout" */;
+			productName = PinLayout;
+		};
+		05EB15E32AC152EB00137B7D /* FlexLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05EB15E22AC152EB00137B7D /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			productName = FlexLayout;
+		};
+		05F2616A2A84989200BFC7A7 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05F261692A84989200BFC7A7 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		8DAC243029F417BB0012A85F /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DAC242F29F417BB0012A85F /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		8DAC243329F41A7C0012A85F /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DAC243229F41A7C0012A85F /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		8DD7138A2A4846D800209EEF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DD713892A4846D800209EEF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		8DD7139B2A485A9000209EEF /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DD7139A2A485A9000209EEF /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
+		};
 /* End XCSwiftPackageProductDependency section */
     };
     rootObject = 8D36171129F2CA7F00231628 /* Project object */;

@@ -60,7 +60,10 @@ final class MainVM {
             childPages: [
                 "Counter"
             ]
-        )
+        ),
+        Page(category: "UIKit FlexLayout", childPages: [
+          "FlexLayout Test"
+        ])
     ]
     var numberOfSection: Int {
         return pageNames.count
