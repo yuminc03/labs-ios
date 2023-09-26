@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  HealthHeartClone
 //
-//  Created by LS-NOTE-00106 on 2023/09/25.
+//  Created by Yumin Chu on 2023/09/25.
 //
 
 import UIKit

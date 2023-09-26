@@ -24,6 +24,7 @@
 		8DE211872AC30D2D0061A02A /* HeartBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE211862AC30D2D0061A02A /* HeartBeat.swift */; };
 		8DE2118B2AC310A60061A02A /* MoreMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE2118A2AC310A60061A02A /* MoreMemory.swift */; };
 		8DE2118D2AC3129A0061A02A /* AboutHeart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE2118C2AC3129A0061A02A /* AboutHeart.swift */; };
+		8DE211902AC3183D0061A02A /* HeartHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE2118F2AC3183D0061A02A /* HeartHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		8DE211862AC30D2D0061A02A /* HeartBeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartBeat.swift; sourceTree = "<group>"; };
 		8DE2118A2AC310A60061A02A /* MoreMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMemory.swift; sourceTree = "<group>"; };
 		8DE2118C2AC3129A0061A02A /* AboutHeart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHeart.swift; sourceTree = "<group>"; };
+		8DE2118F2AC3183D0061A02A /* HeartHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeartHeaderView.swift; path = "../../../../Apple-Health/HealthHeartClone/Model/HeartHeaderView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,10 +120,7 @@
 				05EB15F32AC16E9D00137B7D /* AppDelegate.swift */,
 				05EB15F52AC16E9D00137B7D /* SceneDelegate.swift */,
 				8DE211882AC30F890061A02A /* Model */,
-				05EB15F72AC16E9D00137B7D /* HeartVC.swift */,
-				8DB505302AC1CA9B0005B012 /* HeartScrollView.swift */,
-				8DB505322AC1CFD20005B012 /* HeartTableViewHeader.swift */,
-				8DB505342AC1D0FB0005B012 /* HeartTableViewCell.swift */,
+				8DE2118E2AC316EA0061A02A /* Views */,
 				05EB16292AC1736700137B7D /* Extension */,
 				05EB15FC2AC16E9F00137B7D /* Assets.xcassets */,
 				05EB15FE2AC16E9F00137B7D /* LaunchScreen.storyboard */,
@@ -163,6 +162,18 @@
 				8DE2118C2AC3129A0061A02A /* AboutHeart.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8DE2118E2AC316EA0061A02A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				05EB15F72AC16E9D00137B7D /* HeartVC.swift */,
+				8DB505302AC1CA9B0005B012 /* HeartScrollView.swift */,
+				8DE2118F2AC3183D0061A02A /* HeartHeaderView.swift */,
+				8DB505322AC1CFD20005B012 /* HeartTableViewHeader.swift */,
+				8DB505342AC1D0FB0005B012 /* HeartTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE211902AC3183D0061A02A /* HeartHeaderView.swift in Sources */,
 				8DE2118D2AC3129A0061A02A /* AboutHeart.swift in Sources */,
 				05EB15F82AC16E9D00137B7D /* HeartVC.swift in Sources */,
 				8DE211872AC30D2D0061A02A /* HeartBeat.swift in Sources */,
