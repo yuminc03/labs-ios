@@ -21,6 +21,9 @@
 		8DB505312AC1CA9B0005B012 /* HeartScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB505302AC1CA9B0005B012 /* HeartScrollView.swift */; };
 		8DB505332AC1CFD20005B012 /* HeartTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB505322AC1CFD20005B012 /* HeartTableViewHeader.swift */; };
 		8DB505352AC1D0FB0005B012 /* HeartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB505342AC1D0FB0005B012 /* HeartTableViewCell.swift */; };
+		8DE211872AC30D2D0061A02A /* HeartBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE211862AC30D2D0061A02A /* HeartBeat.swift */; };
+		8DE2118B2AC310A60061A02A /* MoreMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE2118A2AC310A60061A02A /* MoreMemory.swift */; };
+		8DE2118D2AC3129A0061A02A /* AboutHeart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE2118C2AC3129A0061A02A /* AboutHeart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		8DB505302AC1CA9B0005B012 /* HeartScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartScrollView.swift; sourceTree = "<group>"; };
 		8DB505322AC1CFD20005B012 /* HeartTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartTableViewHeader.swift; sourceTree = "<group>"; };
 		8DB505342AC1D0FB0005B012 /* HeartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartTableViewCell.swift; sourceTree = "<group>"; };
+		8DE211862AC30D2D0061A02A /* HeartBeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartBeat.swift; sourceTree = "<group>"; };
+		8DE2118A2AC310A60061A02A /* MoreMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMemory.swift; sourceTree = "<group>"; };
+		8DE2118C2AC3129A0061A02A /* AboutHeart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHeart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,7 @@
 			children = (
 				05EB15F32AC16E9D00137B7D /* AppDelegate.swift */,
 				05EB15F52AC16E9D00137B7D /* SceneDelegate.swift */,
+				8DE211882AC30F890061A02A /* Model */,
 				05EB15F72AC16E9D00137B7D /* HeartVC.swift */,
 				8DB505302AC1CA9B0005B012 /* HeartScrollView.swift */,
 				8DB505322AC1CFD20005B012 /* HeartTableViewHeader.swift */,
@@ -146,6 +153,16 @@
 				05EB162A2AC1738000137B7D /* UIViewController+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		8DE211882AC30F890061A02A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8DE211862AC30D2D0061A02A /* HeartBeat.swift */,
+				8DE2118A2AC310A60061A02A /* MoreMemory.swift */,
+				8DE2118C2AC3129A0061A02A /* AboutHeart.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,12 +303,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE2118D2AC3129A0061A02A /* AboutHeart.swift in Sources */,
 				05EB15F82AC16E9D00137B7D /* HeartVC.swift in Sources */,
+				8DE211872AC30D2D0061A02A /* HeartBeat.swift in Sources */,
 				8DB505352AC1D0FB0005B012 /* HeartTableViewCell.swift in Sources */,
 				8DB505312AC1CA9B0005B012 /* HeartScrollView.swift in Sources */,
 				05EB15F42AC16E9D00137B7D /* AppDelegate.swift in Sources */,
 				05EB162B2AC1738000137B7D /* UIViewController+.swift in Sources */,
 				05EB15F62AC16E9D00137B7D /* SceneDelegate.swift in Sources */,
+				8DE2118B2AC310A60061A02A /* MoreMemory.swift in Sources */,
 				8DB505332AC1CFD20005B012 /* HeartTableViewHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
