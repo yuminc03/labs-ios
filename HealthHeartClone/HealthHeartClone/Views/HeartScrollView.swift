@@ -18,7 +18,7 @@ final class HeartScrollView: UIScrollView {
   }()
   
   let tableView: UITableView = {
-    let v = UITableView()
+    let v = UITableView(frame: .zero, style: .insetGrouped)
     v.backgroundColor = .clear
     v.separatorStyle = .none
     v.registerCell(type: HeartTableViewCell.self)
@@ -51,7 +51,7 @@ final class HeartScrollView: UIScrollView {
   }
   
   private func setupConstraints() {
-    containerView.flex.direction(.column).padding(0, 20).define {
+    containerView.flex.direction(.column).define {
       $0.addItem(tableView)
     }
   }

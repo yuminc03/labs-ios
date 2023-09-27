@@ -59,7 +59,7 @@ final class HeartVC: TCABaseVC<HeartCore> {
   }
   
   private func setupConstraints() {
-    
+    scrollView.flex.width(UIScreen.main.bounds.width).height(UIScreen.main.bounds.height)
   }
 }
 
@@ -70,12 +70,20 @@ extension HeartVC: UITableViewDelegate, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 1
+    if section < 3 {
+      return viewStore.heartBeats[section].data.count
+    } else {
+      return viewStore.usableData.count
+    }
   }
   
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     let header = tableView.dequeueHeaderFooter(type: HeartTableViewHeader.self)
-    
+    if section < 3 {
+      header.updateUI(title: viewStore.heartBeats[section].headerTitle)
+    } else {
+      header.updateUI(title: "사용 가능한 데이터 없음")
+    }
     return header
   }
   
