@@ -84,4 +84,11 @@ final class HeartTableViewCell: UITableViewCell {
       }
     }
   }
+  
+  func updateUI(data: HeartBeat.Heart) {
+    heartBeatLabel.text = data.title
+    timeLabel.text = data.measuredTime
+    heartBeatCountLabel.text = "\(data.heartBeatCount)"
+    bpmLabel.text = data.unit
+  }
 }

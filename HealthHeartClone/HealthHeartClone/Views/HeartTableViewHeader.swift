@@ -14,7 +14,7 @@ final class HeartTableViewHeader: UITableViewHeaderFooterView {
   private let titleLabel: UILabel = {
     let v = UILabel()
     v.textColor = .black
-    v.font = .systemFont(ofSize: 20, weight: .medium)
+    v.font = .systemFont(ofSize: 24, weight: .bold)
     return v
   }()
   
@@ -26,7 +26,8 @@ final class HeartTableViewHeader: UITableViewHeaderFooterView {
   
   override func layoutSubviews() {
     super.layoutSubviews()
-    titleLabel.flex.layout(mode: .adjustHeight)
+    contentView.pin.margin(pin.safeArea)
+    contentView.flex.layout(mode: .adjustHeight)
   }
   
   required init?(coder: NSCoder) {
@@ -39,7 +40,9 @@ final class HeartTableViewHeader: UITableViewHeaderFooterView {
   }
   
   private func setupConstraints() {
-    titleLabel.flex.direction(.row).padding(5, 20)
+    contentView.flex.direction(.row).padding(5, 0).define {
+      $0.addItem(titleLabel)
+    }
   }
   
   func updateUI(title: String) {
