@@ -21,6 +21,8 @@ final class HeartScrollView: UIScrollView {
     let v = UITableView()
     v.backgroundColor = .clear
     v.separatorStyle = .none
+    v.registerCell(type: HeartTableViewCell.self)
+    v.registerHeaderFooter(type: HeartTableViewHeader.self)
     return v
   }()
   
