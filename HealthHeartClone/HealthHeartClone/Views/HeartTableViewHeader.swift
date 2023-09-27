@@ -14,7 +14,7 @@ final class HeartTableViewHeader: UITableViewHeaderFooterView {
   private let titleLabel: UILabel = {
     let v = UILabel()
     v.textColor = .black
-    v.font = .systemFont(ofSize: 20, weight: .medium)
+    v.font = .systemFont(ofSize: 24, weight: .bold)
     return v
   }()
   
@@ -40,7 +40,7 @@ final class HeartTableViewHeader: UITableViewHeaderFooterView {
   }
   
   private func setupConstraints() {
-    contentView.flex.direction(.row).padding(5, 20).define {
+    contentView.flex.direction(.row).padding(5, 0).define {
       $0.addItem(titleLabel)
     }
   }

@@ -52,7 +52,7 @@ final class HeartVC: TCABaseVC<HeartCore> {
   }
   
   private func setupUI() {
-    view.backgroundColor = .white
+    view.backgroundColor = UIColor(named: "gray_EAEAEA")
     view.addSubview(scrollView)
     scrollView.tableView.delegate = self
     scrollView.tableView.dataSource = self
@@ -88,6 +88,12 @@ extension HeartVC: UITableViewDelegate, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    return UITableViewCell()
+    if indexPath.section < 3 {
+      let cell = tableView.dequeueCell(type: HeartTableViewCell.self, indexPath: indexPath)
+      cell.updateUI(data: viewStore.heartBeats[indexPath.section].data[indexPath.row])
+      return cell
+    } else {
+      return UITableViewCell()
+    }
   }
 }
