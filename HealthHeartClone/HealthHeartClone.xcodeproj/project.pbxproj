@@ -18,6 +18,9 @@
 		05EB16252AC171A200137B7D /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 05EB16242AC171A200137B7D /* FlexLayout */; };
 		05EB16282AC171B500137B7D /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 05EB16272AC171B500137B7D /* PinLayout */; };
 		05EB162B2AC1738000137B7D /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB162A2AC1738000137B7D /* UIViewController+.swift */; };
+		8D238C512AC4284000D3DFDD /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 8D238C502AC4284000D3DFDD /* ComposableArchitecture */; };
+		8D238C542AC42CBD00D3DFDD /* TableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C532AC42CBD00D3DFDD /* TableView+.swift */; };
+		8D238C5E2AC45CDE00D3DFDD /* TCABaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C5D2AC45CDE00D3DFDD /* TCABaseVC.swift */; };
 		8DB505312AC1CA9B0005B012 /* HeartScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB505302AC1CA9B0005B012 /* HeartScrollView.swift */; };
 		8DB505332AC1CFD20005B012 /* HeartTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB505322AC1CFD20005B012 /* HeartTableViewHeader.swift */; };
 		8DB505352AC1D0FB0005B012 /* HeartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB505342AC1D0FB0005B012 /* HeartTableViewCell.swift */; };
@@ -58,6 +61,8 @@
 		05EB16142AC16E9F00137B7D /* HealthHeartCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthHeartCloneUITests.swift; sourceTree = "<group>"; };
 		05EB16162AC16E9F00137B7D /* HealthHeartCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthHeartCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		05EB162A2AC1738000137B7D /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		8D238C532AC42CBD00D3DFDD /* TableView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableView+.swift"; sourceTree = "<group>"; };
+		8D238C5D2AC45CDE00D3DFDD /* TCABaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCABaseVC.swift; sourceTree = "<group>"; };
 		8DB505302AC1CA9B0005B012 /* HeartScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartScrollView.swift; sourceTree = "<group>"; };
 		8DB505322AC1CFD20005B012 /* HeartTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartTableViewHeader.swift; sourceTree = "<group>"; };
 		8DB505342AC1D0FB0005B012 /* HeartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartTableViewCell.swift; sourceTree = "<group>"; };
@@ -74,6 +79,7 @@
 			files = (
 				05EB16282AC171B500137B7D /* PinLayout in Frameworks */,
 				05EB16252AC171A200137B7D /* FlexLayout in Frameworks */,
+				8D238C512AC4284000D3DFDD /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,9 +125,9 @@
 			children = (
 				05EB15F32AC16E9D00137B7D /* AppDelegate.swift */,
 				05EB15F52AC16E9D00137B7D /* SceneDelegate.swift */,
+				8D238C522AC42CA700D3DFDD /* Common */,
 				8DE211882AC30F890061A02A /* Model */,
 				8DE2118E2AC316EA0061A02A /* Views */,
-				05EB16292AC1736700137B7D /* Extension */,
 				05EB15FC2AC16E9F00137B7D /* Assets.xcassets */,
 				05EB15FE2AC16E9F00137B7D /* LaunchScreen.storyboard */,
 				05EB16012AC16E9F00137B7D /* Info.plist */,
@@ -146,12 +152,14 @@
 			path = HealthHeartCloneUITests;
 			sourceTree = "<group>";
 		};
-		05EB16292AC1736700137B7D /* Extension */ = {
+		8D238C522AC42CA700D3DFDD /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				05EB162A2AC1738000137B7D /* UIViewController+.swift */,
+				8D238C532AC42CBD00D3DFDD /* TableView+.swift */,
+				8D238C5D2AC45CDE00D3DFDD /* TCABaseVC.swift */,
 			);
-			path = Extension;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		8DE211882AC30F890061A02A /* Model */ = {
@@ -195,6 +203,7 @@
 			packageProductDependencies = (
 				05EB16242AC171A200137B7D /* FlexLayout */,
 				05EB16272AC171B500137B7D /* PinLayout */,
+				8D238C502AC4284000D3DFDD /* ComposableArchitecture */,
 			);
 			productName = HealthHeartClone;
 			productReference = 05EB15F02AC16E9D00137B7D /* HealthHeartClone.app */;
@@ -271,6 +280,7 @@
 			packageReferences = (
 				05EB16232AC171A200137B7D /* XCRemoteSwiftPackageReference "FlexLayout" */,
 				05EB16262AC171B500137B7D /* XCRemoteSwiftPackageReference "PinLayout" */,
+				8D238C4F2AC4284000D3DFDD /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = 05EB15F12AC16E9D00137B7D /* Products */;
 			projectDirPath = "";
@@ -319,11 +329,13 @@
 				05EB15F82AC16E9D00137B7D /* HeartVC.swift in Sources */,
 				8DE211872AC30D2D0061A02A /* HeartBeat.swift in Sources */,
 				8DB505352AC1D0FB0005B012 /* HeartTableViewCell.swift in Sources */,
+				8D238C542AC42CBD00D3DFDD /* TableView+.swift in Sources */,
 				8DB505312AC1CA9B0005B012 /* HeartScrollView.swift in Sources */,
 				05EB15F42AC16E9D00137B7D /* AppDelegate.swift in Sources */,
 				05EB162B2AC1738000137B7D /* UIViewController+.swift in Sources */,
 				05EB15F62AC16E9D00137B7D /* SceneDelegate.swift in Sources */,
 				8DE2118B2AC310A60061A02A /* MoreMemory.swift in Sources */,
+				8D238C5E2AC45CDE00D3DFDD /* TCABaseVC.swift in Sources */,
 				8DB505332AC1CFD20005B012 /* HeartTableViewHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -676,6 +688,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		8D238C4F2AC4284000D3DFDD /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -688,6 +708,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 05EB16262AC171B500137B7D /* XCRemoteSwiftPackageReference "PinLayout" */;
 			productName = PinLayout;
+		};
+		8D238C502AC4284000D3DFDD /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D238C4F2AC4284000D3DFDD /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
