@@ -46,7 +46,7 @@ final class HeartTableViewHeader: UITableViewHeaderFooterView {
   }
   
   private func setupConstraints() {
-    contentView.flex.direction(.row).define {
+    contentView.flex.direction(.row).paddingBottom(5).define {
       $0.addItem(titleLabel)
     }
   }

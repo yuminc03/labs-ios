@@ -22,6 +22,7 @@
 		8D238C542AC42CBD00D3DFDD /* TableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C532AC42CBD00D3DFDD /* TableView+.swift */; };
 		8D238C5E2AC45CDE00D3DFDD /* TCABaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C5D2AC45CDE00D3DFDD /* TCABaseVC.swift */; };
 		8D238C602AC5A83A00D3DFDD /* MaximumOxygenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C5F2AC5A83A00D3DFDD /* MaximumOxygenCell.swift */; };
+		8D238C622AC5C85500D3DFDD /* UnusableDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C612AC5C85500D3DFDD /* UnusableDataCell.swift */; };
 		8DB505312AC1CA9B0005B012 /* HeartScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB505302AC1CA9B0005B012 /* HeartScrollView.swift */; };
 		8DB505332AC1CFD20005B012 /* HeartTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB505322AC1CFD20005B012 /* HeartTableViewHeader.swift */; };
 		8DB505352AC1D0FB0005B012 /* HeartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB505342AC1D0FB0005B012 /* HeartTableViewCell.swift */; };
@@ -65,6 +66,7 @@
 		8D238C532AC42CBD00D3DFDD /* TableView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableView+.swift"; sourceTree = "<group>"; };
 		8D238C5D2AC45CDE00D3DFDD /* TCABaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCABaseVC.swift; sourceTree = "<group>"; };
 		8D238C5F2AC5A83A00D3DFDD /* MaximumOxygenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaximumOxygenCell.swift; sourceTree = "<group>"; };
+		8D238C612AC5C85500D3DFDD /* UnusableDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnusableDataCell.swift; sourceTree = "<group>"; };
 		8DB505302AC1CA9B0005B012 /* HeartScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartScrollView.swift; sourceTree = "<group>"; };
 		8DB505322AC1CFD20005B012 /* HeartTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartTableViewHeader.swift; sourceTree = "<group>"; };
 		8DB505342AC1D0FB0005B012 /* HeartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartTableViewCell.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				8DB505322AC1CFD20005B012 /* HeartTableViewHeader.swift */,
 				8DB505342AC1D0FB0005B012 /* HeartTableViewCell.swift */,
 				8D238C5F2AC5A83A00D3DFDD /* MaximumOxygenCell.swift */,
+				8D238C612AC5C85500D3DFDD /* UnusableDataCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				8DE2118B2AC310A60061A02A /* MoreMemory.swift in Sources */,
 				8D238C5E2AC45CDE00D3DFDD /* TCABaseVC.swift in Sources */,
 				8DB505332AC1CFD20005B012 /* HeartTableViewHeader.swift in Sources */,
+				8D238C622AC5C85500D3DFDD /* UnusableDataCell.swift in Sources */,
 				8D238C602AC5A83A00D3DFDD /* MaximumOxygenCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -88,15 +88,19 @@ extension HeartVC: UITableViewDelegate, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard indexPath.section < 3 else { return UITableViewCell() }
-    
-    if indexPath.section == 1 {
-      let cell = tableView.dequeueCell(type: MaximumOxygenCell.self, indexPath: indexPath)
-      cell.updateUI(data: viewStore.heartBeats[indexPath.section].data[indexPath.row])
-      return cell
+    if indexPath.section < 3 {
+      if indexPath.section == 1 {
+        let cell = tableView.dequeueCell(type: MaximumOxygenCell.self, indexPath: indexPath)
+        cell.updateUI(data: viewStore.heartBeats[indexPath.section].data[indexPath.row])
+        return cell
+      } else {
+        let cell = tableView.dequeueCell(type: HeartTableViewCell.self, indexPath: indexPath)
+        cell.updateUI(data: viewStore.heartBeats[indexPath.section].data[indexPath.row])
+        return cell
+      }
     } else {
-      let cell = tableView.dequeueCell(type: HeartTableViewCell.self, indexPath: indexPath)
-      cell.updateUI(data: viewStore.heartBeats[indexPath.section].data[indexPath.row])
+      let cell = tableView.dequeueCell(type: UnusableDataCell.self, indexPath: indexPath)
+      cell.updateUI(title: viewStore.usableData[indexPath.row])
       return cell
     }
   }

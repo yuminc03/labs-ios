@@ -23,6 +23,7 @@ final class HeartScrollView: UIScrollView {
     v.separatorStyle = .none
     v.registerCell(type: HeartTableViewCell.self)
     v.registerCell(type: MaximumOxygenCell.self)
+    v.registerCell(type: UnusableDataCell.self)
     v.registerHeaderFooter(type: HeartTableViewHeader.self)
     return v
   }()
