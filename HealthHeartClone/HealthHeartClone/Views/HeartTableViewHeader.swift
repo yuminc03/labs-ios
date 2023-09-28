@@ -10,6 +10,7 @@ import UIKit
 import FlexLayout
 import PinLayout
 
+/// 심박수 Section Header (오늘, 최근 7일 ..)
 final class HeartTableViewHeader: UITableViewHeaderFooterView {
   private let titleLabel: UILabel = {
     let v = UILabel()

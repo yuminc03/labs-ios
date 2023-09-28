@@ -1,8 +1,8 @@
 //
-//  HeartTableViewCell.swift
+//  BelowAverageCell.swift
 //  HealthHeartClone
 //
-//  Created by Yumin Chu on 2023/09/25.
+//  Created by Yumin Chu on 2023/09/28.
 //
 
 import UIKit
@@ -10,8 +10,8 @@ import UIKit
 import FlexLayout
 import PinLayout
 
-/// 심박수 Cell
-final class HeartTableViewCell: UITableViewCell {
+/// 최대 산소 섭취량 Cell
+final class MaximumOxygenCell: UITableViewCell {
   private let containerView: UIView = {
     let v = UIView()
     v.backgroundColor = .white
@@ -26,7 +26,7 @@ final class HeartTableViewCell: UITableViewCell {
     return v
   }()
   
-  private let heartBeatLabel: UILabel = {
+  private let fitnessLabel: UILabel = {
     let v = UILabel()
     v.textColor = .systemPink
     v.font = .systemFont(ofSize: 16, weight: .bold)
@@ -47,15 +47,15 @@ final class HeartTableViewCell: UITableViewCell {
     return v
   }()
   
-  private let heartBeatCountLabel: UILabel = {
+  private let maxOxygenIntakeLabel: UILabel = {
     let v = UILabel()
     v.textColor = .black
-    v.font = .systemFont(ofSize: 27, weight: .bold)
+    v.font = .systemFont(ofSize: 20, weight: .bold)
     v.sizeToFit()
     return v
   }()
   
-  private let bpmLabel: UILabel = {
+  private let maxOxygenIntakeValueLabel: UILabel = {
     let v = UILabel()
     v.textColor = .lightGray
     v.font = .systemFont(ofSize: 14, weight: .bold)
@@ -69,6 +69,10 @@ final class HeartTableViewCell: UITableViewCell {
     setupConstraints()
   }
   
+  required init?(coder: NSCoder) {
+    fatalError("Do not use Storyboard.")
+  }
+  
   override func layoutSubviews() {
     super.layoutSubviews()
     contentView.flex.layout(mode: .adjustHeight)
@@ -78,10 +82,6 @@ final class HeartTableViewCell: UITableViewCell {
     contentView.flex.width(size.width)
     contentView.flex.layout(mode: .adjustHeight)
     return contentView.frame.size
-  }
-  
-  required init?(coder: NSCoder) {
-    fatalError("Do not use Storyboard.")
   }
   
   private func setupUI() {
@@ -95,25 +95,25 @@ final class HeartTableViewCell: UITableViewCell {
         $0.addItem().direction(.row).justifyContent(.spaceBetween).define {
           $0.addItem().direction(.row).alignItems(.center).define {
             $0.addItem(heartImageView).width(20).aspectRatio(of: heartImageView)
-            $0.addItem(heartBeatLabel).marginLeft(5)
+            $0.addItem(fitnessLabel).marginLeft(5)
           }
           $0.addItem().direction(.row).alignItems(.center).define {
             $0.addItem(timeLabel)
             $0.addItem(rightArrowImage).width(10).aspectRatio(of: rightArrowImage).marginLeft(10)
           }
         }
-        $0.addItem().direction(.row).alignItems(.baseline).marginTop(20).define {
-          $0.addItem(heartBeatCountLabel)
-          $0.addItem(bpmLabel).marginLeft(5)
+        $0.addItem().direction(.column).marginTop(20).define {
+          $0.addItem(maxOxygenIntakeLabel)
+          $0.addItem(maxOxygenIntakeValueLabel)
         }
       }
     }
   }
   
   func updateUI(data: HeartBeat.Heart) {
-    heartBeatLabel.text = data.title
+    fitnessLabel.text = data.title
     timeLabel.text = data.measuredTime
-    heartBeatCountLabel.text = "\(data.heartBeatCount)"
-    bpmLabel.text = data.unit
+    maxOxygenIntakeLabel.text = "\(data.heartBeatCount == 0 ? "평균 이하" : data.heartBeatCount.description)"
+    maxOxygenIntakeValueLabel.text = data.unit
   }
 }
