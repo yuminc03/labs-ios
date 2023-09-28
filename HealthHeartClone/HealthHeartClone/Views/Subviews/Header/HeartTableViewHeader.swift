@@ -10,11 +10,13 @@ import UIKit
 import FlexLayout
 import PinLayout
 
+/// 심박수 Section Header (오늘, 최근 7일 ..)
 final class HeartTableViewHeader: UITableViewHeaderFooterView {
   private let titleLabel: UILabel = {
     let v = UILabel()
     v.textColor = .black
     v.font = .systemFont(ofSize: 24, weight: .bold)
+    v.sizeToFit()
     return v
   }()
   
@@ -26,8 +28,13 @@ final class HeartTableViewHeader: UITableViewHeaderFooterView {
   
   override func layoutSubviews() {
     super.layoutSubviews()
-    contentView.pin.margin(pin.safeArea)
     contentView.flex.layout(mode: .adjustHeight)
+  }
+  
+  override func sizeThatFits(_ size: CGSize) -> CGSize {
+    contentView.flex.width(size.width)
+    contentView.flex.layout(mode: .adjustHeight)
+    return contentView.frame.size
   }
   
   required init?(coder: NSCoder) {
@@ -36,11 +43,10 @@ final class HeartTableViewHeader: UITableViewHeaderFooterView {
   
   private func setupUI() {
     contentView.backgroundColor = .clear
-    contentView.addSubview(titleLabel)
   }
   
   private func setupConstraints() {
-    contentView.flex.direction(.row).padding(5, 0).define {
+    contentView.flex.direction(.row).paddingBottom(5).define {
       $0.addItem(titleLabel)
     }
   }

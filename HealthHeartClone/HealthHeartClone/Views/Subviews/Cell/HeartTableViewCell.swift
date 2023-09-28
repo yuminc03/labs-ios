@@ -10,17 +10,18 @@ import UIKit
 import FlexLayout
 import PinLayout
 
+/// 심박수 Cell
 final class HeartTableViewCell: UITableViewCell {
   private let containerView: UIView = {
     let v = UIView()
     v.backgroundColor = .white
-    v.layer.cornerRadius = 5
+    v.layer.cornerRadius = 10
     return v
   }()
   
   private let heartImageView: UIImageView = {
     let v = UIImageView()
-    v.image = UIImage(named: "heart.fill")
+    v.image = UIImage(systemName: "heart.fill")
     v.tintColor = .systemPink
     return v
   }()
@@ -28,14 +29,14 @@ final class HeartTableViewCell: UITableViewCell {
   private let heartBeatLabel: UILabel = {
     let v = UILabel()
     v.textColor = .systemPink
-    v.font = .systemFont(ofSize: 16)
+    v.font = .systemFont(ofSize: 16, weight: .bold)
     return v
   }()
   
   private let timeLabel: UILabel = {
     let v = UILabel()
     v.textColor = .lightGray
-    v.font = .systemFont(ofSize: 12)
+    v.font = .systemFont(ofSize: 14, weight: .medium)
     return v
   }()
   
@@ -49,20 +50,34 @@ final class HeartTableViewCell: UITableViewCell {
   private let heartBeatCountLabel: UILabel = {
     let v = UILabel()
     v.textColor = .black
-    v.font = .systemFont(ofSize: 24, weight: .medium)
+    v.font = .systemFont(ofSize: 27, weight: .bold)
+    v.sizeToFit()
     return v
   }()
   
   private let bpmLabel: UILabel = {
     let v = UILabel()
-    v.textColor = .gray
-    v.font = .systemFont(ofSize: 16)
+    v.textColor = .lightGray
+    v.font = .systemFont(ofSize: 14, weight: .bold)
+    v.sizeToFit()
     return v
   }()
   
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     setupUI()
+    setupConstraints()
+  }
+  
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    contentView.flex.layout(mode: .adjustHeight)
+  }
+  
+  override func sizeThatFits(_ size: CGSize) -> CGSize {
+    contentView.flex.width(size.width)
+    contentView.flex.layout(mode: .adjustHeight)
+    return contentView.frame.size
   }
   
   required init?(coder: NSCoder) {
@@ -72,14 +87,24 @@ final class HeartTableViewCell: UITableViewCell {
   private func setupUI() {
     backgroundColor = .clear
     selectionStyle = .none
-    contentView.addSubview(containerView)
   }
   
   private func setupConstraints() {
-    containerView.flex.direction(.column).padding(20, 20).define {
-      $0.addItem().direction(.row).justifyContent(.spaceBetween).define {
-        $0.addItem().direction(.row).padding(0, 1).define {
-          $0.addItem(heartImageView).width(10).aspectRatio(1)
+    contentView.flex.padding(5, 0).define {
+      $0.addItem(containerView).direction(.column).padding(10, 10).define {
+        $0.addItem().direction(.row).justifyContent(.spaceBetween).define {
+          $0.addItem().direction(.row).alignItems(.center).define {
+            $0.addItem(heartImageView).width(20).aspectRatio(of: heartImageView)
+            $0.addItem(heartBeatLabel).marginLeft(5)
+          }
+          $0.addItem().direction(.row).alignItems(.center).define {
+            $0.addItem(timeLabel)
+            $0.addItem(rightArrowImage).width(10).aspectRatio(of: rightArrowImage).marginLeft(10)
+          }
+        }
+        $0.addItem().direction(.row).alignItems(.baseline).marginTop(20).define {
+          $0.addItem(heartBeatCountLabel)
+          $0.addItem(bpmLabel).marginLeft(5)
         }
       }
     }
