@@ -43,6 +43,8 @@ final class HeartScrollView: UIScrollView {
     containerView.pin.top().horizontally()
     containerView.flex.layout(mode: .adjustHeight)
     contentSize = containerView.frame.size
+    // tableView.contentSize가 업데이트되는 시점에 레이아웃 다시 그려주기
+    tableView.flex.markDirty()
   }
   
   required init?(coder: NSCoder) {
@@ -60,7 +62,7 @@ final class HeartScrollView: UIScrollView {
   private func setupConstraints() {
     containerView.flex.direction(.column).define {
       $0.addItem(tableView)
-      $0.addItem(learnMoreInHealthAppView).marginTop(40)
+      $0.addItem(learnMoreInHealthAppView).marginTop(10)
       $0.addItem(aboutTheHeartView).marginTop(40)
     }
   }

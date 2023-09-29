@@ -90,7 +90,7 @@ final class HeartTableViewCell: UITableViewCell {
   }
   
   private func setupConstraints() {
-    contentView.flex.padding(5, 0).define {
+    contentView.flex.paddingBottom(10).define {
       $0.addItem(containerView).direction(.column).padding(10, 10).define {
         $0.addItem().direction(.row).justifyContent(.spaceBetween).define {
           $0.addItem().direction(.row).alignItems(.center).define {
