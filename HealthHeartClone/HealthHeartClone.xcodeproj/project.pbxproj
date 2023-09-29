@@ -26,6 +26,8 @@
 		8D238C6C2AC68BCD00D3DFDD /* LearnMoreInHealthAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C6B2AC68BCD00D3DFDD /* LearnMoreInHealthAppView.swift */; };
 		8D238C722AC6A2E500D3DFDD /* ContainButtonRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C712AC6A2E500D3DFDD /* ContainButtonRoundedView.swift */; };
 		8D238C762AC6F46D00D3DFDD /* HeartHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C752AC6F46D00D3DFDD /* HeartHeaderView.swift */; };
+		8D238C792AC6F4CB00D3DFDD /* AboutTheHeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C782AC6F4CB00D3DFDD /* AboutTheHeartView.swift */; };
+		8D238C7B2AC6F60700D3DFDD /* RoundedRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C7A2AC6F60700D3DFDD /* RoundedRectangleView.swift */; };
 		8DB505312AC1CA9B0005B012 /* HeartScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB505302AC1CA9B0005B012 /* HeartScrollView.swift */; };
 		8DB505332AC1CFD20005B012 /* HeartTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB505322AC1CFD20005B012 /* HeartTableViewHeader.swift */; };
 		8DB505352AC1D0FB0005B012 /* HeartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB505342AC1D0FB0005B012 /* HeartTableViewCell.swift */; };
@@ -72,6 +74,8 @@
 		8D238C6B2AC68BCD00D3DFDD /* LearnMoreInHealthAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMoreInHealthAppView.swift; sourceTree = "<group>"; };
 		8D238C712AC6A2E500D3DFDD /* ContainButtonRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainButtonRoundedView.swift; sourceTree = "<group>"; };
 		8D238C752AC6F46D00D3DFDD /* HeartHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartHeaderView.swift; sourceTree = "<group>"; };
+		8D238C782AC6F4CB00D3DFDD /* AboutTheHeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTheHeartView.swift; sourceTree = "<group>"; };
+		8D238C7A2AC6F60700D3DFDD /* RoundedRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleView.swift; sourceTree = "<group>"; };
 		8DB505302AC1CA9B0005B012 /* HeartScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartScrollView.swift; sourceTree = "<group>"; };
 		8DB505322AC1CFD20005B012 /* HeartTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartTableViewHeader.swift; sourceTree = "<group>"; };
 		8DB505342AC1D0FB0005B012 /* HeartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartTableViewCell.swift; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 			children = (
 				8D238C742AC6F41A00D3DFDD /* TableView */,
 				8D238C732AC6F41500D3DFDD /* LearnMoreInHealthApp */,
+				8D238C772AC6F49D00D3DFDD /* AboutTheHeart */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -214,6 +219,15 @@
 				8D238C652AC5D14900D3DFDD /* Cell */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		8D238C772AC6F49D00D3DFDD /* AboutTheHeart */ = {
+			isa = PBXGroup;
+			children = (
+				8D238C782AC6F4CB00D3DFDD /* AboutTheHeartView.swift */,
+				8D238C7A2AC6F60700D3DFDD /* RoundedRectangleView.swift */,
+			);
+			path = AboutTheHeart;
 			sourceTree = "<group>";
 		};
 		8DE211882AC30F890061A02A /* Model */ = {
@@ -379,11 +393,13 @@
 				8D238C762AC6F46D00D3DFDD /* HeartHeaderView.swift in Sources */,
 				8DE2118D2AC3129A0061A02A /* AboutHeart.swift in Sources */,
 				05EB15F82AC16E9D00137B7D /* HeartVC.swift in Sources */,
+				8D238C7B2AC6F60700D3DFDD /* RoundedRectangleView.swift in Sources */,
 				8DE211872AC30D2D0061A02A /* HeartBeat.swift in Sources */,
 				8D238C6C2AC68BCD00D3DFDD /* LearnMoreInHealthAppView.swift in Sources */,
 				8DB505352AC1D0FB0005B012 /* HeartTableViewCell.swift in Sources */,
 				8D238C722AC6A2E500D3DFDD /* ContainButtonRoundedView.swift in Sources */,
 				8D238C542AC42CBD00D3DFDD /* TableView+.swift in Sources */,
+				8D238C792AC6F4CB00D3DFDD /* AboutTheHeartView.swift in Sources */,
 				8DB505312AC1CA9B0005B012 /* HeartScrollView.swift in Sources */,
 				05EB15F42AC16E9D00137B7D /* AppDelegate.swift in Sources */,
 				05EB162B2AC1738000137B7D /* UIViewController+.swift in Sources */,

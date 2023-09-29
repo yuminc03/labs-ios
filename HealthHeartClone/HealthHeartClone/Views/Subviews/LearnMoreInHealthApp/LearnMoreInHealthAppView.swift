@@ -29,9 +29,10 @@ final class LearnMoreInHealthAppView: UIView {
   private let atrialFibrillationView = ContainButtonRoundedView()
   /// 심전도 검사
   private let cardiographyView = ContainButtonRoundedView()
-  private var roundedViews = [ContainButtonRoundedView]()
+  private let roundedViews: [ContainButtonRoundedView]
   
   init() {
+    self.roundedViews = [atrialFibrillationView, cardiographyView]
     super.init(frame: .zero)
     setupUI()
     setupConstraints()
@@ -43,12 +44,6 @@ final class LearnMoreInHealthAppView: UIView {
     containerView.flex.layout(mode: .adjustHeight)
   }
   
-  override func sizeThatFits(_ size: CGSize) -> CGSize {
-    containerView.flex.width(size.width)
-    containerView.flex.layout(mode: .adjustHeight)
-    return containerView.frame.size
-  }
-  
   required init?(coder: NSCoder) {
     fatalError("Do not use Storboard.")
   }
@@ -56,8 +51,6 @@ final class LearnMoreInHealthAppView: UIView {
   private func setupUI() {
     backgroundColor = .clear
     addSubview(containerView)
-    roundedViews.append(atrialFibrillationView)
-    roundedViews.append(cardiographyView)
   }
   
   private func setupConstraints() {

@@ -57,7 +57,10 @@ final class HeartVC: TCABaseVC<HeartCore> {
     view.addSubview(scrollView)
     scrollView.tableView.delegate = self
     scrollView.tableView.dataSource = self
-    scrollView.updateUI(data: viewStore.learnMoreInfo)
+    scrollView.updateUI(
+      learnMoreInfo: viewStore.learnMoreInfo,
+      aboutTheHeart: viewStore.aboutHeartApp
+    )
   }
   
   private func setupConstraints() {

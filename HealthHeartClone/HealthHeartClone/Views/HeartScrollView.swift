@@ -30,6 +30,7 @@ final class HeartScrollView: UIScrollView {
   }()
   
   private let learnMoreInHealthAppView = LearnMoreInHealthAppView()
+  private let aboutTheHeartView = AboutTheHeartView()
   
   init() {
     super.init(frame: .zero)
@@ -59,11 +60,13 @@ final class HeartScrollView: UIScrollView {
   private func setupConstraints() {
     containerView.flex.direction(.column).define {
       $0.addItem(tableView)
-      $0.addItem(learnMoreInHealthAppView)
+      $0.addItem(learnMoreInHealthAppView).marginTop(40)
+      $0.addItem(aboutTheHeartView).marginTop(40)
     }
   }
   
-  func updateUI(data: LearnMoreInfo) {
-    learnMoreInHealthAppView.updateUI(data: data)
+  func updateUI(learnMoreInfo: LearnMoreInfo, aboutTheHeart: AboutHeart) {
+    learnMoreInHealthAppView.updateUI(data: learnMoreInfo)
+    aboutTheHeartView.updateUI(data: aboutTheHeart)
   }
 }
