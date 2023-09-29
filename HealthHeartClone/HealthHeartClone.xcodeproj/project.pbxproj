@@ -17,7 +17,6 @@
 		05EB16172AC16E9F00137B7D /* HealthHeartCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB16162AC16E9F00137B7D /* HealthHeartCloneUITestsLaunchTests.swift */; };
 		05EB16252AC171A200137B7D /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 05EB16242AC171A200137B7D /* FlexLayout */; };
 		05EB16282AC171B500137B7D /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 05EB16272AC171B500137B7D /* PinLayout */; };
-		05EB162B2AC1738000137B7D /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB162A2AC1738000137B7D /* UIViewController+.swift */; };
 		8D238C512AC4284000D3DFDD /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 8D238C502AC4284000D3DFDD /* ComposableArchitecture */; };
 		8D238C542AC42CBD00D3DFDD /* TableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C532AC42CBD00D3DFDD /* TableView+.swift */; };
 		8D238C5E2AC45CDE00D3DFDD /* TCABaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C5D2AC45CDE00D3DFDD /* TCABaseVC.swift */; };
@@ -66,7 +65,6 @@
 		05EB16102AC16E9F00137B7D /* HealthHeartCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthHeartCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05EB16142AC16E9F00137B7D /* HealthHeartCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthHeartCloneUITests.swift; sourceTree = "<group>"; };
 		05EB16162AC16E9F00137B7D /* HealthHeartCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthHeartCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		05EB162A2AC1738000137B7D /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		8D238C532AC42CBD00D3DFDD /* TableView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableView+.swift"; sourceTree = "<group>"; };
 		8D238C5D2AC45CDE00D3DFDD /* TCABaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCABaseVC.swift; sourceTree = "<group>"; };
 		8D238C5F2AC5A83A00D3DFDD /* MaximumOxygenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaximumOxygenCell.swift; sourceTree = "<group>"; };
@@ -167,7 +165,6 @@
 		8D238C522AC42CA700D3DFDD /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				05EB162A2AC1738000137B7D /* UIViewController+.swift */,
 				8D238C532AC42CBD00D3DFDD /* TableView+.swift */,
 				8D238C5D2AC45CDE00D3DFDD /* TCABaseVC.swift */,
 			);
@@ -402,7 +399,6 @@
 				8D238C792AC6F4CB00D3DFDD /* AboutTheHeartView.swift in Sources */,
 				8DB505312AC1CA9B0005B012 /* HeartScrollView.swift in Sources */,
 				05EB15F42AC16E9D00137B7D /* AppDelegate.swift in Sources */,
-				05EB162B2AC1738000137B7D /* UIViewController+.swift in Sources */,
 				05EB15F62AC16E9D00137B7D /* SceneDelegate.swift in Sources */,
 				8DE2118B2AC310A60061A02A /* LearnMoreInfo.swift in Sources */,
 				8D238C5E2AC45CDE00D3DFDD /* TCABaseVC.swift in Sources */,

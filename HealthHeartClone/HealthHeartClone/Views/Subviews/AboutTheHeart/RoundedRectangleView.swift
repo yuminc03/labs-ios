@@ -38,7 +38,7 @@ final class RoundedRectangleView: UIView {
   private let contentsLabel: UILabel = {
     let v = UILabel()
     v.textColor = .black
-    v.font = .systemFont(ofSize: 16, weight: .medium)
+    v.font = .systemFont(ofSize: 18, weight: .medium)
     v.numberOfLines = 0
     return v
   }()
@@ -51,7 +51,7 @@ final class RoundedRectangleView: UIView {
   
   override func layoutSubviews() {
     super.layoutSubviews()
-    containerView.pin.margin(pin.safeArea)
+    containerView.pin.all()
     containerView.flex.layout(mode: .adjustHeight)
   }
   

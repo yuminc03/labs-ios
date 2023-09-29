@@ -65,7 +65,7 @@ final class ContainButtonRoundedView: UIView {
   override func layoutSubviews() {
     super.layoutSubviews()
     containerView.flex.layout(mode: .adjustHeight)
-    containerView.pin.margin(pin.safeArea)
+    containerView.pin.all()
   }
   
   required init?(coder: NSCoder) {
