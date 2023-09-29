@@ -21,12 +21,15 @@ final class HeartScrollView: UIScrollView {
     let v = UITableView(frame: .zero, style: .insetGrouped)
     v.backgroundColor = .clear
     v.separatorStyle = .none
+    v.isScrollEnabled = false
     v.registerCell(type: HeartTableViewCell.self)
     v.registerCell(type: MaximumOxygenCell.self)
     v.registerCell(type: UnusableDataCell.self)
     v.registerHeaderFooter(type: HeartTableViewHeader.self)
     return v
   }()
+  
+  private let learnMoreInHealthAppView = LearnMoreInHealthAppView()
   
   init() {
     super.init(frame: .zero)
@@ -36,8 +39,9 @@ final class HeartScrollView: UIScrollView {
   
   override func layoutSubviews() {
     super.layoutSubviews()
-    containerView.pin.all().margin(pin.safeArea)
+    containerView.pin.margin(pin.safeArea)
     containerView.flex.layout(mode: .adjustHeight)
+    contentSize = containerView.frame.size
   }
   
   required init?(coder: NSCoder) {
@@ -55,6 +59,11 @@ final class HeartScrollView: UIScrollView {
   private func setupConstraints() {
     containerView.flex.direction(.column).define {
       $0.addItem(tableView)
+      $0.addItem(learnMoreInHealthAppView)
     }
+  }
+  
+  func updateUI(data: LearnMoreInfo) {
+    learnMoreInHealthAppView.updateUI(data: data)
   }
 }

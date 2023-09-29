@@ -17,6 +17,7 @@ struct HeartCore: Reducer {
       "저심박수 알림",
       "혈압"
     ]
+    let learnMoreInfo = LearnMoreInfo.dummy
     let aboutHeartApp = AboutHeart.dummy
   }
   
@@ -56,6 +57,7 @@ final class HeartVC: TCABaseVC<HeartCore> {
     view.addSubview(scrollView)
     scrollView.tableView.delegate = self
     scrollView.tableView.dataSource = self
+    scrollView.updateUI(data: viewStore.learnMoreInfo)
   }
   
   private func setupConstraints() {

@@ -25,11 +25,12 @@
 		8D238C622AC5C85500D3DFDD /* UnusableDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C612AC5C85500D3DFDD /* UnusableDataCell.swift */; };
 		8D238C6C2AC68BCD00D3DFDD /* LearnMoreInHealthAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C6B2AC68BCD00D3DFDD /* LearnMoreInHealthAppView.swift */; };
 		8D238C6E2AC68D5300D3DFDD /* HeartHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C6D2AC68D5300D3DFDD /* HeartHeaderView.swift */; };
+		8D238C722AC6A2E500D3DFDD /* ContainButtonRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C712AC6A2E500D3DFDD /* ContainButtonRoundedView.swift */; };
 		8DB505312AC1CA9B0005B012 /* HeartScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB505302AC1CA9B0005B012 /* HeartScrollView.swift */; };
 		8DB505332AC1CFD20005B012 /* HeartTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB505322AC1CFD20005B012 /* HeartTableViewHeader.swift */; };
 		8DB505352AC1D0FB0005B012 /* HeartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB505342AC1D0FB0005B012 /* HeartTableViewCell.swift */; };
 		8DE211872AC30D2D0061A02A /* HeartBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE211862AC30D2D0061A02A /* HeartBeat.swift */; };
-		8DE2118B2AC310A60061A02A /* MoreMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE2118A2AC310A60061A02A /* MoreMemory.swift */; };
+		8DE2118B2AC310A60061A02A /* LearnMoreInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE2118A2AC310A60061A02A /* LearnMoreInfo.swift */; };
 		8DE2118D2AC3129A0061A02A /* AboutHeart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE2118C2AC3129A0061A02A /* AboutHeart.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,11 +71,12 @@
 		8D238C612AC5C85500D3DFDD /* UnusableDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnusableDataCell.swift; sourceTree = "<group>"; };
 		8D238C6B2AC68BCD00D3DFDD /* LearnMoreInHealthAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMoreInHealthAppView.swift; sourceTree = "<group>"; };
 		8D238C6D2AC68D5300D3DFDD /* HeartHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeartHeaderView.swift; path = "../../../../../../Apple-Health/HealthHeartClone/HeartHeaderView.swift"; sourceTree = "<group>"; };
+		8D238C712AC6A2E500D3DFDD /* ContainButtonRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainButtonRoundedView.swift; sourceTree = "<group>"; };
 		8DB505302AC1CA9B0005B012 /* HeartScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartScrollView.swift; sourceTree = "<group>"; };
 		8DB505322AC1CFD20005B012 /* HeartTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartTableViewHeader.swift; sourceTree = "<group>"; };
 		8DB505342AC1D0FB0005B012 /* HeartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartTableViewCell.swift; sourceTree = "<group>"; };
 		8DE211862AC30D2D0061A02A /* HeartBeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartBeat.swift; sourceTree = "<group>"; };
-		8DE2118A2AC310A60061A02A /* MoreMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMemory.swift; sourceTree = "<group>"; };
+		8DE2118A2AC310A60061A02A /* LearnMoreInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMoreInfo.swift; sourceTree = "<group>"; };
 		8DE2118C2AC3129A0061A02A /* AboutHeart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHeart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				8D238C6B2AC68BCD00D3DFDD /* LearnMoreInHealthAppView.swift */,
+				8D238C712AC6A2E500D3DFDD /* ContainButtonRoundedView.swift */,
 				8D238C642AC5D14300D3DFDD /* Header */,
 				8D238C652AC5D14900D3DFDD /* Cell */,
 			);
@@ -201,7 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				8DE211862AC30D2D0061A02A /* HeartBeat.swift */,
-				8DE2118A2AC310A60061A02A /* MoreMemory.swift */,
+				8DE2118A2AC310A60061A02A /* LearnMoreInfo.swift */,
 				8DE2118C2AC3129A0061A02A /* AboutHeart.swift */,
 			);
 			path = Model;
@@ -362,12 +365,13 @@
 				8DE211872AC30D2D0061A02A /* HeartBeat.swift in Sources */,
 				8D238C6C2AC68BCD00D3DFDD /* LearnMoreInHealthAppView.swift in Sources */,
 				8DB505352AC1D0FB0005B012 /* HeartTableViewCell.swift in Sources */,
+				8D238C722AC6A2E500D3DFDD /* ContainButtonRoundedView.swift in Sources */,
 				8D238C542AC42CBD00D3DFDD /* TableView+.swift in Sources */,
 				8DB505312AC1CA9B0005B012 /* HeartScrollView.swift in Sources */,
 				05EB15F42AC16E9D00137B7D /* AppDelegate.swift in Sources */,
 				05EB162B2AC1738000137B7D /* UIViewController+.swift in Sources */,
 				05EB15F62AC16E9D00137B7D /* SceneDelegate.swift in Sources */,
-				8DE2118B2AC310A60061A02A /* MoreMemory.swift in Sources */,
+				8DE2118B2AC310A60061A02A /* LearnMoreInfo.swift in Sources */,
 				8D238C6E2AC68D5300D3DFDD /* HeartHeaderView.swift in Sources */,
 				8D238C5E2AC45CDE00D3DFDD /* TCABaseVC.swift in Sources */,
 				8DB505332AC1CFD20005B012 /* HeartTableViewHeader.swift in Sources */,
