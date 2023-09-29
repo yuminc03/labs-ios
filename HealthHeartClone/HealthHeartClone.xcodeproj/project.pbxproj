@@ -17,19 +17,21 @@
 		05EB16172AC16E9F00137B7D /* HealthHeartCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB16162AC16E9F00137B7D /* HealthHeartCloneUITestsLaunchTests.swift */; };
 		05EB16252AC171A200137B7D /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 05EB16242AC171A200137B7D /* FlexLayout */; };
 		05EB16282AC171B500137B7D /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 05EB16272AC171B500137B7D /* PinLayout */; };
-		05EB162B2AC1738000137B7D /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB162A2AC1738000137B7D /* UIViewController+.swift */; };
 		8D238C512AC4284000D3DFDD /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 8D238C502AC4284000D3DFDD /* ComposableArchitecture */; };
 		8D238C542AC42CBD00D3DFDD /* TableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C532AC42CBD00D3DFDD /* TableView+.swift */; };
 		8D238C5E2AC45CDE00D3DFDD /* TCABaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C5D2AC45CDE00D3DFDD /* TCABaseVC.swift */; };
 		8D238C602AC5A83A00D3DFDD /* MaximumOxygenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C5F2AC5A83A00D3DFDD /* MaximumOxygenCell.swift */; };
 		8D238C622AC5C85500D3DFDD /* UnusableDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C612AC5C85500D3DFDD /* UnusableDataCell.swift */; };
-		8D238C682AC5D15B00D3DFDD /* HeartHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C672AC5D15B00D3DFDD /* HeartHeaderView.swift */; };
-		8D238C6A2AC5D19F00D3DFDD /* HeartHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C692AC5D19F00D3DFDD /* HeartHeaderView.swift */; };
+		8D238C6C2AC68BCD00D3DFDD /* LearnMoreInHealthAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C6B2AC68BCD00D3DFDD /* LearnMoreInHealthAppView.swift */; };
+		8D238C722AC6A2E500D3DFDD /* ContainButtonRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C712AC6A2E500D3DFDD /* ContainButtonRoundedView.swift */; };
+		8D238C762AC6F46D00D3DFDD /* HeartHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C752AC6F46D00D3DFDD /* HeartHeaderView.swift */; };
+		8D238C792AC6F4CB00D3DFDD /* AboutTheHeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C782AC6F4CB00D3DFDD /* AboutTheHeartView.swift */; };
+		8D238C7B2AC6F60700D3DFDD /* RoundedRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C7A2AC6F60700D3DFDD /* RoundedRectangleView.swift */; };
 		8DB505312AC1CA9B0005B012 /* HeartScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB505302AC1CA9B0005B012 /* HeartScrollView.swift */; };
 		8DB505332AC1CFD20005B012 /* HeartTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB505322AC1CFD20005B012 /* HeartTableViewHeader.swift */; };
 		8DB505352AC1D0FB0005B012 /* HeartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB505342AC1D0FB0005B012 /* HeartTableViewCell.swift */; };
 		8DE211872AC30D2D0061A02A /* HeartBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE211862AC30D2D0061A02A /* HeartBeat.swift */; };
-		8DE2118B2AC310A60061A02A /* MoreMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE2118A2AC310A60061A02A /* MoreMemory.swift */; };
+		8DE2118B2AC310A60061A02A /* LearnMoreInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE2118A2AC310A60061A02A /* LearnMoreInfo.swift */; };
 		8DE2118D2AC3129A0061A02A /* AboutHeart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE2118C2AC3129A0061A02A /* AboutHeart.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,18 +65,20 @@
 		05EB16102AC16E9F00137B7D /* HealthHeartCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthHeartCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05EB16142AC16E9F00137B7D /* HealthHeartCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthHeartCloneUITests.swift; sourceTree = "<group>"; };
 		05EB16162AC16E9F00137B7D /* HealthHeartCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthHeartCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		05EB162A2AC1738000137B7D /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		8D238C532AC42CBD00D3DFDD /* TableView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableView+.swift"; sourceTree = "<group>"; };
 		8D238C5D2AC45CDE00D3DFDD /* TCABaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCABaseVC.swift; sourceTree = "<group>"; };
 		8D238C5F2AC5A83A00D3DFDD /* MaximumOxygenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaximumOxygenCell.swift; sourceTree = "<group>"; };
 		8D238C612AC5C85500D3DFDD /* UnusableDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnusableDataCell.swift; sourceTree = "<group>"; };
-		8D238C672AC5D15B00D3DFDD /* HeartHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeartHeaderView.swift; path = "../../../../../../Apple-Health/HealthHeartClone/Model/HeartHeaderView.swift"; sourceTree = "<group>"; };
-		8D238C692AC5D19F00D3DFDD /* HeartHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeartHeaderView.swift; path = "../../../../../../Apple-Health/HealthHeartClone/Model/HeartHeaderView.swift"; sourceTree = "<group>"; };
+		8D238C6B2AC68BCD00D3DFDD /* LearnMoreInHealthAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMoreInHealthAppView.swift; sourceTree = "<group>"; };
+		8D238C712AC6A2E500D3DFDD /* ContainButtonRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainButtonRoundedView.swift; sourceTree = "<group>"; };
+		8D238C752AC6F46D00D3DFDD /* HeartHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartHeaderView.swift; sourceTree = "<group>"; };
+		8D238C782AC6F4CB00D3DFDD /* AboutTheHeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTheHeartView.swift; sourceTree = "<group>"; };
+		8D238C7A2AC6F60700D3DFDD /* RoundedRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleView.swift; sourceTree = "<group>"; };
 		8DB505302AC1CA9B0005B012 /* HeartScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartScrollView.swift; sourceTree = "<group>"; };
 		8DB505322AC1CFD20005B012 /* HeartTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartTableViewHeader.swift; sourceTree = "<group>"; };
 		8DB505342AC1D0FB0005B012 /* HeartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartTableViewCell.swift; sourceTree = "<group>"; };
 		8DE211862AC30D2D0061A02A /* HeartBeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartBeat.swift; sourceTree = "<group>"; };
-		8DE2118A2AC310A60061A02A /* MoreMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMemory.swift; sourceTree = "<group>"; };
+		8DE2118A2AC310A60061A02A /* LearnMoreInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMoreInfo.swift; sourceTree = "<group>"; };
 		8DE2118C2AC3129A0061A02A /* AboutHeart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHeart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,7 +165,6 @@
 		8D238C522AC42CA700D3DFDD /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				05EB162A2AC1738000137B7D /* UIViewController+.swift */,
 				8D238C532AC42CBD00D3DFDD /* TableView+.swift */,
 				8D238C5D2AC45CDE00D3DFDD /* TCABaseVC.swift */,
 			);
@@ -171,8 +174,9 @@
 		8D238C632AC5D13600D3DFDD /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
-				8D238C642AC5D14300D3DFDD /* Header */,
-				8D238C652AC5D14900D3DFDD /* Cell */,
+				8D238C742AC6F41A00D3DFDD /* TableView */,
+				8D238C732AC6F41500D3DFDD /* LearnMoreInHealthApp */,
+				8D238C772AC6F49D00D3DFDD /* AboutTheHeart */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -181,8 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				8DB505322AC1CFD20005B012 /* HeartTableViewHeader.swift */,
-				8D238C692AC5D19F00D3DFDD /* HeartHeaderView.swift */,
-				8D238C672AC5D15B00D3DFDD /* HeartHeaderView.swift */,
+				8D238C752AC6F46D00D3DFDD /* HeartHeaderView.swift */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -197,11 +200,38 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		8D238C732AC6F41500D3DFDD /* LearnMoreInHealthApp */ = {
+			isa = PBXGroup;
+			children = (
+				8D238C6B2AC68BCD00D3DFDD /* LearnMoreInHealthAppView.swift */,
+				8D238C712AC6A2E500D3DFDD /* ContainButtonRoundedView.swift */,
+			);
+			path = LearnMoreInHealthApp;
+			sourceTree = "<group>";
+		};
+		8D238C742AC6F41A00D3DFDD /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				8D238C642AC5D14300D3DFDD /* Header */,
+				8D238C652AC5D14900D3DFDD /* Cell */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		8D238C772AC6F49D00D3DFDD /* AboutTheHeart */ = {
+			isa = PBXGroup;
+			children = (
+				8D238C782AC6F4CB00D3DFDD /* AboutTheHeartView.swift */,
+				8D238C7A2AC6F60700D3DFDD /* RoundedRectangleView.swift */,
+			);
+			path = AboutTheHeart;
+			sourceTree = "<group>";
+		};
 		8DE211882AC30F890061A02A /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				8DE211862AC30D2D0061A02A /* HeartBeat.swift */,
-				8DE2118A2AC310A60061A02A /* MoreMemory.swift */,
+				8DE2118A2AC310A60061A02A /* LearnMoreInfo.swift */,
 				8DE2118C2AC3129A0061A02A /* AboutHeart.swift */,
 			);
 			path = Model;
@@ -357,18 +387,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D238C762AC6F46D00D3DFDD /* HeartHeaderView.swift in Sources */,
 				8DE2118D2AC3129A0061A02A /* AboutHeart.swift in Sources */,
 				05EB15F82AC16E9D00137B7D /* HeartVC.swift in Sources */,
+				8D238C7B2AC6F60700D3DFDD /* RoundedRectangleView.swift in Sources */,
 				8DE211872AC30D2D0061A02A /* HeartBeat.swift in Sources */,
+				8D238C6C2AC68BCD00D3DFDD /* LearnMoreInHealthAppView.swift in Sources */,
 				8DB505352AC1D0FB0005B012 /* HeartTableViewCell.swift in Sources */,
+				8D238C722AC6A2E500D3DFDD /* ContainButtonRoundedView.swift in Sources */,
 				8D238C542AC42CBD00D3DFDD /* TableView+.swift in Sources */,
+				8D238C792AC6F4CB00D3DFDD /* AboutTheHeartView.swift in Sources */,
 				8DB505312AC1CA9B0005B012 /* HeartScrollView.swift in Sources */,
 				05EB15F42AC16E9D00137B7D /* AppDelegate.swift in Sources */,
-				8D238C682AC5D15B00D3DFDD /* HeartHeaderView.swift in Sources */,
-				05EB162B2AC1738000137B7D /* UIViewController+.swift in Sources */,
 				05EB15F62AC16E9D00137B7D /* SceneDelegate.swift in Sources */,
-				8DE2118B2AC310A60061A02A /* MoreMemory.swift in Sources */,
-				8D238C6A2AC5D19F00D3DFDD /* HeartHeaderView.swift in Sources */,
+				8DE2118B2AC310A60061A02A /* LearnMoreInfo.swift in Sources */,
 				8D238C5E2AC45CDE00D3DFDD /* TCABaseVC.swift in Sources */,
 				8DB505332AC1CFD20005B012 /* HeartTableViewHeader.swift in Sources */,
 				8D238C622AC5C85500D3DFDD /* UnusableDataCell.swift in Sources */,

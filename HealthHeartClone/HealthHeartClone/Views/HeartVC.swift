@@ -17,6 +17,7 @@ struct HeartCore: Reducer {
       "저심박수 알림",
       "혈압"
     ]
+    let learnMoreInfo = LearnMoreInfo.dummy
     let aboutHeartApp = AboutHeart.dummy
   }
   
@@ -30,6 +31,12 @@ struct HeartCore: Reducer {
 }
 
 final class HeartVC: TCABaseVC<HeartCore> {
+  private let containerView: UIView = {
+    let v = UIView()
+    v.backgroundColor = .clear
+    return v
+  }()
+  
   private let scrollView = HeartScrollView()
   
   init() {
@@ -42,24 +49,24 @@ final class HeartVC: TCABaseVC<HeartCore> {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupUI()
-    setupConstraints()
   }
   
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
-    scrollView.pin.margin(view.pin.safeArea)
-    scrollView.flex.layout(mode: .adjustHeight)
+    containerView.pin.all(view.pin.safeArea)
+    scrollView.pin.all()
   }
   
   private func setupUI() {
     view.backgroundColor = UIColor(named: "gray_EAEAEA")
-    view.addSubview(scrollView)
+    view.addSubview(containerView)
+    containerView.addSubview(scrollView)
     scrollView.tableView.delegate = self
     scrollView.tableView.dataSource = self
-  }
-  
-  private func setupConstraints() {
-    scrollView.flex.width(UIScreen.main.bounds.width).height(UIScreen.main.bounds.height)
+    scrollView.updateUI(
+      learnMoreInfo: viewStore.learnMoreInfo,
+      aboutTheHeart: viewStore.aboutHeartApp
+    )
   }
 }
 
@@ -103,5 +110,9 @@ extension HeartVC: UITableViewDelegate, UITableViewDataSource {
       cell.updateUI(title: viewStore.usableData[indexPath.row])
       return cell
     }
+  }
+  
+  func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    return 30
   }
 }

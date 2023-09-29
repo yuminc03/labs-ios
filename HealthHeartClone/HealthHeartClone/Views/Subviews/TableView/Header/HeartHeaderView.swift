@@ -33,7 +33,7 @@ final class HeartHeaderView: UIView {
   
   override func layoutSubviews() {
     super.layoutSubviews()
-    containerView.pin.all().margin(containerView.pin.safeArea)
+    containerView.pin.all()
     containerView.flex.layout(mode: .adjustHeight)
   }
   
