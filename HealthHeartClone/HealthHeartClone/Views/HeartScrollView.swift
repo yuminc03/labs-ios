@@ -40,7 +40,7 @@ final class HeartScrollView: UIScrollView {
   
   override func layoutSubviews() {
     super.layoutSubviews()
-    containerView.pin.margin(pin.safeArea)
+    containerView.pin.top().horizontally()
     containerView.flex.layout(mode: .adjustHeight)
     contentSize = containerView.frame.size
   }

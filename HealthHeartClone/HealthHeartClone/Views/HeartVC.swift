@@ -31,6 +31,12 @@ struct HeartCore: Reducer {
 }
 
 final class HeartVC: TCABaseVC<HeartCore> {
+  private let containerView: UIView = {
+    let v = UIView()
+    v.backgroundColor = .clear
+    return v
+  }()
+  
   private let scrollView = HeartScrollView()
   
   init() {
@@ -43,28 +49,24 @@ final class HeartVC: TCABaseVC<HeartCore> {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupUI()
-    setupConstraints()
   }
   
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
-    scrollView.pin.margin(view.pin.safeArea)
-    scrollView.flex.layout(mode: .adjustHeight)
+    containerView.pin.all(view.pin.safeArea)
+    scrollView.pin.all()
   }
   
   private func setupUI() {
     view.backgroundColor = UIColor(named: "gray_EAEAEA")
-    view.addSubview(scrollView)
+    view.addSubview(containerView)
+    containerView.addSubview(scrollView)
     scrollView.tableView.delegate = self
     scrollView.tableView.dataSource = self
     scrollView.updateUI(
       learnMoreInfo: viewStore.learnMoreInfo,
       aboutTheHeart: viewStore.aboutHeartApp
     )
-  }
-  
-  private func setupConstraints() {
-    scrollView.flex.width(UIScreen.main.bounds.width).height(UIScreen.main.bounds.height)
   }
 }
 
