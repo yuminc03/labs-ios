@@ -54,9 +54,6 @@ final class HeartScrollView: UIScrollView {
   private func setupUI() {
     backgroundColor = .clear
     addSubview(containerView)
-    let header = HeartHeaderView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 70))
-    header.update(title: "심장")
-    tableView.tableHeaderView = header
   }
   
   private func setupConstraints() {

@@ -53,11 +53,13 @@ final class HeartVC: TCABaseVC<HeartCore> {
   
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
-    containerView.pin.all(view.pin.safeArea)
+    containerView.pin.all()
     scrollView.pin.all()
   }
   
   private func setupUI() {
+    title = "심장"
+    navigationController?.navigationBar.prefersLargeTitles = true
     view.backgroundColor = UIColor(named: "gray_EAEAEA")
     view.addSubview(containerView)
     containerView.addSubview(scrollView)
