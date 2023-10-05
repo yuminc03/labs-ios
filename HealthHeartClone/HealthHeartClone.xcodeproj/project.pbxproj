@@ -24,7 +24,6 @@
 		8D238C622AC5C85500D3DFDD /* UnusableDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C612AC5C85500D3DFDD /* UnusableDataCell.swift */; };
 		8D238C6C2AC68BCD00D3DFDD /* LearnMoreInHealthAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C6B2AC68BCD00D3DFDD /* LearnMoreInHealthAppView.swift */; };
 		8D238C722AC6A2E500D3DFDD /* ContainButtonRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C712AC6A2E500D3DFDD /* ContainButtonRoundedView.swift */; };
-		8D238C762AC6F46D00D3DFDD /* HeartHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C752AC6F46D00D3DFDD /* HeartHeaderView.swift */; };
 		8D238C792AC6F4CB00D3DFDD /* AboutTheHeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C782AC6F4CB00D3DFDD /* AboutTheHeartView.swift */; };
 		8D238C7B2AC6F60700D3DFDD /* RoundedRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D238C7A2AC6F60700D3DFDD /* RoundedRectangleView.swift */; };
 		8DB505312AC1CA9B0005B012 /* HeartScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB505302AC1CA9B0005B012 /* HeartScrollView.swift */; };
@@ -71,7 +70,6 @@
 		8D238C612AC5C85500D3DFDD /* UnusableDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnusableDataCell.swift; sourceTree = "<group>"; };
 		8D238C6B2AC68BCD00D3DFDD /* LearnMoreInHealthAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMoreInHealthAppView.swift; sourceTree = "<group>"; };
 		8D238C712AC6A2E500D3DFDD /* ContainButtonRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainButtonRoundedView.swift; sourceTree = "<group>"; };
-		8D238C752AC6F46D00D3DFDD /* HeartHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartHeaderView.swift; sourceTree = "<group>"; };
 		8D238C782AC6F4CB00D3DFDD /* AboutTheHeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTheHeartView.swift; sourceTree = "<group>"; };
 		8D238C7A2AC6F60700D3DFDD /* RoundedRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleView.swift; sourceTree = "<group>"; };
 		8DB505302AC1CA9B0005B012 /* HeartScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartScrollView.swift; sourceTree = "<group>"; };
@@ -185,7 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				8DB505322AC1CFD20005B012 /* HeartTableViewHeader.swift */,
-				8D238C752AC6F46D00D3DFDD /* HeartHeaderView.swift */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -387,7 +384,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D238C762AC6F46D00D3DFDD /* HeartHeaderView.swift in Sources */,
 				8DE2118D2AC3129A0061A02A /* AboutHeart.swift in Sources */,
 				05EB15F82AC16E9D00137B7D /* HeartVC.swift in Sources */,
 				8D238C7B2AC6F60700D3DFDD /* RoundedRectangleView.swift in Sources */,
@@ -577,6 +573,7 @@
 				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "FLEXLAYOUT_SWIFT_PACKAGE=1";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HealthHeartClone/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "심장";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -605,6 +602,7 @@
 				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "FLEXLAYOUT_SWIFT_PACKAGE=1";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HealthHeartClone/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "심장";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
